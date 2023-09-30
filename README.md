@@ -1,3 +1,31 @@
+# Here API info
+
+# platform.here.com
+# API name is Paris Trip
+
+### https://developer.here.com/documentation/geocoding-search-api/dev_guide/topics/endpoint-discover-brief.html
+### https://developer.here.com/documentation/geocoding-search-api/dev_guide/topics-api/code-discover-category.html
+
+Example
+GET https://discover.search.hereapi.com/v1/
+    discover
+    ?in=circle:48.864716,2.349014;r=150
+    &q=hotels
+    &apiKey={YOUR_API_KEY}
+
+Paris, France
+Latitude and longitude coordinates are: 48.864716, 2.349014.
+
+The following parameters are used:
+
+in - Search within a geographic area. Results will be returned if they are located within the specified area.
+q - Enter a free-text query.
+apiKey - Your API key.
+
+allow search by category
+- search by name (STRETCH GOAL)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
