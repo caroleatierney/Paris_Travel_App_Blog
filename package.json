@@ -4,10 +4,16 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "bootswatch": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "path-browserify": "^1.0.1",
     "react": "^17",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^17",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^5.3.0",
+    "react-select": "^5.7.5",
+    "stream-browserify": "^3.0.0",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

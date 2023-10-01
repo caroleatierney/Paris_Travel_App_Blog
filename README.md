@@ -4,7 +4,18 @@
 # API name is Paris Trip
 
 ### https://developer.here.com/documentation/geocoding-search-api/dev_guide/topics/endpoint-discover-brief.html
+
 ### https://developer.here.com/documentation/geocoding-search-api/dev_guide/topics-api/code-discover-category.html
+
+# categories
+### https://developer.here.com/documentation/places/dev_guide/topics/place_categories/places-category-system.html
+
+# specific search - use in for radius
+https://places.ls.hereapi.com/places/v1/discover/search
+?apiKey={YOUR_API_KEY}
+&at=52.531,13.3843
+&q=Brandenburg+Gate
+
 
 Example
 GET https://discover.search.hereapi.com/v1/

@@ -1,4 +1,13 @@
 import React from 'react'
+
+// delete later
+import '../App.css';
 export default function Header() {
-    return <h1>I am the Header Form</h1>;
+    return (
+        <div className="header justify-content-center">
+            <h1>Roseann & Carole's Excellent Adventure!</h1>
+            <h2>Paris 2023</h2>
+            <h3>Travel Planner and Blog</h3>
+        </div>
+    )
 }
