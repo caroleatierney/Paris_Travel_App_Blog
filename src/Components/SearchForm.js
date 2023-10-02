@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Select from 'react-select';
+import HereApiSearch from './HereApiSearch.js'
 // import Container from '../node_modules/react-bootstrap/Container';
 
 // delete later
@@ -19,6 +20,12 @@ const categories = [
     { label: "Areas and Buildings", value: 900 }
 ]
 
+// this passes the search criteria to the component
+// that gets and displays the data from the Here API
+const handleSubmit = () => {
+    HereApiSearch(type, text);
+};
+
 export default function SearchForm() {
     return (
         <div className="search">
@@ -27,15 +34,9 @@ export default function SearchForm() {
 
             <div className="Container d-flex flex-row">
                 <div className="row">
-                    <div className="col-6">
-                        <form className="form-inline">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Free form search" aria-label="Search"/>
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-                        </form>
-                    </div>
-
-                    <div className="col-6">
+                    <div className="col-12">
                         <Select options={categories} />
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" type="category" onSubmit={handleSubmit}>Submit</button>
                     </div>
                 </div>
             </div>

@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
-export default function ApiSearch() {
+export default function HereApiSearchCategory() {
+    // The following code is used to fetch data from the Here API
     const BASE_URL ="https://discover.search.hereapi.com/";
     const version = "v1";
     const service = "discover";
     const location = "in=circle:48.864716,2.349014;r=150";
-    const limit="limit=2";
+    const limit="limit=15";
     const language = "lang=en";
     const category= "q=restaurant";
     const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY); 
 
-    console.log("url: " + URL);
+    // console.log("url: " + URL);
 
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
     const [results, setResults] = useState([]);
 
-    // fetch call to API
-    const fetchResults = async () => {
+    // fetch call to Here API
+    const fetchHereResults = async () => {
         try {
             const resp = await fetch(URL);
             
@@ -27,19 +28,33 @@ export default function ApiSearch() {
 
             // assign variable to response object's results 
             setResults(resultList.items)
-            console.log("results: " + results)
+            // console.log("results: " + results)
 
         } catch (error) {
             setIsError(true)
             console.log(error);
         }
         setIsLoading(false)
+
+        // Once information is received from API, add it to MockAPI to allow for CRUD operations
+        const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
+        results.map((result, index) => (
+            fetch(MOCK_API_URL, {
+                method: 'POST',
+                headers:
+                {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: result.title
+                }),
+            })
+        ))
     };
 
     // This is the first fetch (useEffect Hook)
     useEffect(() => {
-        fetchResults();
-        // console.log("In useEffect")
+        fetchHereResults();
     }, []);
 
     // let user know when there is a lag in API return
@@ -52,25 +67,7 @@ export default function ApiSearch() {
         return <h2>There was an error</h2>
     }
 
-    // Once information is received from API, add it to MockAPI to allow CRUD operations
-
-    // const MOCK_API_URL = 'xxxxxx/Paris_APP/destinations'
-
-
-    // results.map((result, index) => (
-    //     fetch(MOCK_API_URL, {
-    //         method: 'POST',
-    //         headers:
-    //         {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({
-    //             title: result.title
-    //         }),
-    //     })
-    // ))
-
-    // return a movie div to the App component with movie name, poster and trailor link
+    // return a result div to the App component with movie name, poster and trailor link
     return (
         <div>
             {results.map((result, index) => (

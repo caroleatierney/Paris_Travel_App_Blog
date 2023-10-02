@@ -10,7 +10,8 @@ import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import SearchForm from './Components/SearchForm.js'
 import About from './Components/About.js'
-import ApiSearch from './Components/ApiSearch.js'
+import HereApiSearchFree from './Components/HereApiSearchFree.js'
+import HereApiSearchCategory from './Components/HereApiSearchCategory.js'
 import DailyBlog from './Components/DailyBlog.js'
 
 export default function App() {
@@ -34,18 +35,18 @@ export default function App() {
                   <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
                 </li>
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/searchForm">Search for things to do in Paris!</Link>
+                  <Link className="nav-link" to="/searchForm">Search Paris!</Link>
                 </li>
-                <li>
-                  <Link className="nav-link" to="/apiSearch">Search Here API</Link>
-                </li>
+                {/* <li> */}
+                  {/* <Link className="nav-link" to="/apiSearch">Search Here API</Link> */}
+                {/* </li> */}
               </ul>
           </Nav>
 
           <Switch>
-            <Route path="/apiSearch">
+            {/* <Route path="/apiSearch">
               <ApiSearch />
-            </Route>
+            </Route> */}
 
             <Route path="/about">
               <About />
