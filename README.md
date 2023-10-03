@@ -36,6 +36,9 @@ apiKey - Your API key.
 allow search by category
 - search by name (STRETCH GOAL)
 
+
+
+
 // notes
 // https://bard.google.com/chat/f7773ae79ae94bcb// this passes the search criteria to the component
 // that gets and displays the data from the Here API

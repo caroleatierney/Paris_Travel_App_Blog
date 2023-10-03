@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
+// import SearchForm from './SearchForm.js'
 
-export default function HereApiSearchCategory() {
+export default function HereApiSearch({selectedCategory}) {
+    alert("selected Category: " + {selectedCategory})
+    // ***** I want to be able to search by the category *****
+    // ***** const category = "q="+{selectedCategory}; *****
+
     // The following code is used to fetch data from the Here API
     const BASE_URL = "https://discover.search.hereapi.com/";
     const version = "v1";
     const service = "discover";
     const location = "in=circle:48.864716,2.349014;r=150";
-    const limit = "limit=15";
+    const limit = "limit=5";
     const language = "lang=en";
     const category = "q=restaurant";
+
+
+
     const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
 
     // console.log("url: " + URL);
@@ -76,7 +84,7 @@ export default function HereApiSearchCategory() {
         return <h2>There was an error</h2>
     }
 
-    // return a result div to the App component with movie name, poster and trailor link
+    // return a result div to the App component
     return (
         <div>
             {results.map((result, index) => (

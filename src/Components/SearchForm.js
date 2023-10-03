@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import HereApiSearch from './HereApiSearch.js'
 
 const categories = [
     { label: 'Eat and Drink', value: 100 },
@@ -18,6 +19,12 @@ const categories = [
 export default function SearchForm() {
     const [selectedCategory, setSelectedCategory] = useState('');
 
+    // this passes the dog id to the update component
+    // so it can update the correct dog
+    const passCategory = (selectedCategory) => {
+        HereApiSearch(selectedCategory);
+    };
+
     return (
         <div className="search">
             <h1>Search for things to do</h1>
@@ -26,16 +33,18 @@ export default function SearchForm() {
             <div className="Container d-flex flex-row">
                 <div className="row">
                     <div className="col-12">
-                        <Select
+                       <Select
                             options={categories}
                             onChange={(event) => {
-                                // setSelectedCategory(event.target.value);
+                                setSelectedCategory(event.value);
+                                // passCategory={selectedCategory};
                             }}
-                        />
+                        /> 
                         <p>selectedCategory: {selectedCategory}</p>
                     </div>
                 </div>
             </div>
+            <HereApiSearch selectedCategory={selectedCategory} />
         </div>
-    );
+    ); 
 };

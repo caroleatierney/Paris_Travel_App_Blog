@@ -37,11 +37,11 @@ export default function App() {
                   <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
                 </li>
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/searchForm">Search Paris!</Link>
+                  <Link className="nav-link" to="/searchForm">Search for Paris Destinations!</Link>
                 </li>
-                <li>
-                  <Link className="nav-link" to="/HereApiSearch">Search Here API</Link>
-                </li>
+                {/* <li>
+                   <Link className="nav-link" to="/HereApiSearch">Search Paris Destinations</Link>
+                </li> */}
               </ul>
           </Nav>
 
