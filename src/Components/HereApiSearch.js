@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// import SearchForm from './SearchForm.js'
 
 export default function HereApiSearch({selectedCategory}) {
-    alert("selected Category: " + {selectedCategory})
-    // ***** I want to be able to search by the category *****
-    // ***** const category = "q="+{selectedCategory}; *****
-
+  
     // The following code is used to fetch data from the Here API
     const BASE_URL = "https://discover.search.hereapi.com/";
     const version = "v1";
@@ -14,12 +10,14 @@ export default function HereApiSearch({selectedCategory}) {
     const limit = "limit=5";
     const language = "lang=en";
     const category = "q=restaurant";
-
+    // const category = "q=" + selectedCategory;
+    console.log(selectedCategory);
 
 
     const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
 
-    // console.log("url: " + URL);
+    console.log("url: " + URL);
+    console.log("cat " + category);
 
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
@@ -56,7 +54,7 @@ export default function HereApiSearch({selectedCategory}) {
                 },
                 body: JSON.stringify({
                     title: result.title,
-                    buildingNumber: result.houseNumber,
+                    houseNumber: result.houseNumber,
                     street: result.street,
                     city: result.city,
                     state: result.state,
