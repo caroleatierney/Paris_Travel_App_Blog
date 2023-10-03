@@ -9,15 +9,18 @@ export default function HereApiSearch({selectedCategory}) {
     const location = "in=circle:48.864716,2.349014;r=150";
     const limit = "limit=5";
     const language = "lang=en";
-    const category = "q=restaurant";
-    // const category = "q=" + selectedCategory;
+    const category = "q=Leisure and Outdoor";
+// needs to be q=Leisure%20and%20Outdoor
+
+    const category1 = "q=" + selectedCategory;
+    console.log (category1)
+    console.log("catz working: " + selectedCategory);
+    console.log("catx working too: Have to select from dropdown:  " + `${selectedCategory}`);
 
     const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
 
     console.log("url: " + URL);
-    console.log("catz" + selectedCategory);
-    console.log("catx" + `${selectedCategory}`);
-    console.log("cat " + {selectedCategory});
+
 
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
@@ -95,10 +98,12 @@ export default function HereApiSearch({selectedCategory}) {
                     <h5>{result.address.postalCode}</h5>
                     <h5>{result.address.country}</h5>
                     <h5>{result.categories[0].name}</h5>
-                    <h5>{result.contacts[0].phone[0].value}</h5>
+                    {/* <h5>{result.contacts[0].phone[0].value}</h5> */}
                     <hr></hr>
                 </div>
             ))}
         </div>
     )
 }
+
+// how to code if an object is not there 

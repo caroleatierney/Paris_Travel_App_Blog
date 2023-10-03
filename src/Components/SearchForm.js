@@ -3,17 +3,17 @@ import Select from 'react-select';
 import HereApiSearch from './HereApiSearch.js'
 
 const categories = [
-    { label: 'Eat and Drink', value: 'Eat and Drink' },
-    { label: 'Going Out - Entertainment', value: 'Going Out - Entertainment' },
-    { label: 'Sights and Museums', value: 'Sights and Museums' },
-    { label: 'Natural and Geographical', value: 'Natural and Geographical' },
+    { label: 'Eat and Drink', value: 'Eat%20and%20' },
+    { label: 'Going Out - Entertainment', value: 'Going%20Out%20-%20Entertainment' },
+    { label: 'Sights and Museums', value: 'Sights%20and%20Museums' },
+    { label: 'Natural and Geographical', value: 'Natural%20and%20Geographical' },
     { label: 'Transport', value: 'Transport' },
     { label: 'Accommodations', value: 'Accommodations' },
-    { label: 'Leisure and Outdoor', value: 'Leisure and Outdoor' },
+    { label: 'Leisure and Outdoor', value: 'Leisure%20and%20Outdoor' },
     { label: 'Shopping', value: 'Shopping' },
-    { label: 'Business and Services', value: 'Business and Services' },
+    { label: 'Business and Services', value: 'Business%20and%20Services' },
     { label: 'Facilities', value: 'Facilities' },
-    { label: 'Areas and Buildings', value: 'Areas and Buildings' },
+    { label: 'Areas and Buildings', value: 'Areas%20and%20Buildings' },
 ];
 
 export default function SearchForm() {
