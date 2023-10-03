@@ -11,13 +11,13 @@ export default function HereApiSearch({selectedCategory}) {
     const language = "lang=en";
     const category = "q=restaurant";
     // const category = "q=" + selectedCategory;
-    console.log(selectedCategory);
-
 
     const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
 
     console.log("url: " + URL);
-    console.log("cat " + category);
+    console.log("catz" + selectedCategory);
+    console.log("catx" + `${selectedCategory}`);
+    console.log("cat " + {selectedCategory});
 
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
