@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
 import HereApiSearch from './HereApiSearch.js'
 
-const categories = [
-    { label: 'Eat and Drink', value: 'Eat%20and%20' },
-    { label: 'Going Out - Entertainment', value: 'Going%20Out%20-%20Entertainment' },
-    { label: 'Sights and Museums', value: 'Sights%20and%20Museums' },
-    { label: 'Natural and Geographical', value: 'Natural%20and%20Geographical' },
-    { label: 'Transport', value: 'Transport' },
-    { label: 'Accommodations', value: 'Accommodations' },
-    { label: 'Leisure and Outdoor', value: 'Leisure%20and%20Outdoor' },
-    { label: 'Shopping', value: 'Shopping' },
-    { label: 'Business and Services', value: 'Business%20and%20Services' },
-    { label: 'Facilities', value: 'Facilities' },
-    { label: 'Areas and Buildings', value: 'Areas%20and%20Buildings' },
+const options = [
+    { text: 'Eat and Drink', value: 'eat%20and%20drink' },
+    { text: 'Going Out - Entertainment', value: 'going%20out%20-%20entertainment' },
+    { text: 'Sights and Museums', value: 'sights%20and%20museums' },
+    { text: 'Natural and Geographical', value: 'natural%20and%20geographical' },
+    { text: 'Transport', value: 'transport' },
+    { text: 'Accommodations', value: 'accommodations' },
+    { text: 'Leisure and Outdoor', value: 'leisure%20and%20outdoor' },
+    { text: 'Shopping', value: 'shopping' },
+    { text: 'Business and Services', value: 'business%20and%20services' },
+    { text: 'Facilities', value: 'facilities' },
+    { text: 'Areas and Buildings', value: 'areas%20and%20buildings' },
 ];
 
 export default function SearchForm() {
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('leisure%20and%20outdoor');
 
-    // const passCategory = (selectedCategory) => {
-    //     HereApiSearch(selectedCategory);
-    // };
+    const handleChange = event => {
+        setSelectedCategory(event.target.value);
+    };
 
     return (
         <div className="search">
@@ -31,10 +30,15 @@ export default function SearchForm() {
             <div className="Container d-flex flex-row">
                 <div className="row">
                     <div className="col-12">
-                       <Select
-                            options={categories}
-                            onChange={(event) => setSelectedCategory(event.value)}value="selectedCategory"
-                        />
+
+                        <select value={selectedCategory} onChange={handleChange}>
+                            {options.map(option => (
+                                <option key={option.value} value={option.value}>
+                                    {option.text}
+                                </option>
+                            ))}
+                        </select>
+
                         <p>selectedCategory: {selectedCategory}</p>
                     </div>
                 </div>
@@ -43,5 +47,3 @@ export default function SearchForm() {
         </div>
     ); 
 };
-
-// Make it call only once, clear mockAPI button

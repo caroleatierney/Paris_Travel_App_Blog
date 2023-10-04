@@ -7,20 +7,14 @@ export default function HereApiSearch({selectedCategory}) {
     const version = "v1";
     const service = "discover";
     const location = "in=circle:48.864716,2.349014;r=150";
-    const limit = "limit=5";
+    const limit = "limit=1";
     const language = "lang=en";
-    const category = "q=Leisure and Outdoor";
-// needs to be q=Leisure%20and%20Outdoor
+    const category1= "q=" + selectedCategory;
+    console.log("category1: " + category1);
 
-    const category1 = "q=" + selectedCategory;
-    console.log (category1)
-    console.log("catz working: " + selectedCategory);
-    console.log("catx working too: Have to select from dropdown:  " + `${selectedCategory}`);
-
-    const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
+    const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category1 + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
 
     console.log("url: " + URL);
-
 
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
@@ -34,18 +28,18 @@ export default function HereApiSearch({selectedCategory}) {
             // assign variable to response's object
             // response is an object with an array in it
             const resultList = await resp.json();
-            // console.log("result list: " + resultList)
+            console.log("result list: " + resultList)
 
             // assign variable to response object's results 
             setResults(resultList.items)
-            // console.log("results: " + results)
+            console.log("results: " + results)
 
         } catch (error) {
             setIsError(true)
             console.log(error);
         }
         setIsLoading(false)
-
+        
         // Once information is received from API, add it to MockAPI to allow for CRUD operations
         const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
         results.map((result, index) => (
@@ -63,17 +57,12 @@ export default function HereApiSearch({selectedCategory}) {
                     state: result.state,
                     postalCode: result.postalCode,
                     country: result.country,
-                    phoneNumber: result.contacts[0].phone[0].value,
+                    // phoneNumber: result.contacts[0].phone[0].value,
                     category: result.categories[0].name
                 }),
             })
         ))
     };
-
-    // This is the first fetch (useEffect Hook)
-    useEffect(() => {
-        fetchHereResults();
-    }, []);
 
     // let user know when there is a lag in API return
     if (isLoading) {
