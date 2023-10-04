@@ -1,26 +1,3 @@
-    console.log("cat1" + selectedCategory);
-    console.log("cat2" + `${selectedCategory}`);
-    console.log("cat3 `${selectedCategory}`");
-    console.log(`cat4 ${selectedCategory}`);
-    console.log("cat5" + `${selectedCategory}`);
-    console.log("cat7" + {selectedCategory});
-     // console.log("cat6" + {props.selectedCategory});
-
-    // The following code is used to fetch data from the Here API
-    const BASE_URL = "https://discover.search.hereapi.com/";
-    const version = "v1";
-    const service = "discover";
-    const location = "in=circle:48.864716,2.349014;r=150";
-    const limit = "limit=5";
-    const language = "lang=en";
-    const category = "q=restaurant";
-    // const category = "q=selectedCategory";
-    // const selectedCategory = selectedCategory
-
-    const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
-
-    console.log("url: " + URL);
-
 # Here API info
 
 # platform.here.com
@@ -56,19 +33,6 @@ in - Search within a geographic area. Results will be returned if they are locat
 q - Enter a free-text query.
 apiKey - Your API key.
 
-allow search by category
-- search by name (STRETCH GOAL)
-
-
-
-
-// notes
-// https://bard.google.com/chat/f7773ae79ae94bcb// this passes the search criteria to the component
-// that gets and displays the data from the Here API
-// const handleSubmit = () => {
-    // console.log({catButton.value})
-    // HereApiSearch(type, text);
-// };
 
 # Getting Started with Create React App
 
