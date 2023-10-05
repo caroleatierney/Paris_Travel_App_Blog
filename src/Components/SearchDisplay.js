@@ -29,7 +29,7 @@ export default function SearchDisplay() {
 
         const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=${limit}&lang=en&q=${selectedCategory}`
         const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_API_KEY;
-        console.log("url:           " + URL);
+        // console.log("url:           " + URL);
 
         // const res = await fetch('https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=5&lang=en&q=business%20and%20services&apiKey=yreqyHh2IHFd-e4AvuS2QHUYHm1FSKV5wKJUNGS38lc')
 
@@ -63,11 +63,21 @@ export default function SearchDisplay() {
         // when a category is chosen, get the data from HereAPI
         // write to MockAPI
         // retrieve from MockAPI
+        // **** NOT HAPPY !!!!
         const handleChange = event => {
             console.log(event.target.value)
             setSelectedCategory(event.target.value);
             searchHereApi(event.target.value);
-            console.log("selected Category" + selectedCategory);
+        };
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+        // this function goes out to MockAPI, and deletes all data then redisplays
+        const clearSearch = () => {
+            fetch(MOCK_API_URL + "/", {
+                    method: 'DELETE',
+            })
+    // }).then(() => getDestinations())
+
         };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -77,7 +87,7 @@ export default function SearchDisplay() {
             <h1>Search for things to do</h1>
             <h3>Note Both search options have a 150 xx radius around Paris</h3>
             <div>
-                {/* <button type="button" onClick={clearSearch} >Clear Search Results</button> */}
+                <button type="button" onClick={clearSearch} >Clear Search Results</button>
             </div>
             <div className="Container d-flex flex-row">
                 <div className="row">
