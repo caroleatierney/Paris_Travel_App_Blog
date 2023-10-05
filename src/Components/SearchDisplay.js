@@ -34,7 +34,7 @@ export default function SearchForm() {
     // console.clear();
     const [selectedCategory, setSelectedCategory] = useState('');
     const [results, setResults] = useState(null);
-    const [destinations, setDestinations] = useState(null);
+    const [destinations, setDestinations] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -53,7 +53,7 @@ export default function SearchForm() {
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-    // When a category is chosen, get the data from HereAPI
+    // when a category is chosen, get the data from HereAPI
     // write to MockAPI
     // retrieve from MockAPI
     const handleChange = event => {
@@ -61,7 +61,7 @@ export default function SearchForm() {
         searchHereApi()
         getAndPostSearchToMockAPI()
         console.log("selected Category" + selectedCategory)
-        getDestinations()
+
     };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -82,6 +82,27 @@ export default function SearchForm() {
                 setDestinations(data)
                 console.log(data)
             })
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+        // display data from MockAPI
+        return (
+            <ul>
+                {destinations.map((destination, index) => (
+                    <div key={index}>
+                        <h5>{destination.title}</h5>
+                        <h5>{destination.houseNumber}</h5>
+                        <h5>{destination.street}</h5>
+                        <h5>{destination.city}</h5>
+                        <h5>{destination.state}</h5>
+                        <h5>{destination.postalCode}</h5>
+                        <h5>{destination.country}</h5>
+                        <h5>{destination.name}</h5>
+                        <h5>{destination.phone}</h5>
+                        <hr></hr>
+                    </div>
+                ))}
+            </ul>
+        )
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -123,26 +144,7 @@ export default function SearchForm() {
                         body: JSON.stringify(destInfo),
                     })
                 ))
-                getDestinations();
-            
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-            // display data from MockAPI
-            {
-                destinations.map((destination, index) => (
-                    <div key={index}>
-                        <h5>{destination.title}</h5>
-                        <h5>{destination.address.houseNumber}</h5>
-                        <h5>{destination.address.street}</h5>
-                        <h5>{destination.address.city}</h5>
-                        <h5>{destination.address.state}</h5>
-                        <h5>{destination.address.postalCode}</h5>
-                        <h5>{destination.address.country}</h5>
-                        <h5>{destination.categories[0].name}</h5>
-                        {destination.contacts?.[0]?.phone?.[0]?.value && <h5>{destination.contacts[0].phone[0].value}</h5>}
-                        <hr></hr>
-                    </div>
-                ))
-            }
+                getDestinations()
         } else {
             <div>Loading...</div>
         }
