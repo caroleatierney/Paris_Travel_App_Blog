@@ -16,22 +16,24 @@ const options = [
     { text: 'Areas and Buildings', value: 'areas%20and%20buildings' },
 ];
 
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function SearchDisplay() {
-    console.clear();
+    // console.clear();
     const [selectedCategory, setSelectedCategory] = useState('');
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // The following code is used to fetch data from the Here API
     async function searchHereApi(selectedCategory, limit = 5) {
-        const BASE_URL = `https://discover.search.hereapi.com/v1/discover/in=circle:48.864716,2.349014;r=150limit=${limit}lang=en&q=${selectedCategory}`
-        const URL = BASE_URL + "apiKey=" + process.env.REACT_APP_API_KEY;
-        // console.log("url: " + URL);
 
-        const res = await fetch('https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=5&lang=en&q=business%20and%20services&apiKey=yreqyHh2IHFd-e4AvuS2QHUYHm1FSKV5wKJUNGS38lc')
+        const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=${limit}&lang=en&q=${selectedCategory}`
+        const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_API_KEY;
+        console.log("url:           " + URL);
+
+        // const res = await fetch('https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=5&lang=en&q=business%20and%20services&apiKey=yreqyHh2IHFd-e4AvuS2QHUYHm1FSKV5wKJUNGS38lc')
+
+        const res = await fetch(URL)
 
         const data = await res.json()
 
