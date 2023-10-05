@@ -39,17 +39,28 @@ export default function SearchForm() {
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // The following code is used to fetch data from the Here API
-    function searchHereApi() {
-        const BASE_URL = "https://discover.search.hereapi.com/";
-        const version = "v1";
-        const service = "discover";
-        const location = "in=circle:48.864716,2.349014;r=150";
-        const limit = "limit=5";
-        const language = "lang=en";
-        const category1 = "q=" + selectedCategory;
+    async function searchHereApi(selectedCategory, limit = 5) {
+        const BASE_URL = `https://discover.search.hereapi.com/v1/discover/in=circle:48.864716,2.349014;r=150limit=${limit}lang=en&q=${selectedCategory}`
         // console.log("category1: " + category1);
-        const URL = (BASE_URL + version + "/" + service + "?" + location + "&" + limit + "&" + language + "&" + category1 + "&" + "apiKey=" + process.env.REACT_APP_API_KEY);
+        const URL = BASE_URL + "apiKey=" + process.env.REACT_APP_API_KEY;
         // console.log("url: " + URL);
+        console.log(URL)
+
+        const res = await fetch('https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=5&lang=en&q=business%20and%20services&apiKey=yreqyHh2IHFd-e4AvuS2QHUYHm1FSKV5wKJUNGS38lc')
+      const data = await res.json()
+
+      data.items.forEach(item => {
+        fetch(MOCK_API_URL, {
+            method: "POST",
+            body: JSON.stringify({...item, rating: 0}),
+            headers: {"Content-Type":"application/json"}
+        })
+      })
+
+        
+
+
+
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -57,11 +68,12 @@ export default function SearchForm() {
     // write to MockAPI
     // retrieve from MockAPI
     const handleChange = event => {
+        console.log(event.target.value)
         setSelectedCategory(event.target.value);
-        searchHereApi()
-        getAndPostSearchToMockAPI()
-        console.log("selected Category" + selectedCategory)
-
+        searchHereApi(event.target.value);
+        // fetchHereResults();
+        getAndPostToMockAPI();
+        console.log("selected Category" + selectedCategory);
     };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -82,9 +94,10 @@ export default function SearchForm() {
                 setDestinations(data)
                 console.log(data)
             })
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
         // display data from MockAPI
+        //*** data in destinations but not displaying */
         return (
             <ul>
                 {destinations.map((destination, index) => (
@@ -107,7 +120,7 @@ export default function SearchForm() {
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // get data from HereAPI and write results of search to MockAPI
-    function getAndPostSearchToMockAPI() {
+    function getAndPostToMockAPI() {
         const fetchHereResults = async () => {
             const resp = await fetch(URL);
 
@@ -121,6 +134,8 @@ export default function SearchForm() {
             console.log("results: " + results)
 
             if (results) {
+
+                console.log("in here")
 
                 // Once information is received from API, add it to MockAPI to allow for CRUD operations
                 results.map((result, index) => (
@@ -149,7 +164,7 @@ export default function SearchForm() {
             <div>Loading...</div>
         }
     }
-}
+    }
 
     return (
         <div className="search">
@@ -162,7 +177,7 @@ export default function SearchForm() {
                 <div className="row">
                     <div className="col-12">
 
-                        <select value={selectedCategory} onChange={handleChange}>
+                        <select value={selectedCategory} onChange={e => handleChange(e)}>
                             {options.map(option => (
                                 <option key={option.value} value={option.value}>
                                     {option.text}
