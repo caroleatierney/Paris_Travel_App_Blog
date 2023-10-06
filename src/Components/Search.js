@@ -36,8 +36,8 @@ export default function SearchDisplay() {
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
         // write Here data to MockAPI
-        data.items.forEach(item => {
-            fetch(MOCK_API_URL, {
+        for (const item of data.items) {
+            await fetch(MOCK_API_URL, {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(
@@ -53,8 +53,8 @@ export default function SearchDisplay() {
                         category: item.categories[0].name,
                         rating: 0
                     }),
-            })
-        })
+            });
+        }
     }
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //

@@ -1,19 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DeleteDestination from './DeleteDestination.js'
 export default function DisplayDestinations() {
     const [destinations, setDestinations] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
+    let count = 0
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // go out to the MockAPI, get all data
     // converts it to json and sets the state with set destinationData(data)
     // const getDestinations = () => {
-        // fetch(MOCK_API_URL)
-        // .then((data) => data.json())
-        // .then((data) => {
-        //     setDestinations(data)
-        //     console.log("destinations" + destinations)
-        // })
+    //     fetch(MOCK_API_URL)
+    //     .then((data) => data.json())
+    //     .then((data) => {
+    //         setDestinations(data)
+    //         console.log("destinations" + destinations)
+    //     })
     // }
 
     const getDestinations = async () => {
@@ -23,7 +24,9 @@ export default function DisplayDestinations() {
     };
 
     // execute function to get the destinations
-    if (destinations) getDestinations();
+    useEffect(() => {
+        getDestinations();
+    }, []);
 
 
     // this passes the destination id to the delete component so it can delete the correct destination

@@ -2,7 +2,7 @@ import React from 'react';
 export default function DeleteDestination({ destinationId, onDelete, getDestinations }) {
 
     // API URL used to update MockAPI
-    const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/Paris/destinations'
+    const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // when the delete button is clicked, this function is executed, 
     // passing in the current destination id
