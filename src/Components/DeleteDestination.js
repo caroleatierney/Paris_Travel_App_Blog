@@ -11,6 +11,9 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
         fetch(MOCK_API_URL + `/${destinationId}`, {
             method: 'DELETE',
         }).then(() => getDestinations())
+
+        // close modal
+        handleClose()
     }
 
     // this is the delete button rendered from the DisplayDestination's component's card

@@ -4,6 +4,7 @@ import DisplayDestinations from './DisplayDestinations.js'
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // This is the array of objects for user to select a category from
 const options = [
+    { text: 'Select a category', value: ''},
     { text: 'Eat and Drink', value: 'eat%20and%20drink' },
     { text: 'Going Out - Entertainment', value: 'going%20out%20-%20entertainment' },
     { text: 'Sights and Museums', value: 'sights%20and%20museums' },
@@ -74,11 +75,13 @@ export default function SearchDisplay() {
     const clearSearch = () => {
         setSelectedCategory("");
         setIsCategorySelected(false);
-        // clearMockAPI();
+        clearMockAPI();
     };
 
+    // Not sure why this is not working so I am using a workaround that is slower and takes up more resources
     // const clearMockAPI = async () => {
-    //     const response = await fetch(MOCK_API_URL + "/", {
+    //     // const response = await fetch(MOCK_API_URL + "/", {
+    //     const response = await fetch(MOCK_API_URL, {
     //         method: 'DELETE'
     //     });
 
@@ -88,6 +91,43 @@ export default function SearchDisplay() {
     //         console.log("An error occurred while deleting the data");
     //     }
     // };
+
+    const clearMockAPI = async () => {
+        // Get the list of all destinations from the MockAPI.
+        const response = await fetch(MOCK_API_URL);
+        const destinations = await response.json();
+
+        // Delete each destination individually.
+        for (const destination of destinations) {
+            await fetch(MOCK_API_URL + "/" + destination.id, {
+                method: 'DELETE'
+            });
+        }
+    };
+
+    // const clearMockAPI = async () => {
+    //     // Create a POST request to delete all destinations.
+    //     const request = new Request(MOCK_API_URL, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //             deleteAll: true
+    //         })
+    //     });
+
+    //     // Send the POST request.
+    //     const response = await fetch(request);
+
+    //     // Check if the request was successful.
+    //     if (response.status === 200) {
+    //         console.log("All destinations have been successfully deleted");
+    //     } else {
+    //         console.log("An error occurred while deleting the destinations");
+    //     }
+    // };
+
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // Search fields
@@ -111,8 +151,6 @@ export default function SearchDisplay() {
                         <button type ="button" onClick={clearSearch}>Clear Search</button>
 
                         {isCategorySelected && <DisplayDestinations />}
-
-                        <p>selectedCategory: {selectedCategory}</p>
 
                     </div>
                 </div>

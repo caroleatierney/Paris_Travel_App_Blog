@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
+import AddDestination from './AddDestination.js'
 import UpdateDestinationNotes from './UpdateDestinationNotes.js'
 import DeleteDestination from './DeleteDestination.js'
 
 export default function DisplayDestinations() {
     const [destinations, setDestinations] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
-    let count = 0
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // get all data from MockAPI
@@ -43,6 +43,8 @@ export default function DisplayDestinations() {
     // display data from MockAPI
     return (
         <div>
+            <h1>Add a destination</h1>
+                <AddDestination getDestinations={getDestinations} />
             <ul>
                 {destinations.map((destination, index) => (
                     <div key={index}>

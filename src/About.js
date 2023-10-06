@@ -1,7 +1,7 @@
 import React from 'react';
 
 // delete later
-import '../App.css';
+// import '../App.css';
 export default function About() {
     return (
         <div className="about">

@@ -28,6 +28,9 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
 
         // set form field to blank after update
         setUpdatedNotes('')
+
+        // close modal
+        handleClose()
     }
 
     // react bootstrap modal used to only display update notes form field if user wants to update notes

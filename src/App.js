@@ -8,7 +8,7 @@ import Nav from '../node_modules/react-bootstrap/Nav';
 import Home from './Components/Home.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
-import About from './Components/About.js'
+import About from './About.js'
 import Search from './Components/Search.js'
 import DailyBlog from './Components/DailyBlog.js'
 
