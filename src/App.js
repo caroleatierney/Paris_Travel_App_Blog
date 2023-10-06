@@ -9,7 +9,7 @@ import Home from './Components/Home.js'
 import Header from './Components/Header.js'
 import Footer from './Components/Footer.js'
 import About from './Components/About.js'
-import SearchDisplay from './Components/SearchDisplay.js'
+import Search from './Components/Search.js'
 import DailyBlog from './Components/DailyBlog.js'
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
                   <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
                 </li>
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/searchDisplay">Search for Paris Destinations!</Link>
+                  <Link className="nav-link" to="/search">Search for Paris Destinations!</Link>
                 </li>
               </ul>
           </Nav>
@@ -47,8 +47,8 @@ export default function App() {
               <DailyBlog />
             </Route>
 
-            <Route path="/searchDisplay">
-                <SearchDisplay />
+            <Route path="/search">
+                <Search />
             </Route>
 
             <Route path="/">

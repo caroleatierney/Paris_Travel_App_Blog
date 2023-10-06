@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DisplayDestinations from './DisplayDestinations.js'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // This is the array of objects for user to select a category from
@@ -21,25 +22,24 @@ const options = [
 export default function SearchDisplay() {
     // console.clear();
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [isCategorySelected, setIsCategorySelected] = useState(false);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-    // The following code is used to fetch data from the Here API
+    // fetch data from the Here API
     async function searchHereApi(selectedCategory, limit = 5) {
 
         const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=${limit}&lang=en&q=${selectedCategory}`
         const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_API_KEY;
-        // console.log("url:           " + URL);
-
-        // const res = await fetch('https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=5&lang=en&q=business%20and%20services&apiKey=yreqyHh2IHFd-e4AvuS2QHUYHm1FSKV5wKJUNGS38lc')
-
         const res = await fetch(URL)
-
         const data = await res.json()
 
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+        // write Here data to MockAPI
         data.items.forEach(item => {
             fetch(MOCK_API_URL, {
-                method: "POST",
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(
                     {
                         title: item.title,
@@ -53,32 +53,40 @@ export default function SearchDisplay() {
                         category: item.categories[0].name,
                         rating: 0
                     }),
-                headers: { "Content-Type": "application/json" }
             })
         })
     }
-    
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
         // when a category is chosen, get the data from HereAPI
-        // write to MockAPI
-        // retrieve from MockAPI
-        // **** NOT HAPPY !!!!
+        // then writte it to MockAPI
+        // then read it from MockAPI and display it
         const handleChange = event => {
-            console.log(event.target.value)
+            console.log("handleEvent's event.target.value passed in:  " + event.target.value)
             setSelectedCategory(event.target.value);
             searchHereApi(event.target.value);
+            setIsCategorySelected(true);
         };
 
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-        // this function goes out to MockAPI, and deletes all data then redisplays
-        const clearSearch = () => {
-            fetch(MOCK_API_URL + "/", {
-                    method: 'DELETE',
-            })
-    // }).then(() => getDestinations())
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+    // clear category name and set is selecetd to false when there is a new search
+    const clearSearch = () => {
+        setSelectedCategory("");
+        setIsCategorySelected(false);
+        // clearMockAPI();
+    };
 
-        };
+    // const clearMockAPI = async () => {
+    //     const response = await fetch(MOCK_API_URL + "/", {
+    //         method: 'DELETE'
+    //     });
+
+    //     if (response.status === 200) {
+    //         console.log("The data has been successfully deleted");
+    //     } else {
+    //         console.log("An error occurred while deleting the data");
+    //     }
+    // };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // Search fields
@@ -86,9 +94,7 @@ export default function SearchDisplay() {
         <div className="search">
             <h1>Search for things to do</h1>
             <h3>Note Both search options have a 150 xx radius around Paris</h3>
-            <div>
-                <button type="button" onClick={clearSearch} >Clear Search Results</button>
-            </div>
+
             <div className="Container d-flex flex-row">
                 <div className="row">
                     <div className="col-12">
@@ -101,7 +107,12 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
+                        <button type ="button" onClick={clearSearch}>Clear Search</button>
+
+                        {isCategorySelected && <DisplayDestinations />}
+
                         <p>selectedCategory: {selectedCategory}</p>
+
                     </div>
                 </div>
             </div>
