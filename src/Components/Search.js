@@ -51,6 +51,7 @@ export default function SearchDisplay() {
                         country: item.address.country ?? '',
                         phone: item.contacts?.[0]?.phone?.[0]?.value ?? '',
                         category: item.categories[0].name,
+                        notes: '',
                         rating: 0
                     }),
             });

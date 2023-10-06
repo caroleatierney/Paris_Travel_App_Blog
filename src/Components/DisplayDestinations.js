@@ -1,26 +1,19 @@
 import { useEffect, useState } from 'react'
+import UpdateDestinationNotes from './UpdateDestinationNotes.js'
 import DeleteDestination from './DeleteDestination.js'
+
 export default function DisplayDestinations() {
     const [destinations, setDestinations] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
     let count = 0
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-    // go out to the MockAPI, get all data
-    // converts it to json and sets the state with set destinationData(data)
-    // const getDestinations = () => {
-    //     fetch(MOCK_API_URL)
-    //     .then((data) => data.json())
-    //     .then((data) => {
-    //         setDestinations(data)
-    //         console.log("destinations" + destinations)
-    //     })
-    // }
-
+    // get all data from MockAPI
     const getDestinations = async () => {
         const response = await fetch(MOCK_API_URL);
         const data = await response.json();
         setDestinations(data);
+        console.log("Destinations from fetch" + destinations);
     };
 
     // execute function to get the destinations
@@ -28,8 +21,17 @@ export default function DisplayDestinations() {
         getDestinations();
     }, []);
 
+    // this passes the destination id to the updateNotes component so it can update the correct destination's notes
+    // reload new data
+    const onUpdate = async (destinationId) => {
+        UpdateDestinationNotes(destinationId);
+        const response = await fetch(MOCK_API_URL);
+        const data = await response.json();
+        setDestinations(data);
+    };
 
     // this passes the destination id to the delete component so it can delete the correct destination
+    // reload new data
     const onDelete = async (destinationId) => {
         DeleteDestination(destinationId);
         const response = await fetch(MOCK_API_URL);
@@ -52,8 +54,11 @@ export default function DisplayDestinations() {
                         <h5>{destination.state}</h5>
                         <h5>{destination.postalCode}</h5>
                         <h5>{destination.country}</h5>
-                        <h5>{destination.name}</h5>
                         <h5>{destination.phone}</h5>
+                        <h5>{destination.category}</h5>
+                        <h5>{destination.notes || 'No notes: Select Update Notes Button to Add a Note'}</h5>
+                        <h5>{destination.rating}</h5>
+                        <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
                         <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
                         <hr></hr>
                     </div>
