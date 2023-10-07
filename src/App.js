@@ -37,6 +37,9 @@ export default function App() {
               <li className="nav-item active">
                 <Link className="nav-link" to="/search">Search for Paris Destinations!</Link>
               </li>
+              <li>
+                <a href='intinerary.js'>Ininerary</a>
+              </li>
             </ul>
           </Nav>
 
