@@ -12,6 +12,7 @@ export default function Home() {
 
                 <h1>Saturday</h1>
                     <p>nav component</p>
+                    <p>Proper Image for each day that adjusts to carousel</p>
                     <p>Star rating for things we want to do most</p>
 
                 <h3>Next - get styling going</h3>
