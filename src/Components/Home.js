@@ -30,6 +30,7 @@ export default function Home() {
                     <p>food wine</p>
                     <p>blog</p>
                     <p>search by name</p>
+                    <p>Use the itinerary tags to go to that day in the blog-->About</p>
 
                 <h3>Questions</h3>
                     <p>How many css files should you have?</p>
