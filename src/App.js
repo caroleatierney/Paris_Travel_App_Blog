@@ -22,20 +22,20 @@ export default function App() {
           </header>
 
           <Nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-space-between">
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
                 <Link className="nav-link" to="/">Home</Link>
-                </li>
-                <li className="nav-item active">
+              </li>
+              <li className="nav-item active">
                 <Link className="nav-link" to="/about">About</Link>
-                </li>
-                <li className="nav-item active">
-                  <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
-                </li>
-                <li className="nav-item active">
-                  <Link className="nav-link" to="/search">Search for Paris Destinations!</Link>
-                </li>
-              </ul>
+              </li>
+              <li className="nav-item active">
+                <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
+              </li>
+              <li className="nav-item active">
+                <Link className="nav-link" to="/search">Search for Paris Destinations!</Link>
+              </li>
+            </ul>
           </Nav>
 
           <Switch>
@@ -48,7 +48,7 @@ export default function App() {
             </Route>
 
             <Route path="/search">
-                <Search />
+              <Search />
             </Route>
 
             <Route path="/">

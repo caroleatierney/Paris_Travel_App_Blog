@@ -12,6 +12,10 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
             method: 'DELETE',
         }).then(() => getDestinations())
 
+        const handleClose = () => {
+            // Your code to close the modal goes here
+        };
+
         // close modal
         handleClose()
     }
