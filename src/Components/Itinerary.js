@@ -1,8 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import './About.css';
+import './Itinerary.css';
 
-export default function About() {
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
+export default function Itinerary() {
     return (
         <Carousel className="p-3 mb-2 text-white" width={500} height={300}>
             <Carousel.Item>
@@ -90,4 +92,4 @@ export default function About() {
             </Carousel.Item>
         </Carousel >
     )
-}
+ }

@@ -78,20 +78,7 @@ export default function SearchDisplay() {
         clearMockAPI();
     };
 
-    // Not sure why this is not working so I am using a workaround that is slower and takes up more resources
-    // const clearMockAPI = async () => {
-    //     // const response = await fetch(MOCK_API_URL + "/", {
-    //     const response = await fetch(MOCK_API_URL, {
-    //         method: 'DELETE'
-    //     });
-
-    //     if (response.status === 200) {
-    //         console.log("The data has been successfully deleted");
-    //     } else {
-    //         console.log("An error occurred while deleting the data");
-    //     }
-    // };
-
+    // delete all entities from MockAPI
     const clearMockAPI = async () => {
         // Get the list of all destinations from the MockAPI.
         const response = await fetch(MOCK_API_URL);
@@ -105,36 +92,13 @@ export default function SearchDisplay() {
         }
     };
 
-    // const clearMockAPI = async () => {
-    //     // Create a POST request to delete all destinations.
-    //     const request = new Request(MOCK_API_URL, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             deleteAll: true
-    //         })
-    //     });
-
-    //     // Send the POST request.
-    //     const response = await fetch(request);
-
-    //     // Check if the request was successful.
-    //     if (response.status === 200) {
-    //         console.log("All destinations have been successfully deleted");
-    //     } else {
-    //         console.log("An error occurred while deleting the destinations");
-    //     }
-    // };
-
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // Search fields
     return (
         <div className="search">
-            <h1>Search for things to do</h1>
+            <h2>Search for things to do</h2>
             <h3>Note Both search options have a 150 xx radius around Paris</h3>
+            <h3>All results are written to database</h3>
 
             <div className="Container d-flex flex-row">
                 <div className="row">
@@ -148,7 +112,7 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
-                        <button type ="button" onClick={clearSearch}>Clear Search</button>
+                        <button type ="button" onClick={clearSearch}>Clear Database</button>
 
                         {isCategorySelected && <DisplayDestinations />}
 
