@@ -34,6 +34,7 @@ export default function Home() {
                     <p>Use the itinerary tags to go to that day in the blog-->About</p>
 
                 <h3>Questions</h3>
+                    <p>how come I have to refresh the browser to get data from choosing label</p>
                     <p>How many css files should you have?</p>
                     <p>Get app to start up on home page</p>
                     

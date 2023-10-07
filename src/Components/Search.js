@@ -24,6 +24,7 @@ export default function SearchDisplay() {
     // console.clear();
     const [selectedCategory, setSelectedCategory] = useState('');
     const [isCategorySelected, setIsCategorySelected] = useState(false);
+    const [defaultCategory, setDefaultCategory] = useState('Select a Category');
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -76,6 +77,7 @@ export default function SearchDisplay() {
         setSelectedCategory("");
         setIsCategorySelected(false);
         clearMockAPI();
+        setSelectedCategory(defaultCategory);
     };
 
     // delete all entities from MockAPI
