@@ -1,4 +1,10 @@
 import { useEffect, useState } from 'react'
+
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import AddDestination from './AddDestination.js'
 import UpdateDestinationNotes from './UpdateDestinationNotes.js'
 import DeleteDestination from './DeleteDestination.js'
@@ -44,28 +50,31 @@ export default function DisplayDestinations() {
     return (
         <div>
             <h1>Add a destination</h1>
-                <AddDestination getDestinations={getDestinations} />
-            <ul>
-                {destinations.map((destination, index) => (
-                    <div key={index}>
-                        <h1>{destination.id}</h1>
-                        <h5>{destination.title}</h5>
-                        <h5>{destination.houseNumber}</h5>
-                        <h5>{destination.street}</h5>
-                        <h5>{destination.city}</h5>
-                        <h5>{destination.state}</h5>
-                        <h5>{destination.postalCode}</h5>
-                        <h5>{destination.country}</h5>
-                        <h5>{destination.phone}</h5>
-                        <h5>{destination.category}</h5>
-                        <h5>{destination.notes || 'No notes: Select Update Notes Button to Add a Note'}</h5>
-                        <h5>{destination.rating}</h5>
-                        <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
-                        <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
-                        <hr></hr>
-                    </div>
-                ))}
-            </ul>
+            <AddDestination getDestinations={getDestinations} />
+            <Row>
+                <Card className="p-3 mb-2 bg-primary text-white text-center"  style={{ width: '18rem' }}>
+                    {destinations.map((destination, index) => (
+                        <Col key={index} xs={6}>
+                            <Card.Body className="p-3 m-3">
+                                <Card.Title>{destination.title}</Card.Title>
+                                <Card.Text className="p-3 mb-2 bg-info text-white text-center">
+                                    {destination.houseNumber} {destination.street}<br></br>
+                                    {destination.city}, {destination.state} {destination.postalCode}<br></br>
+                                    {destination.country}<br></br>
+                                    Phone: {destination.phone}<br></br>
+
+                                    Category: {destination.category}<br></br>
+                                    Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}<br></br>
+                                    {destination.rating}<br></br>
+                                </Card.Text>
+                                <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
+                                <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
+                                <Button variant="secondary">Close</Button>
+                            </Card.Body>
+                        </Col>
+                    ))}
+                </Card>
+            </Row>
         </div>
     )
 }
