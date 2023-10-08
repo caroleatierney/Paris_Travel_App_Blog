@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color:rgba(247, 210, 240, 0.379);
-}
+} */
 
 .navBarLink {
   margin: 5px;
@@ -24,9 +24,9 @@ body {
   background-color: rgba(174, 220, 176, 0.379);
 }
 
-.about {
+/* .about {
   background-color: rgba(195, 174, 220, 0.379);
-}
+} */
 
 .dailyBlog {
   background-color: rgba(155, 167, 226, 0.379);
