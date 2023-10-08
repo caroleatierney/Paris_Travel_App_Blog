@@ -37,7 +37,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://imgur.com/NpmvFm6.png"
+                    src="https://i.imgur.com/dSAXcpm.png"
                     alt="BasicTripImage"
                 />
                 <Carousel.Caption className="carousel-content">

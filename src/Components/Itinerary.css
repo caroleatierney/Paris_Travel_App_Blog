@@ -8,8 +8,8 @@ img {
 
 img {
     width: auto;
-    height: 500px;
-    max-height: 225px;
+    height: auto;
+    /* max-height: 500px; */
     /* padding: 5%; */
     /* margin: 10%; */
 }
@@ -20,4 +20,16 @@ h1 {
 
 .carousel {
     background-color: cornflowerblue;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}
+
+.item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
