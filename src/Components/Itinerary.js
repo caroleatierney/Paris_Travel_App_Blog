@@ -1,7 +1,7 @@
 import React from 'react';
+import ReactTextStroke from 'react-text-stroke';
 import Carousel from 'react-bootstrap/Carousel';
 import './Itinerary.css';
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 
@@ -13,11 +13,18 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Château_De_Rully.jpeg"
-                    alt="Saint Léger-sur-Dheune"
+                    src="https://i.imgur.com/KiDzz21.jpg"
+                    alt="Saint_Léger_Sur_Dheune"
                 />
+
                 <Carousel.Caption className="carousel-content">
-                    <h1 className="beige">Sunday, October 29, 2023</h1>
+                    <ReactTextStroke
+                        strokeWidth={2}
+                        strokeColor="black"
+                    >
+                        <h1 className="beige">Sunday, October 29, 2023</h1>
+                    </ReactTextStroke>
+
                     <h4 className="white">The ADRIENNE's guide will meet you at the hotel and escort the transfer from Paris via motorcoach, to Saint Léger-sur-Dheune where the ADRIENNE is moored. Champagne Reception and Welcome Dinner on board.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -25,7 +32,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Château_De_Rully.jpeg"
+                    src="https://i.imgur.com/0B9HXi5.jpg"
                     alt="Château de Rully"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -37,7 +44,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Chalon_Sur_Saone.jpeg"
+                    src="https://i.imgur.com/UwfFNZx.jpg"
                     alt="Saône River"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -49,7 +56,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Chalon_Sur_Saone.jpeg"
+                    src="https://i.imgur.com/UwfFNZx.jpg"
                     alt="Chalon-sur-Saône"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -61,7 +68,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Clos_De_Vougeot.jpeg"
+                    src="https://i.imgur.com/mYs8kHQ.jpg"
                     alt="Clos de Vougeot"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -73,7 +80,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/St_Jean_De_Losne.jpeg"
+                    src="https://i.imgur.com/ovDvvaq.jpg"
                     alt="Saint-Jean de-Losne"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -85,12 +92,12 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../Assetts/Hot_Air_Balloon_Paris.jpeg"
+                    src="https://i.imgur.com/31W7dVQ.jpg"
                     alt="Hot Air Balloons - Paris"
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Saturday, November 4, 2023</h1>
-                    <h4 className="white">After breakfast, depart the barge for the escorted transfer to Paris, arriving at the hotel at approxi mately 12:45 PM. Note: The Captain will schedule Hot Air Ballooning during the cruise upon request. Balloon flights are dependent on favorable wind conditions and a minimum of four passengers.</h4>
+                    <h4 className="white">After breakfast, depart the barge for the escorted transfer to Paris, arriving at the hotel at approximately 12:45 PM. Note: The Captain will schedule Hot Air Ballooning during the cruise upon request. Balloon flights are dependent on favorable wind conditions and a minimum of four passengers.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel >
