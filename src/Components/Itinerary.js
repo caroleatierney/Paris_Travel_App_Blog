@@ -1,15 +1,11 @@
 import React from 'react';
-import ReactTextStroke from 'react-text-stroke';
 import Carousel from 'react-bootstrap/Carousel';
 import './Itinerary.css';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
-
-// 1680x500
-
 export default function Itinerary() {
     return (
-        <Carousel className="p-3 mb-2 text-white" width={500} height={300}>
+        <Carousel className="p-3 mb-2 text-white" width={500} height={300} interval={5000}>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -18,12 +14,8 @@ export default function Itinerary() {
                 />
 
                 <Carousel.Caption className="carousel-content">
-                    <ReactTextStroke
-                        strokeWidth={2}
-                        strokeColor="black"
-                    >
-                        <h1 className="beige">Sunday, October 29, 2023</h1>
-                    </ReactTextStroke>
+      
+                    <h1 className="beige">Sunday, October 29, 2023</h1>
 
                     <h4 className="white">The ADRIENNE's guide will meet you at the hotel and escort the transfer from Paris via motorcoach, to Saint Léger-sur-Dheune where the ADRIENNE is moored. Champagne Reception and Welcome Dinner on board.</h4>
                 </Carousel.Caption>

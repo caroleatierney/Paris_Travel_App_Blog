@@ -16,10 +16,12 @@ img {
 
 .beige {
     color: rgb(223, 218, 175);
+    text-shadow: 3px 3px 3px rgb(13, 13, 13);
 }
 
 .white {
     color: white;
+    text-shadow: 3px 3px 3px rgb(13, 13, 13);
 }
 
 .carousel {

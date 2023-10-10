@@ -7,6 +7,8 @@ import Itinerary from './Itinerary.js'
 import Search from './Search.js'
 import DailyBlog from './DailyBlog.js'
 
+import './NavBar.css';
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function NavBar() {
@@ -14,7 +16,7 @@ export default function NavBar() {
 
     <Router>
         <div>
-            <Nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-space-between">
+                <Nav className="navbar navbar-expand-lg justify-content-space-between d-flex flex-column  align-items-center tangerine">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
                         <Link className="nav-link" to="/">Home</Link>

@@ -1,44 +1,31 @@
 import React from 'react';
-
-// delete later
-import '../App.css';
+import './Home.css';
 
 export default function Home() {
 
     return (
         <div className="home">
-            <h2>Home</h2>
-                <h3>To Do Important</h3>
+            *** Home<br></br>
 
-                <h1>Saturday</h1>
-                    <p>Proper Image for each day that adjusts to carousel</p>
+            - Mona Lisa Page<br></br>
+            - About page<br></br>
 
-                <h3>Next - get styling going</h3>
-                    <p>Star rating component for things we want to do most</p>
-                    <p>styling</p>
-                    <p>fun background image</p>
-                    <p>fun background color - image overlayed - make in Canva</p>
-                    <p>what will home page be?</p>
+            - To Do Important<br></br>
+            - Star rating component for things we want to do most<br></br>
+            - add heart rating?<br></br>
 
-                <h3>After Styling</h3>
-                    <p>tackle blog!</p>
-                        <p>in blog, include form for entering photos and comments under photos</p>
-                        <p>add heart rating?</p>
-
-                    <p>error handling - I have none!</p>
-                    <p>add food and wine from area we are going to?</p>
-
-                <h3>Stretch Goals</h3>
-                    <p>food wine</p>
-                    <p>search by name</p>
-                    <p>Use the itinerary tags to go to that day in the blog-->About</p>
-
-                <h3>Questions</h3>
-                    <p>how come I have to refresh the browser to get data from choosing label</p>
-                    <p>How many css files should you have?</p>
-                    <p>Get app to start up on home page</p>
-                    
-
+            - in blog, include form for entering photos and comments under photos<br></br>
+            - error handling - I have none!<br></br>
+            <br></br>
+            *** Questions<br></br>
+            - how come I have to refresh the browser to get data from choosing label<br></br>
+            - How many css files should you have?<br></br>
+            - Get app to start up on home page<br></br>
+            <br></br>
+            *** Stretch Goals<br></br>
+            - food wine<br></br>
+            - search by name<br></br>
+            - Use the itinerary tags to go to that day in the blog<br></br>
         </div>
     )
 }
