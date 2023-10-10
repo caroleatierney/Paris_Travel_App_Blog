@@ -14,8 +14,12 @@ img {
     /* margin: 10%; */
 }
 
-h1 {
-    color: blueviolet;
+.beige {
+    color: rgb(223, 218, 175);
+}
+
+.white {
+    color: white;
 }
 
 .carousel {
