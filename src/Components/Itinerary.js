@@ -13,7 +13,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src=".Assetts/Château_De_Rully.jpeg"
+                    src="../Assetts/Château_De_Rully.jpeg"
                     alt="Saint Léger-sur-Dheune"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -25,7 +25,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="./Assetts/Château_De_Rully.jpeg"
+                    src="../Assetts/Château_De_Rully.jpeg"
                     alt="Château de Rully"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -37,7 +37,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="./Assetts/Chalon_Sur_Saone.jpeg"
+                    src="../Assetts/Chalon_Sur_Saone.jpeg"
                     alt="Saône River"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -61,7 +61,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="./Assetts/Clos_De_Vougeot.jpeg"
+                    src="../Assetts/Clos_De_Vougeot.jpeg"
                     alt="Clos de Vougeot"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -73,7 +73,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="./Assetts/St_Jean_De_Losne.jpeg"
+                    src="../Assetts/St_Jean_De_Losne.jpeg"
                     alt="Saint-Jean de-Losne"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -85,7 +85,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="./Assetts/Hot_Air_Balloon-Paris.jpeg"
+                    src="../Assetts/Hot_Air_Balloon_Paris.jpeg"
                     alt="Hot Air Balloons - Paris"
                 />
                 <Carousel.Caption className="carousel-content">
