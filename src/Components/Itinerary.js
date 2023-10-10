@@ -13,7 +13,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.imgur.com/ryqofuM.png"
+                    src=".Assetts/Château_De_Rully.jpeg"
                     alt="Saint Léger-sur-Dheune"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -25,7 +25,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.imgur.com/9RKQwqU.jpg"
+                    src="./Assetts/Château_De_Rully.jpeg"
                     alt="Château de Rully"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -54,14 +54,14 @@ export default function Itinerary() {
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Wednesday, November 1, 2023</h1>
-                    <h4 className="white">Morning walking tour of Chalon-sur-Saône. Re turn to ADRIENNE for lunch on board. Beaune, the medieval wine capital of 15th century  Hospice and the historic to explore on your own. After lunch, drive toBurgundy. Visit the quarter, with free time to explore on your own.</h4>
+                    <h4 className="white">Morning walking tour of Chalon-sur-Saône. Re turn to ADRIENNE for lunch on board. Beaune, the medieval wine capital of 15th century  Hospice and the historic to explore on your own. After lunch, drive to Burgundy. Visit the quarter, with free time to explore on your own.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.imgur.com/3my3j6A.jpg"
+                    src="./Assetts/Clos_De_Vougeot.jpeg"
                     alt="Clos de Vougeot"
                 />
                 <Carousel.Caption className="carousel-content">
@@ -73,7 +73,7 @@ export default function Itinerary() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="xxx"
+                    src="./Assetts/St_Jean_De_Losne.jpeg"
                     alt="Saint-Jean de-Losne"
                 />
                 <Carousel.Caption className="carousel-content">
