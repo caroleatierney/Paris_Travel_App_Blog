@@ -3,15 +3,11 @@ h1, p {
 }
 
 img {
-    width: 100%
-}
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover; 
+    max-height: 800px; 
 
-img {
-    width: auto;
-    height: auto;
-    /* max-height: 500px; */
-    /* padding: 5%; */
-    /* margin: 10%; */
 }
 
 .beige {
@@ -34,7 +30,25 @@ img {
     bottom: initial;
 }
 
-.item {
+/* .item { */
+    /* -webkit-transform-style: preserve-3d; */
+    /* -moz-transform-style: preserve-3d; */
+    /* transform-style: preserve-3d; */
+    /* height: 200px; */
+/* } */
+
+/* .carousel {
+    display: flex;
+    align-items: stretch;
+}
+
+.carousel-item {
+    flex: 1;
+} */
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    height: 150px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;

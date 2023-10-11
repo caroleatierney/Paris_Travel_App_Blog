@@ -1,31 +1,36 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
 import './Itinerary.css';
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function Itinerary() {
     return (
-        <Carousel className="d-flex p-3 mb-2 text-white" width={500} height={300} interval={2000}>
+        <Carousel className="d-flex p-3 mb-2 text-white" width={500} height={300} interval={1000}>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/KiDzz21.jpg"
                     alt="Saint_Léger_Sur_Dheune"
+                    thumbnail
+                    fluid
                 />
 
                 <Carousel.Caption className="carousel-content">
       
                     <h1 className="beige">Sunday, October 29, 2023</h1>
-
                     <h4 className="white">The ADRIENNE's guide will meet you at the hotel and escort the transfer from Paris via motorcoach, to Saint Léger-sur-Dheune where the ADRIENNE is moored. Champagne Reception and Welcome Dinner on board.</h4>
                 </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/0B9HXi5.jpg"
                     alt="Château de Rully"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Monday, October 30, 2023</h1>
@@ -34,10 +39,12 @@ export default function Itinerary() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/UwfFNZx.jpg"
                     alt="Saône River"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Tuesday, October 31, 2023</h1>
@@ -46,10 +53,12 @@ export default function Itinerary() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="https://i.imgur.com/UwfFNZx.jpg"
+                <Image
+                    className="d-block"
+                    src="https://i.imgur.com/gouXWe0.jpg"
                     alt="Chalon-sur-Saône"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Wednesday, November 1, 2023</h1>
@@ -58,10 +67,12 @@ export default function Itinerary() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/mYs8kHQ.jpg"
                     alt="Clos de Vougeot"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Thursday, November 2, 2023</h1>
@@ -70,10 +81,12 @@ export default function Itinerary() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/ovDvvaq.jpg"
                     alt="Saint-Jean de-Losne"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Friday, November 3, 2023</h1>
@@ -82,10 +95,12 @@ export default function Itinerary() {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block"
                     src="https://i.imgur.com/31W7dVQ.jpg"
                     alt="Hot Air Balloons - Paris"
+                    thumbnail
+                    fluid
                 />
                 <Carousel.Caption className="carousel-content">
                     <h1 className="beige">Saturday, November 4, 2023</h1>

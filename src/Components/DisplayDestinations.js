@@ -6,8 +6,6 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import AddDestination from './AddDestination.js'
 import UpdateDestinationNotes from './UpdateDestinationNotes.js'
