@@ -1,0 +1,12 @@
+body {
+    background-color:burlywood !important;
+}
+
+.carousel {
+    display: flex;
+    align-items: stretch;
+}
+
+.carousel-item {
+    flex: 1;
+}

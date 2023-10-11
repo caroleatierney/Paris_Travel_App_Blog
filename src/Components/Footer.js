@@ -1,7 +1,6 @@
 import React from 'react'
+import './Footer.css';
 
-// delete later
-import '../App.css'; 
 export default function Footer() {
     return (
         <div className="footer justify-content-center">

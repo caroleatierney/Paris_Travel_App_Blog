@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav';
-import Home from './Home.js'
 import About from './About.js'
 import Itinerary from './Itinerary.js'
 import Search from './Search.js'
@@ -18,9 +17,6 @@ export default function NavBar() {
         <div>
                 <Nav className="navbar navbar-expand-lg justify-content-space-between d-flex flex-column  align-items-center tangerine">
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/">Home</Link>
-                    </li>
                     <li className="nav-item active">
                         <Link className="nav-link" to="/about">About</Link>
                     </li>
@@ -51,10 +47,6 @@ export default function NavBar() {
 
                 <Route path="/search">
                     <Search />
-                </Route>
-
-                <Route path="/">
-                    <Home />
                 </Route>
             </Switch>
         </div>

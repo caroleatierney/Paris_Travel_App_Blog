@@ -1,6 +1,5 @@
 import React from 'react'
 import './Header.css';
-// import './node_modules/bootswatch/dist/minty/bootstrap.min.css';
 
 export default function Header() {
     return (

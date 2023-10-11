@@ -5,7 +5,7 @@ import './Itinerary.css';
 // Main Functional Component
 export default function Itinerary() {
     return (
-        <Carousel className="p-3 mb-2 text-white" width={500} height={300} interval={5000}>
+        <Carousel className="d-flex p-3 mb-2 text-white" width={500} height={300} interval={2000}>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
