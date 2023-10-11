@@ -1,3 +1,16 @@
-img {
-    width: 100%
+.about {
+    background-image: url("https: //i.imgur.com/hdHscdx.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    border-color: burlywood;
+    border-style: groove;
+    border-width: 10px;
+}
+
+h1, h2, h3 {
+    color: black;
 }

@@ -5,10 +5,8 @@ export default function Home() {
 
     return (
         <div className="home">
-            *** Home<br></br>
-
             - Mona Lisa Page<br></br>
-            - About page<br></br>
+            - make home and about the same page just about<br></br>
 
             - To Do Important<br></br>
             - Star rating component for things we want to do most<br></br>
