@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../App.css';
 export default function DeleteDestination({ destinationId, onDelete, getDestinations }) {
 
     // API URL used to update MockAPI
@@ -23,7 +25,7 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
     // this is the delete button rendered from the DisplayDestination's component's card
     return (
         <div className="text-center">
-            <button type="button" onClick={deleteDestination} className="btn btn-success p-2 m-2">Delete Destination</button>
+            <button type="button" onClick={deleteDestination} className="btn btn-success p-2 m-2 tangerine">Delete Destination</button>
         </div>
     );
 }

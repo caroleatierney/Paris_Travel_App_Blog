@@ -3,7 +3,7 @@ import './App.css';
 
 import Container from '../node_modules/react-bootstrap/Container';
 import Header from './Components/Header.js'
-import NavBar from './Components/NavBar.js'
+import Navigation from './Components/Navigation.js'
 import Footer from './Components/Footer.js'
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
       </header>
 
       <div>
-        <NavBar />
+        <Navigation />
       </div>
 
       <footer>
