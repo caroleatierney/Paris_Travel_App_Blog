@@ -6,17 +6,9 @@
     text-align: center;
     justify-content: center;
     color: black;
-    border-color: burlywood;
+    border-color: rgb(172, 219, 229);
     border-style: groove;
     border-width: 10px;
     width: 100%;
     height: 100%;
-    /* width: auto; */
 }
-.tangerine {
-    color: #f0ca2e;
-    font-family: Tangerine !important;
-    font-size: 30px !important;
-    text-shadow: 2px 2px 2px rgb(15, 15, 15);
-    font-weight: bold;
- }

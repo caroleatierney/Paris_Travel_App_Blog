@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color:burlywood !important;
-}
+} */
 
 .carousel {
     display: flex;
@@ -9,4 +9,9 @@ body {
 
 .carousel-item {
     flex: 1;
+}
+
+#card {
+    background-color: antiquewhite;
+    color: black;
 }

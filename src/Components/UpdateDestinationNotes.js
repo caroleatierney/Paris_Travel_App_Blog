@@ -36,9 +36,9 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
     // react bootstrap modal used to only display update notes form field if user wants to update notes
     return (
         <>
-            <div className="text-center">
+            <div className="text-center montserrat">
                 <Button variant="info" onClick={handleShow} >
-                    Update Notes!
+                    Update Notes
                 </Button>
             </div>
 

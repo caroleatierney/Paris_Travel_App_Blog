@@ -51,18 +51,18 @@ export default function DisplayDestinations() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
     return (
-        <div className="DisplayDestination">
-            <h1 className="tangerine">Add a destination</h1>
+        <div className="DisplayDestination" style={{ minHeight: '100%' }} >
+            <h1 className="montserrat">Add a destination</h1>
             <AddDestination getDestinations={getDestinations} />
 
             <Container className="p-5 m-10">
                 <Row>
                     {destinations.map((destination, index) => (
                         <Col key={index} xs={3} className="d-inline-flex flex-row  justify-content-around">
-                            <Card className="p-3 mb-2 bg-primary text-white text-center" style={{ width: '20rem', height: '30rem' }}>
+                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '20rem', height: '33rem' }}>
                                 <Card.Body>
-                                    <Card.Title className="tangerine">{destination.title}</Card.Title>
-                                    <Card.Text className="p-3 mb-2 bg-info text-white text-center tangerine">
+                                    <Card.Title className="vibes fs-2">{destination.title}</Card.Title>
+                                    <Card.Text className="p-3 mb-2 fs-6 text-center montserrat">
                                         {destination.houseNumber} {destination.street}<br></br>
                                         {destination.city}, {destination.state} {destination.postalCode}<br></br>
                                         {destination.country}<br></br>
@@ -78,7 +78,7 @@ export default function DisplayDestinations() {
                                 </Card.Body>
                         </Card>
 
-                            </Col>
+                    </Col>
                     ))}
                 </Row>
             </Container>

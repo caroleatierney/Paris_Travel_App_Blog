@@ -8,7 +8,7 @@ import Footer from './Components/Footer.js'
 
 export default function App() {
   return (
-    <Container className="align-content-center" >
+    <Container className="align-content-center about1" >
 
       <header>
         <Header />

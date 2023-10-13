@@ -100,15 +100,15 @@ export default function SearchDisplay() {
     // Search fields
     return (
         <div className="search">
-            <h2 className="tangerine">Search for things to do</h2>
-            <h3 className="tangerine">Note Both search options have a 150 xx radius around Paris</h3>
-            <h3 className="tangerine">All results are written to database</h3>
+            <h2 className="vibes">Search for things to do</h2>
+            <h3 className="montserrat">Note Both search options have a 150 xx radius around Paris</h3>
+            <h3 className="montserrat">All results are written to database</h3>
 
             <div className="Container d-flex flex-row">
                 <div className="row">
                     <div className="col-12">
 
-                        <select className="tangerine" value={selectedCategory} onChange={e => handleChange(e)}>
+                        <select className="montserrat p-1" value={selectedCategory} onChange={e => handleChange(e)}>
                             {options.map(option => (
                                 <option key={option.value} value={option.value}>
                                     {option.text}
@@ -116,7 +116,7 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
-                        <button className="tangerine" type ="button" onClick={clearSearch}>Clear Database</button>
+                        <button className="montserrat" type ="button" onClick={clearSearch}>Clear Database</button>
 
                         {isCategorySelected && <DisplayDestinations />}
 

@@ -5,3 +5,28 @@
     text-shadow: 2px 2px 2px rgb(214, 161, 76);
     font-weight: bold;
 }
+
+.clicker {
+    font-family: 'Clicker Script',
+}
+
+.dancing {
+    font-family: 'Dancing Script',
+}
+
+.vibes {
+    font-family: 'Great Vibes' !important;
+    color: #000;
+    font-size: 70px !important;
+    text-shadow: 4px 4px 4px rgba(214, 76, 212, 0.783);
+    font-weight: bold;
+
+}
+
+.montserrat {
+    font-family: 'Montserrat Alternates';
+    color: #000;
+    font-size: 40px !important;
+    text-shadow: 4px 4px 4px rgba(214, 76, 212, 0.783);
+    font-weight: bold;
+}

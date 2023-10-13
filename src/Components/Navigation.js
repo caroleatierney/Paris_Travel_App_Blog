@@ -6,7 +6,7 @@ import Itinerary from './Itinerary.js'
 import Search from './Search.js'
 import DailyBlog from './DailyBlog.js'
 
-import './Navigation.css';
+import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
@@ -15,19 +15,19 @@ export default function NavBar() {
 
         <Router>
             <div>
-                <Nav className="navbar navbar-expand-lg justify-content-space-between d-flex flex-column  align-items-center tangerine">
-                    <ul className="navbar-nav mr-auto">
+                <Nav className="navbar navbar-expand-lg d-flex flex-column">
+                    <ul className="navbar-nav d-flex justify-content-space-evenly">
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/about">About</Link>
+                            <Link className="nav-link montserrat fs-2" to="/about">About</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/itinerary">Itinerary</Link>
+                            <Link className="nav-link montserrat fs-2" to="/itinerary">Itinerary</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/dailyBlog">Trip Blog</Link>
+                            <Link className="nav-link montserrat fs-2" to="/dailyBlog">Trip Blog</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/search">Search</Link>
+                            <Link className="nav-link montserrat fs-2" to="/search">Search</Link>
                         </li>
                     </ul>
                 </Nav>
