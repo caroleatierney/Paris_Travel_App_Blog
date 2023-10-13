@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './DisplayDestination.css';
+import RatingStars from './RatingStars';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -51,15 +52,14 @@ export default function DisplayDestinations() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
     return (
-        <div className="DisplayDestination" style={{ minHeight: '100%' }} >
-            <h1 className="montserrat">Add a destination</h1>
+        <div className="DisplayDestination p-5 m-5 bg-secondary" style={{ minHeight: '100%' }} >
             <AddDestination getDestinations={getDestinations} />
 
-            <Container className="p-5 m-10">
+            <Container className="m-10 p-5">
                 <Row>
                     {destinations.map((destination, index) => (
-                        <Col key={index} xs={3} className="d-inline-flex flex-row  justify-content-around">
-                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '20rem', height: '33rem' }}>
+                        <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white p-5">
+                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '20rem', height: '40rem'}}>
                                 <Card.Body>
                                     <Card.Title className="vibes fs-2">{destination.title}</Card.Title>
                                     <Card.Text className="p-3 mb-2 fs-6 text-center montserrat">
@@ -67,12 +67,13 @@ export default function DisplayDestinations() {
                                         {destination.city}, {destination.state} {destination.postalCode}<br></br>
                                         {destination.country}<br></br>
                                     
-                                        Phone: {destination.phone}<br></br>
+                                        Phone: {destination.phone}<br></br><br></br>
 
-                                        Category: {destination.category}<br></br>
-                                        Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}<br></br>
-                                        Want to See Rating: {destination.rating}<br></br>
+                                        Category: {destination.category}<br></br><br></br>
+                                        Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}<br></br><br></br>
+                                        Want to See Rating: {destination.rating}<br></br><br></br>
                                     </Card.Text>
+                                    <RatingStars />
                                     <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
                                     <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
                                 </Card.Body>

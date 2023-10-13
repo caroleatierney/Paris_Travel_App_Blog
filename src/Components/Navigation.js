@@ -19,16 +19,16 @@ export default function NavBar() {
                 <Nav className="navbar navbar-expand-lg d-flex flex-column">
                     <ul className="navbar-nav d-flex justify-content-space-evenly">
                         <li className="nav-item active">
-                            <Button variant="primary" href="/about" className="nav-link montserrat fs-1 mr-2">About</Button>
+                            <Button variant="primary" href="/about" className="nav-link montserrat fs-1 p-5">About</Button>
                         </li>
                         <li className="nav-item active">
-                            <Button variant="primary" href="/itinerary" className="nav-link montserrat fs-1 mr-2">Itinerary</Button>
+                            <Button variant="primary" href="/itinerary" className="nav-link montserrat fs-1 p-5">Itinerary</Button>
                         </li>
                         <li className="nav-item active">
-                            <Button variant="primary" href="/tripBlog" className="nav-link montserrat fs-1 mr-2">Trip Blog</Button>
+                            <Button variant="primary" href="/tripBlog" className="nav-link montserrat fs-1 p-5">Trip Blog</Button>
                         </li>
                         <li>
-                            <Button variant="primary" href="/search" className="nav-link montserrat fs-1 mr-2">Search</Button>
+                            <Button variant="primary" href="/search" className="nav-link montserrat fs-1 p-5">Search</Button>
                         </li>
                     </ul>
                 </Nav>

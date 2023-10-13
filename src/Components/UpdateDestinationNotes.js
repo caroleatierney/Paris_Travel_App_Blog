@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 export default function UpdateDestinationNotes({ getDestinations, destinationId }) {
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
@@ -45,20 +47,19 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                     <div className="flex flex-row text-center">
-                        <Modal.Title>Update Notes!</Modal.Title>
+                        <Modal.Title>Update Notes</Modal.Title>
                     </div>
 
                 </Modal.Header>
 
                 <Modal.Body>
-                    <form>
-                        <label>Update Note</label>
-                        <input className="m-1" onChange={(e) => setUpdatedNotes(e.target.value)} value={updatedNotes}></input>
+                    <Form className='justify-contents-space-evenly'>
+                        <textarea className="m-5 p-5" onChange={(e) => setUpdatedNotes(e.target.value)} value={updatedNotes}></textarea>
 
                         <div className="text-center">
                             <button type="button" onClick={updateDestinationNotes} className="btn btn-secondary p-2 m-2">Update Destination</button>
                         </div>
-                    </form>
+                    </Form>
 
                 </Modal.Body>
 

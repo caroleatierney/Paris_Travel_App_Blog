@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import DisplayDestinations from './DisplayDestinations.js'
+import Button from 'react-bootstrap/Button';
 
 import '../App.css';
+import './Search.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // This is the array of objects for user to select a category from
@@ -99,16 +101,15 @@ export default function SearchDisplay() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // Search fields
     return (
-        <div className="search">
-            <h2 className="vibes">Search for things to do</h2>
+        <div className="search square border border-danger border-5 rounded">
+            <h2 className="vibes display-3 my-5">Search for things to do</h2>
             <h3 className="montserrat">Note Both search options have a 150 xx radius around Paris</h3>
             <h3 className="montserrat">All results are written to database</h3>
 
-            <div className="Container d-flex flex-row">
+            <div className="Container d-flex flex-row justify-content-center py-5">
                 <div className="row">
-                    <div className="col-12">
-
-                        <select className="montserrat p-1" value={selectedCategory} onChange={e => handleChange(e)}>
+                    <div className="col">
+                        <select className="montserrat mx-5 p-3" value={selectedCategory} onChange={e => handleChange(e)}>
                             {options.map(option => (
                                 <option key={option.value} value={option.value}>
                                     {option.text}
@@ -116,7 +117,7 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
-                        <button className="montserrat" type ="button" onClick={clearSearch}>Clear Database</button>
+                        <Button className="montserrat mx-5 p-3" variant="secondary" type ="button" onClick={clearSearch}>Clear Database</Button>
 
                         {isCategorySelected && <DisplayDestinations />}
 
