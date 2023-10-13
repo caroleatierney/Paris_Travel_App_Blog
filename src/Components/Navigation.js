@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import About from './About.js'
 import Itinerary from './Itinerary.js'
 import Search from './Search.js'
-import DailyBlog from './DailyBlog.js'
+import TripBlog from './TripBlog.js'
+import Button from 'react-bootstrap/Button';
 
 import '../App.css';
 
@@ -18,16 +19,16 @@ export default function NavBar() {
                 <Nav className="navbar navbar-expand-lg d-flex flex-column">
                     <ul className="navbar-nav d-flex justify-content-space-evenly">
                         <li className="nav-item active">
-                            <Link className="nav-link montserrat fs-2" to="/about">About</Link>
+                            <Button variant="primary" href="/about" className="nav-link montserrat fs-1 mr-2">About</Button>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link montserrat fs-2" to="/itinerary">Itinerary</Link>
+                            <Button variant="primary" href="/itinerary" className="nav-link montserrat fs-1 mr-2">Itinerary</Button>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link montserrat fs-2" to="/dailyBlog">Trip Blog</Link>
+                            <Button variant="primary" href="/tripBlog" className="nav-link montserrat fs-1 mr-2">Trip Blog</Button>
                         </li>
-                        <li className="nav-item active">
-                            <Link className="nav-link montserrat fs-2" to="/search">Search</Link>
+                        <li>
+                            <Button variant="primary" href="/search" className="nav-link montserrat fs-1 mr-2">Search</Button>
                         </li>
                     </ul>
                 </Nav>
@@ -41,8 +42,8 @@ export default function NavBar() {
                         <Itinerary />
                     </Route>
 
-                    <Route path="/dailyBlog">
-                        <DailyBlog />
+                    <Route path="/tripBlog">
+                        <TripBlog />
                     </Route>
 
                     <Route path="/search">

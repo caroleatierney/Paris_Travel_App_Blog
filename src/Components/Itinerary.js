@@ -2,12 +2,13 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
 import './Itinerary.css';
+import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function Itinerary() {
     return (
-        <Carousel className="d-flex p-3 mb-2 text-white" width={500} height={300} interval={1000}>
+        <Carousel className="itinerary d-flex p-3 mb-2 text-white" width={500} height={300} interval={1000}>
             <Carousel.Item>
                 <Image
                     className="d-block"

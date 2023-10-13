@@ -8,8 +8,14 @@ import Footer from './Components/Footer.js'
 
 export default function App() {
   return (
-    <Container className="align-content-center about1" >
+    // <Container id="bgImage" fluid className="align-content-center" style={{
+    //   backgroundImage: `url("https://i.imgur.com/2L1gLOQ.jpg")`
+    // }} >
 
+    <Container id="bgImage" fluid className="align-content-center" style={{
+      backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
+    }} >
+      
       <header>
         <Header />
       </header>

@@ -3,10 +3,9 @@ import '../App.css';
 
 export default function Header() {
     return (
-        <div className="header d-flex flex-column justify-content-center align-items-center">
+        <div className="header d-flex flex-column justify-content-center align-items-center my-5">
             <p className="vibes display-2">Roseann & Carole's Excellent Adventure!</p>
-            <p className="vibes display-4">Paris 2023</p>
-            <p className="montserrat fs-1">Travel Planner and Blog</p>
+            <p className="vibes display-3">Paris 2023</p>
         </div>
     )
 }
