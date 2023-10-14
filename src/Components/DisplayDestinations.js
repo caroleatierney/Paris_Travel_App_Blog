@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import './DisplayDestination.css';
-import RatingStars from './RatingStars';
 import ReviewList from './ReviewList';
+import ReviewForm from './ReviewForm';
+import Stars from './Stars';
 
-
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -76,8 +75,9 @@ export default function DisplayDestinations() {
                                         {/* Reviews: {destination.reviews}<br></br><br></br> */}
                                         {/* Rating: {destination.rating}<br></br><br></br> */}
                                     </Card.Text>
+                                    {/* <ReviewForm /> */}
                                     <ReviewList destination={destination.reviews}/>
-                                    {/* <RatingStars /> */}
+                                    <Stars />
                                     <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
                                     <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
                                 </Card.Body>

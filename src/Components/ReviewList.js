@@ -7,7 +7,6 @@ export default class ReviewList extends Component {
     constructor(props) {
         super(props)
         this.reviews = props.destination
-        console.log(this.reviews)
     }
 
     render() {
