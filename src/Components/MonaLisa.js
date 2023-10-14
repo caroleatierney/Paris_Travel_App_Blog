@@ -16,17 +16,16 @@ export default function monaLisa() {
             </div>
 
             <div>
-                <p className="montserrat fs-3 p-3">Lisa del Giocondo was an Italian noblewoman and member of the Gherardini family of Florence and Tuscany. Her name was given to the Mona Lisa, her portrait commissioned by her husband and painted by Leonardo da Vinci in the Italian Renaissance.</p>
-            </div>
+                <p className="montserrat fs-3 p-3">Lisa del Giocondo was an Italian noblewoman and member of the Gherardini family of Florence and Tuscany. Her name was given to the Mona Lisa, her portrait commissioned by her husband and painted by Leonardo da Vinci in the Italian Renaissance. The Mona Lisa is a portait of Lisa Giacondo, painted by Leonardo Da Vinci somewhere between 1503 and 1519. It was commissioned by her husband, Francesco di Bartolomeo del Giocondo. The painting is a half length portrait whose medium was oil on a poplar wood panel. It is the most famous portrait in the world due to the enigmatic smile on Lisa Giacondo and the mysteries that surrounded it. The painting was in Leonardo's posession at his death when he was in the court of King Fracis I. Upon his death, King Francis I acquired it. For centries it remained part of the roal collection. It had been hanging in Napolean's bedroom when it was claimed during the French Revolution (1787-1799). It has been displayed at the Louvre Museum in Paris since 1804. The painting was stolen in 1911 which made it even more famous. It didn't reappear for two years when someone tried selling it to an art dealer in Florence who alerted the authorities.</p>
+                {/* make ul with links to new page */}
+                <p className="montserrat fs-3 pt-5">The information on this page is from the following websites:</p>
 
-            <div>
-                <h3 className="montserrat fs-3 p-3">The Mona Lisa is a portrait of Giocondo painted by Leonardo da Vinci. It is on display at the Louvre in Paris, France.</h3>
-
-                <h3 className="montserrat p-3">The Mona Lisa is considered to be a masterpiece of the Italian Renaissance. It has been described as "the best known, the most visited, the most written about, the most sung about art in the world".</h3>
-            </div>
-
-            <div>
-                <p className="montserrat fs-3">The information on this page is from the following wikipedia: https://en.wikipedia.org/wiki/Mona_Lisa</p>
+                <ul>
+                    <li style={{ color: 'black', fontSize: '30px', textShadow: '1px 1px 1px #d97fb9f5' }} target="_blank">
+                        <a href="https://en.wikipedia.org/wiki/Mona_Lisa">Wikepedia</a></li>
+                    <li style={{ color: 'black', fontSize: '30px', textShadow: '1px 1px 1px #d97fb9f5' }} target="_blank">
+                        <a href="https://www.britannica.com/topic/Mona-Lisa-painting">Britannica</a></li>
+                </ul>
             </div>
         </Container>
     )
