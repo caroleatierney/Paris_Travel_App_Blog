@@ -76,7 +76,7 @@ export default function DisplayDestinations() {
                                         {/* Rating: {destination.rating}<br></br><br></br> */}
                                     </Card.Text>
                                     {/* <ReviewForm /> */}
-                                    <ReviewList destination={destination.reviews}/>
+                                    {/* <ReviewList destination={destination.reviews}/> */}
                                     {/* <Stars /> */}
                                     <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
                                     <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />
