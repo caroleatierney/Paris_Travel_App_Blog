@@ -4,7 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 import About from './About.js'
 import Itinerary from './Itinerary.js'
 import Search from './Search.js'
+import MonaLisa from './MonaLisa.js'
 import TripBlog from './TripBlog.js'
+
 import Button from 'react-bootstrap/Button';
 
 import '../App.css';
@@ -30,6 +32,9 @@ export default function NavBar() {
                         <li>
                             <Button variant="primary" href="/search" className="nav-link montserrat fs-1 p-5">Search</Button>
                         </li>
+                        <li>
+                            <Button variant="primary" href="/monaLisa" className="nav-link montserrat fs-1 p-5">Mona Lisa</Button>
+                        </li>
                     </ul>
                 </Nav>
 
@@ -48,6 +53,10 @@ export default function NavBar() {
 
                     <Route path="/search">
                         <Search />
+                    </Route>
+
+                    <Route path="/monaLisa">
+                        <MonaLisa />
                     </Route>
                 </Switch>
             </div>

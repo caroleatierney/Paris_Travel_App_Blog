@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+
 export default function UpdateDestinationNotes({ getDestinations, destinationId }) {
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
