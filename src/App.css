@@ -1,7 +1,7 @@
 .vibes {
     font-family: 'Great Vibes' !important;
-    color: #000;
-    text-shadow: 1px 1px 1px rgba(214, 76, 212, 0.783);
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
 }
 
@@ -9,16 +9,10 @@
     font-family: 'Montserrat Alternates';
     color: black;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(214, 76, 212, 0.783);
-}
-
-body,
-html {
-    height: 100%;
+    text-shadow: 1px 1px 1px #d97fb9f5;
 }
 
 #bgImage {
-    /* width: auto; */
     width: 100%;
     height: 100%;
     text-align: center;
@@ -29,19 +23,3 @@ html {
     border-width: 15px;
     margin-bottom: 40px;
 }
-
-#bgImagex {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    text-align: center;
-    justify-content: center;
-    color: whitesmoke;
-}
-
-/* header, footer, .navbar, .about {
-    backdrop-filter: blur(4px);
-    padding: 20px;
-} */

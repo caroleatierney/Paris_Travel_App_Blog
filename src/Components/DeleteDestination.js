@@ -25,7 +25,7 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
     // this is the delete button rendered from the DisplayDestination's component's card
     return (
         <div className="text-center">
-            <button type="button" onClick={deleteDestination} className="btn btn-success p-2 m-2 montserrat">Delete Destination</button>
+            <button type="button" onClick={deleteDestination} className="btn btn-secondary my-3 montserrat">Delete Destination</button>
         </div>
     );
 }

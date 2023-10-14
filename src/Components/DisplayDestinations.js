@@ -53,7 +53,7 @@ export default function DisplayDestinations() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
     return (
-        <div className="DisplayDestination p-5 m-5 bg-secondary" style={{ minHeight: '100%' }} >
+        <div className="DisplayDestination p-5 m-5" style={{ minHeight: '100%' }} >
             <AddDestination getDestinations={getDestinations} />
 
             <Container className="m-10 p-5">

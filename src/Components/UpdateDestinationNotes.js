@@ -39,8 +39,8 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
     return (
         <>
             <div className="text-center montserrat">
-                <Button variant="info" onClick={handleShow} >
-                    Update Notes
+                <Button className="bg-secondary" onClick={handleShow} >
+                    Update Destination Notes
                 </Button>
             </div>
 

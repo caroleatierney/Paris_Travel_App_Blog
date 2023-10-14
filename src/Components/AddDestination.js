@@ -75,7 +75,9 @@ export default function AddDestinations({getDestinations}) {
     return (
         <>
             <div className="text-center">
-                <Button variant="primary" onClick={handleShow} >
+                <Button variant="secondary" style={{
+                    color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
+                }} onClick={handleShow} >
                     Add a new destination!
                 </Button>
             </div>
@@ -83,7 +85,7 @@ export default function AddDestinations({getDestinations}) {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                     <div className="flex flex-row text-center">
-                        <Modal.Title className="montserrat">Add a new destination!</Modal.Title>
+                        <Modal.Title className="montserrat bg-secondary">Add a destination</Modal.Title>
                     </div>
 
                 </Modal.Header>
