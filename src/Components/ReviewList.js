@@ -6,16 +6,16 @@ import Review from './Review'
 export default class ReviewList extends Component {
     constructor(props) {
         super(props)
-        this.destinations = props.destination
-        console.log(this.destinations)
+        this.reviews = props.destination
+        console.log(this.reviews)
     }
 
     render() {
         return (
             <div>
-                {/* {this.destinations.map((destination, index) => ( */}
-                    {/* <Review review={review.reviews} /> */}
-                {/* ))}      */}
+                {this.reviews.map((review, index) => (
+                   <Review key={index} review={review} />
+                ))}      
             </div>
         );
     };
