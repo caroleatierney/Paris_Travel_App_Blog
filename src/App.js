@@ -6,29 +6,27 @@ import Header from './Components/Header.js'
 import Navigation from './Components/Navigation.js'
 import Footer from './Components/Footer.js'
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component with header, navigation and footer
+// Most other components are exected from the navigation component 
 export default function App() {
   return (
-    // <Container id="bgImage" fluid className="align-content-center" style={{
-    //   backgroundImage: `url("https://i.imgur.com/2L1gLOQ.jpg")`
-    // }} >
-
+    
     <Container id="bgImage" fluid className="align-content-center" style={{
       backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
     }} >
 
-    {/* <Container>  */}
-      
-      <header>
-        <Header />
-      </header>
+        <header>
+          <Header />
+        </header>
 
-      <div>
-        <Navigation />
-      </div>
+        <div>
+          <Navigation />
+        </div>
 
-      <footer>
-        <Footer />
-      </footer>
+        <footer>
+          <Footer />
+        </footer>
 
     </Container>
   )

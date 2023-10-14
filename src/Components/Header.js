@@ -1,6 +1,9 @@
+// Component used to display the header content
 import React from 'react'
 import '../App.css';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function Header() {
     return (
         <div className="header d-flex flex-column justify-content-center align-items-center my-5">

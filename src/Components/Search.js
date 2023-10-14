@@ -1,3 +1,5 @@
+// the search component currently has a search destinations by category isng the Here api
+// after the search is made, the destinations are saved into MockAPI where full crud can be performed on them
 import React, { useState } from 'react';
 import DisplayDestinations from './DisplayDestinations.js'
 import Button from 'react-bootstrap/Button';
@@ -5,7 +7,9 @@ import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-// This is the array of objects for user to select a category from
+// This is the array of category objects for the user to select a category from
+// the value is hardcoded. If I had the time, I would like to generate the values
+// by converting the catgory text to lowercase and concatenating them together the % sign
 const options = [
     { text: 'Select a category', value: ''},
     { text: 'Eat and Drink', value: 'eat%20and%20drink' },
@@ -24,9 +28,12 @@ const options = [
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function SearchDisplay() {
-    // console.clear();
+    // declare state for the category variables
     const [selectedCategory, setSelectedCategory] = useState('');
     const [isCategorySelected, setIsCategorySelected] = useState(false);
+
+    // this just sets the category to a 'non-category' so any category the 
+    // user selects will become active
     const [defaultCategory, setDefaultCategory] = useState('Select a Category');
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
@@ -63,19 +70,18 @@ export default function SearchDisplay() {
         }
     }
 
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-        // when a category is chosen, get the data from HereAPI
-        // then writte it to MockAPI
-        // then read it from MockAPI and display it
-        const handleChange = event => {
-            console.log("handleEvent's event.target.value passed in:  " + event.target.value)
-            setSelectedCategory(event.target.value);
-            searchHereApi(event.target.value);
-            setIsCategorySelected(true);
-        };
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+    // when a category is chosen, get the data from HereAPI
+    // then write it to MockAPI, then read from MockAPI and display
+    const handleChange = event => {
+        console.log("handleEvent's event.target.value passed in:  " + event.target.value)
+        setSelectedCategory(event.target.value);
+        searchHereApi(event.target.value);
+        setIsCategorySelected(true);
+    };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-    // clear category name and set is selecetd to false when there is a new search
+    // clear category name and set 'is selected' to false when there is a new search
     const clearSearch = () => {
         setSelectedCategory("");
         setIsCategorySelected(false);
@@ -83,7 +89,9 @@ export default function SearchDisplay() {
         setSelectedCategory(defaultCategory);
     };
 
-    // delete all entities from MockAPI
+    // delete all entities from MockAPI when user clicks clear database
+    // could only delete one at a time - don't think MockAPI has an option
+    // to delete them all at once
     const clearMockAPI = async () => {
         // Get the list of all destinations from the MockAPI.
         const response = await fetch(MOCK_API_URL);
@@ -98,7 +106,7 @@ export default function SearchDisplay() {
     };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-    // Search fields
+    // Search 'select dropdown' for categories and clear database
     return (
         <div className="search">
             <h2 className="vibes display-3 my-5">Search for things to do</h2>

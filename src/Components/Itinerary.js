@@ -1,3 +1,4 @@
+// this component will return a carousel of imamges with the itinerary displayed over the photos
 import React from 'react';
 import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
@@ -19,8 +20,7 @@ export default function Itinerary() {
                 />
 
                 <Carousel.Caption className="carousel-content">
-      
-                    <h1 className="beige">Sunday, October 29, 2023</h1>
+                          <h1 className="beige">Sunday, October 29, 2023</h1>
                     <h4 className="white">The ADRIENNE's guide will meet you at the hotel and escort the transfer from Paris via motorcoach, to Saint Léger-sur-Dheune where the ADRIENNE is moored. Champagne Reception and Welcome Dinner on board.</h4>
                 </Carousel.Caption>
             </Carousel.Item>

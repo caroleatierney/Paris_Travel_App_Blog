@@ -1,9 +1,13 @@
+// Component used to add a new destination to MockAPI
+
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import '../App.css'; 
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function AddDestinations({getDestinations}) {
 
     // API URL used to add to MockAPI
@@ -71,14 +75,14 @@ export default function AddDestinations({getDestinations}) {
         handleClose()
     }
 
-    // react bootstrap modal used to only display form fields if user wants to add a dog
+    // react bootstrap modal used to only display form fields if user wants to add a destination
     return (
         <>
             <div className="text-center">
                 <Button variant="secondary" style={{
                     color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
                 }} onClick={handleShow} >
-                    Add a new destination!
+                    Add a new destination
                 </Button>
             </div>
 

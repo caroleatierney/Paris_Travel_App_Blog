@@ -1,3 +1,4 @@
+// this is the review component for the destinations
 import React, { Component } from 'react';
 import {Rating} from '@mui/material'
 
@@ -9,7 +10,6 @@ export default class Review extends Component {
         this.review = props.review
     }
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     render() {
         return (
             <div>

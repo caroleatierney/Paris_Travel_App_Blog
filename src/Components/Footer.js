@@ -1,6 +1,9 @@
+// Component used to display the footer content
 import React from 'react'
 import '../App.css';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function Footer() {
     return (
         <div className="hooter d-flex flex-column justify-content-center align-items-center my-5">

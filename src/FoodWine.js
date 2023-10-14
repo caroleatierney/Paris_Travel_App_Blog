@@ -1,0 +1,1 @@
+// possible component to blog about the food and wine on the trip

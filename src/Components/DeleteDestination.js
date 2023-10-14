@@ -1,6 +1,10 @@
+// Component used to delete a destination
 import React from 'react';
 
 import '../App.css';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function DeleteDestination({ destinationId, onDelete, getDestinations }) {
 
     // API URL used to update MockAPI

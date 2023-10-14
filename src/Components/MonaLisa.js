@@ -1,20 +1,14 @@
+// this component displays an image of the Mona Lisa and some information about it
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 
 import '../App.css';
 import './MonaLisa.css';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function monaLisa() {
-
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-
     return (
-        // <Container fluid className="d-flex flex-column align-content-center" style={{
-        //         backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
-        //     }} >
-
-
         <Container fluid className="d-flex flex-column align-content-center">
 
             <div>

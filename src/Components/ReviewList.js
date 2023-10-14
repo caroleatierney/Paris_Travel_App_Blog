@@ -1,3 +1,4 @@
+// this component will render the reviews from the review list array
 import React, { Component } from 'react';
 import Review from './Review'
 

@@ -1,13 +1,14 @@
+// This is intended for daily updates of our trip
 import React from 'react'
 
-// delete later
 import '../App.css';
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function DailyBlog() {
     return (
-        <div className="dailyBlog justify-content-center">
-            <h4>There will be a button to add a new trip date</h4>
-            <h4>This will be a new div just for that date</h4>
-            <h4>The div will have a card for each image with a caption and place for comments</h4>
+        <div className="dailyBlog montserrat justify-content-center">
+            <h4 className='montserrat p-4'>There will be a button to add new fields that will be stored in another mockapi resource</h4>
+            <h4 className='montserrat p-4'>This will be a new div containing an image and ability to add comments, name and date of comment </h4>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+// Component used to display all of the destinations 
+
 import { useEffect, useState } from 'react'
 import './DisplayDestination.css';
 import ReviewList from './ReviewList';
@@ -15,6 +17,8 @@ import DeleteDestination from './DeleteDestination.js'
 
 import '../App.css';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function DisplayDestinations() {
     const [destinations, setDestinations] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
@@ -33,7 +37,7 @@ export default function DisplayDestinations() {
     }, []);
 
     // this passes the destination id to the updateNotes component so it can update the correct destination's notes
-    // reload new data
+    // then reload new data
     const onUpdate = async (destinationId) => {
         UpdateDestinationNotes(destinationId);
         const response = await fetch(MOCK_API_URL);
@@ -42,7 +46,7 @@ export default function DisplayDestinations() {
     };
 
     // this passes the destination id to the delete component so it can delete the correct destination
-    // reload new data
+    // then reload new data
     const onDelete = async (destinationId) => {
         DeleteDestination(destinationId);
         const response = await fetch(MOCK_API_URL);
@@ -52,6 +56,8 @@ export default function DisplayDestinations() {
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
+    // ** stars and reviews in progress
+
     return (
         <div className="DisplayDestination p-5 m-5" style={{ minHeight: '100%' }} >
             <AddDestination getDestinations={getDestinations} />

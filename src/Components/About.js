@@ -1,5 +1,10 @@
+// Component used to display the about content
+
 import React from 'react';
 import '../App.css';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Main Functional Component
 export default function About() {
     return (
         <div className="about d-flex flex-column justify-content-center align-items-center  my-5">
