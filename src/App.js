@@ -15,6 +15,8 @@ export default function App() {
     <Container id="bgImage" fluid className="align-content-center" style={{
       backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
     }} >
+
+    {/* <Container> */}
       
       <header>
         <Header />

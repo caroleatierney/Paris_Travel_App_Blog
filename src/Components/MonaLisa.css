@@ -1,0 +1,11 @@
+img {
+    width: auto;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border-style:solid;
+    border-width: 15px;
+    margin-bottom: 40px;
+}

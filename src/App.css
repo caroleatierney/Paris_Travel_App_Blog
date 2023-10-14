@@ -26,9 +26,6 @@ html {
     text-align: center;
     justify-content: center;
     color: whitesmoke;
-    border-color: rgb(203, 76, 120);
-    border-style: groove;
-    border-width: 10px;
 }
 
 /* header, footer, .navbar, .about {
