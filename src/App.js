@@ -13,7 +13,7 @@ export default function App() {
   return (
     
     <Container id="bgImage" fluid className="align-content-center" style={{
-      backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
+      backgroundImage: `url("https://i.imgur.com/nw6Iy7g.png")`
     }} >
 
         <header>
