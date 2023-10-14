@@ -1,5 +1,5 @@
 import React from 'react';
-import './Star.css';
+import './Starx.css';
 
 const Star = (props) => {
 

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './DisplayDestination.css';
 import RatingStars from './RatingStars';
+import ReviewList from './ReviewList';
+
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -71,8 +73,10 @@ export default function DisplayDestinations() {
 
                                         Category: {destination.category}<br></br><br></br>
                                         Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}<br></br><br></br>
-                                        Want to See Rating: {destination.rating}<br></br><br></br>
+                                        {/* Reviews: {destination.reviews}<br></br><br></br> */}
+                                        {/* Rating: {destination.rating}<br></br><br></br> */}
                                     </Card.Text>
+                                    <ReviewList destination={destination.reviews}/>
                                     <RatingStars />
                                     <UpdateDestinationNotes destinationId={destination.id} getDestinations={getDestinations} onUpdate={onUpdate} />
                                     <DeleteDestination destinationId={destination.id} getDestinations={getDestinations} onDelete={onDelete} />

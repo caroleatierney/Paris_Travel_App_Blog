@@ -20,6 +20,7 @@ export default function AddDestinations({getDestinations}) {
     const [newPhone, setNewPhone] = useState('')
     const [newCategory, setNewCategory] = useState('')
     const [newNotes, setNewNotes] = useState('')
+    const [newReviews, setNewReviews] = useState('[]')
     const [newRating, setNewRating] = useState('')
 
     // react bootstrap modal variables   
@@ -47,6 +48,7 @@ export default function AddDestinations({getDestinations}) {
                 phone: newPhone,
                 category: newCategory,
                 notes: newNotes,
+                reviews: newReviews,
                 rating: newRating
             }),
         }).then(() => getDestinations())
@@ -62,6 +64,7 @@ export default function AddDestinations({getDestinations}) {
             setNewPhone('')
             setNewCategory('')
             setNewNotes('')
+            setNewReviews('')
             setNewRating('')
 
         // close modal
@@ -80,48 +83,48 @@ export default function AddDestinations({getDestinations}) {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                     <div className="flex flex-row text-center">
-                        <Modal.Title className="tangerine">Add a new destination!</Modal.Title>
+                        <Modal.Title className="montserrat">Add a new destination!</Modal.Title>
                     </div>
 
                 </Modal.Header>
 
                 <Modal.Body>
                     <form>
-                        <label className="tangerine">Add New Destination Title</label>
+                        <label className="montserrat">Add New Destination Title</label>
                         <input className="m-1" onChange={(e) => setNewTitle(e.target.value)} value={newTitle}></input>
 
-                        <label className="tangerine">Add New Destination House Number</label>
+                        <label className="montserrat">Add New Destination House Number</label>
                         <input className="m-1" onChange={(e) => setNewHouseNumber(e.target.value)} value={newHouseNumber}></input>
 
-                        <label className="tangerine">Add New Destination Street</label>
+                        <label className="montserrat">Add New Destination Street</label>
                         <input className="m-1" onChange={(e) => setNewStreet(e.target.value)} value={newStreet}></input>
 
-                        <label className="tangerine">Add New Destination City</label>
+                        <label className="montserrat">Add New Destination City</label>
                         <input className="m-1" onChange={(e) => setNewCity(e.target.value)} value={newCity}></input>
 
-                        <label className="tangerine">Add New Destination State</label>
+                        <label className="montserrat">Add New Destination State</label>
                         <input className="m-1" onChange={(e) => setNewState(e.target.value)} value={newState}></input>
 
-                        <label className="tangerine">Add New Destination Postal Code</label>
+                        <label className="montserrat">Add New Destination Postal Code</label>
                         <input className="m-1" onChange={(e) => setNewPostalCode(e.target.value)} value={newPostalCode}></input>
 
-                        <label className="tangerine">Add New Destination Country</label>
+                        <label className="montserrat">Add New Destination Country</label>
                         <input className="m-1" onChange={(e) => setNewCountry(e.target.value)} value={newCountry}></input>
 
-                        <label className="tangerine">Add New Destination Phone</label>
+                        <label className="montserrat">Add New Destination Phone</label>
                         <input className="m-1" onChange={(e) => setNewPhone(e.target.value)} value={newPhone}></input>
 
-                        <label className="tangerine">Add New Destination Category</label>
+                        <label className="montserrat">Add New Destination Category</label>
                         <input className="m-1" onChange={(e) => setNewCategory(e.target.value)} value={newCategory}></input>
 
-                        <label className="tangerine">Add New Destination Notes</label>
+                        <label className="montserrat">Add New Destination Notes</label>
                         <input className="m-1" onChange={(e) => setNewNotes(e.target.value)} value={newNotes}></input>
 
-                        <label className="tangerine">Add New Destination Rating</label>
+                        <label className="montserrat">Add New Destination Rating</label>
                         <input className="m-1" onChange={(e) => setNewRating(e.target.value)} value={newRating}></input>
 
                         <div className="text-center">
-                            <button className="tangerine" type="button" onClick={addDestination} className="m-1 tangerine">Add Destination</button>
+                            <button className="montserrat" type="button" onClick={addDestination} className="m-1 tangerine">Add Destination</button>
                         </div>
                     </form>
                 </Modal.Body>

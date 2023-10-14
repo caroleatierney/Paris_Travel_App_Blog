@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Star from './Star.js';
+import Star from './Starx.js';
 
 import '../App.css';
 
