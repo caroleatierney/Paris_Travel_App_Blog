@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Rating} from '@mui/material'
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
@@ -13,7 +14,7 @@ export default class Review extends Component {
         return (
             <div>
                 <h1>
-                    {this.review.name} {this.review.rating}
+                    {this.review.name} <Rating />
                 </h1>
                 <p>{this.review.text}</p>
             </div>
