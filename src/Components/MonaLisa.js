@@ -10,9 +10,12 @@ export default function monaLisa() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
     return (
-        <Container fluid className="d-flex flex-column align-content-center" style={{
-                backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
-            }} >
+        // <Container fluid className="d-flex flex-column align-content-center" style={{
+        //         backgroundImage: `url("https://i.imgur.com/XDYIAGV.png")`
+        //     }} >
+
+
+        <Container fluid className="d-flex flex-column align-content-center">
 
             <div>
                 <img src="https://i.imgur.com/pCZrlUb.jpg" alt="Mona Lisa"></img>
