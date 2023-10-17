@@ -23,7 +23,7 @@
     "text": "^0.1.0",
     "webpack-cli": "^5.1.4"
   },
-  "homepage": "https://github.com/caroleatierney/week_16_final_project",
+  "homepage": "https://caroleatierney.githunb.io/week_16_final_project",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
