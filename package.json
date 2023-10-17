@@ -1,7 +1,7 @@
 {
   "name": "react",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.11.1",
