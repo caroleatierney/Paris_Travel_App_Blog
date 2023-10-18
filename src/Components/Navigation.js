@@ -2,6 +2,7 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav';
+import Home from './Home.js'
 import About from './About.js'
 import Itinerary from './Itinerary.js'
 import Search from './Search.js'
@@ -22,6 +23,9 @@ export default function NavBar() {
                 <Nav className="navbar navbar-expand-lg d-flex flex-column">
                     <ul className="navbar-nav d-flex justify-content-space-evenly">
                         <li className="nav-item active">
+                            <Button as={Link} to="/home" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Home</Button>
+                        </li>
+                        <li className="nav-item active">
                             <Button as={Link} to="/about" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">About</Button>
                         </li>
                         <li className="nav-item active">
@@ -40,6 +44,10 @@ export default function NavBar() {
                 </Nav>
 
                 <Switch>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+
                     <Route path="/about">
                         <About />
                     </Route>
