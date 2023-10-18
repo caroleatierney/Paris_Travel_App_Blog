@@ -17,7 +17,7 @@ import '../App.css';
 export default function NavBar() {
     return (
 
-        <Router basename="/week_16_final_project">
+        <Router>
             <div>
                 <Nav className="navbar navbar-expand-lg d-flex flex-column">
                     <ul className="navbar-nav d-flex justify-content-space-evenly">
