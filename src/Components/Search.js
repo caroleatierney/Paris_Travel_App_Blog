@@ -35,8 +35,8 @@ export default function SearchDisplay() {
     // this just sets the category to a 'non-category' so any category the 
     // user selects will become active
     const [defaultCategory, setDefaultCategory] = useState('Select a Category');
-    const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
-
+    const MOCK_API_URL = "process.env.REACT_APP_MOCK_API_URL"
+    
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // fetch data from the Here API
     async function searchHereApi(selectedCategory, limit = 5) {
