@@ -40,7 +40,7 @@ export default function NavBar() {
                 </Nav>
 
                 <Switch>
-                    <Route exact path="/" component={About} />
+                    <Route path="/" exact component={About} />
 
                     <Route path="/itinerary">
                         <Itinerary />
