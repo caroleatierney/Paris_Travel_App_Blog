@@ -37,3 +37,6 @@ https://places.ls.hereapi.com/places/v1/discover/search
 ?apiKey={YOUR_API_KEY}
 &at=52.531,13.3843
 &q=Brandenburg+Gate
+
+Push changes then 
+Use 'npm run deploy'

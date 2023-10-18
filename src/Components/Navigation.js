@@ -34,13 +34,15 @@ export default function NavBar() {
                             <Button as={Link} to="/search" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Search</Button>
                         </li>
                         <li>
-                            <Button as={Link} to="//monaLisa" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Mona Lisa</Button>
+                            <Button as={Link} to="/monaLisa" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Mona Lisa</Button>
                         </li>
                     </ul>
                 </Nav>
 
                 <Switch>
-                    <Route path="/" exact component={About} />
+                    <Route path="/about">
+                        <About />
+                    </Route>
 
                     <Route path="/itinerary">
                         <Itinerary />
