@@ -8,7 +8,7 @@ import '../App.css';
 export default function SideBar() {
     return (
         <>
-            <div className="postSection">
+            <div className="gray postSection">
                 test side bar
             </div>
 

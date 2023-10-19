@@ -7,7 +7,7 @@ import '../App.css';
 // Main Functional Component
 export default function About() {
     return (
-        <div className="about d-flex flex-column justify-content-center align-items-center  my-5">
+        <div className="blur about d-flex flex-column justify-content-center align-items-center my-5 ">
             <p className="vibes display-2">About Our Trip</p>
             <div>
                 <p className="montserrat fs-1  my-5">We are going on a Luxury Canal Cruise booked through French Country Waterways, Ltd.</p>

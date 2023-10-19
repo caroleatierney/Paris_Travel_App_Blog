@@ -117,7 +117,7 @@ export default function SearchDisplay() {
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // Search 'select dropdown' for categories and clear database
     return (
-        <div className="search">
+        <div className="blur search">
             <h2 className="vibes display-3 my-5">Search for things to do</h2>
             <h3 className="montserrat">Note Both search options have a 150 xx radius around Paris</h3>
             <h3 className="montserrat">All results are written to database</h3>

@@ -8,7 +8,7 @@ import './Posts.css';
 // Main Functional Component
 export default function Posts() {
     return (
-        <div className="posts">
+        <div className="gray ">
             posts
         </div>
    

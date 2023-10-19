@@ -1,5 +1,8 @@
 // This will display our posts
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import TripBlogHeader from "./TripBlogHeader";
 import Posts from "./Posts";
@@ -14,11 +17,17 @@ export default function TripBlog() {
     return (
         <>
             <TripBlogHeader />
-            <div className="postSection">
-                <Posts />
-                <SideBar />
-            </div>
+            <Container>
+                <Row justify-content-left>
+                    <Col md={4}>
+                        <SideBar />
+                    </Col>
 
+                    <Col md={8}>
+                        <Posts />
+                    </Col>
+                </Row>
+            </Container>
         </>
     );
 }

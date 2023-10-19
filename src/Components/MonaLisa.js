@@ -20,7 +20,7 @@ export default function monaLisa() {
                     </Col>
 
                     <Col>
-                        <p className="montserrat fs-3">
+                        <p className="blur  montserrat fs-3">
                             The Mona Lisa is a portait of Lisa Giacondo, painted by Leonardo Da Vinci somewhere between 1503 and 1519. It was commissioned by her husband, Francesco di Bartolomeo del Giocondo. The painting is a half length portrait whose medium was oil on a poplar wood panel. It is the most famous portrait in the world due to the enigmatic smile on Lisa Giacondo and the mysteries that surrounded her and her smile. The painting was in Leonardo's posession at the time of his death when he was in the court of King Francis I. Upon his death, King Francis I acquired it. For centuries it remained part of the royal collection. It had been hanging in Napolean's bedroom when it was claimed during the French Revolution (1787-1799). It has been displayed at the Louvre Museum in Paris since 1804. The painting was stolen in 1911 which made it even more famous. It didn't reappear for two years until a former Louvre worker tried selling it in Florence, Italy to an art dealer who alerted the authorities.
                         </p>
                     </Col>
