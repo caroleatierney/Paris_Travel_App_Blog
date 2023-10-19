@@ -19,12 +19,12 @@ export default function TripBlog() {
             <TripBlogHeader />
             <Container>
                 <Row justify-content-left>
-                    <Col md={4}>
-                        <SideBar />
-                    </Col>
-
                     <Col md={8}>
                         <Posts />
+                    </Col>
+                    
+                    <Col md={4}>
+                        <SideBar />
                     </Col>
                 </Row>
             </Container>
