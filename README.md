@@ -38,5 +38,12 @@ https://places.ls.hereapi.com/places/v1/discover/search
 &at=52.531,13.3843
 &q=Brandenburg+Gate
 
+
+
+Local app
+Push changes then
+npm start
+
+gh-pages
 Push changes then 
 Use 'npm run deploy'

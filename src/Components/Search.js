@@ -35,16 +35,18 @@ export default function SearchDisplay() {
     // this just sets the category to a 'non-category' so any category the 
     // user selects will become active
     const [defaultCategory, setDefaultCategory] = useState('Select a Category');
-    const MOCK_API_URL = "process.env.REACT_APP_MOCK_API_URL"
-    
+    const MOCK_API_URL = process.env.REACT_APP_MOCK_API_URL
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // fetch data from the Here API
     async function searchHereApi(selectedCategory, limit = 5) {
 
         const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=${limit}&lang=en&q=${selectedCategory}`
-        const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_API_KEY;
+        const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_HERE_API_KEY;
         const res = await fetch(URL)
         const data = await res.json()
+
+        console.log("Data: " + data.items)
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
         // write Here data to MockAPI
@@ -64,6 +66,11 @@ export default function SearchDisplay() {
                         phone: item.contacts?.[0]?.phone?.[0]?.value ?? '',
                         category: item.categories[0].name,
                         notes: '',
+                        reviews: {
+                            name: '',
+                            rating: 0,
+                            text: ''
+                        },
                         rating: 0
                     }),
             });
@@ -95,7 +102,9 @@ export default function SearchDisplay() {
     const clearMockAPI = async () => {
         // Get the list of all destinations from the MockAPI.
         const response = await fetch(MOCK_API_URL);
+        // console.log("Response in clear: " + response)
         const destinations = await response.json();
+        // console.log("Destinations in clear: " + destinations)
 
         // Delete each destination individually.
         for (const destination of destinations) {
