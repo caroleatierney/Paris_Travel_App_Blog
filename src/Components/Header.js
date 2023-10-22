@@ -15,8 +15,8 @@ export default function Header() {
             </div>
 
             <div className="topCenter">
-                <p className="vibes display-2">Roseann & Carole's Excellent Adventure!</p>
-                <p className="vibes display-3">Paris 2023</p>
+                <p className="vibesXl">Roseann & Carole's Excellent Adventure!</p>
+                <p className="vibesMed">Paris 2023</p>
             </div>
 
             <div className="topRight">

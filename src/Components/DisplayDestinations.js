@@ -65,19 +65,20 @@ export default function DisplayDestinations() {
             <Container className="m-10 p-5">
                 <Row>
                     {destinations.map((destination, index) => (
-                        <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white p-5">
-                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '20rem', height: '40rem'}}>
+                        <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white">
+                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '25vh', height: '50vh'}}>
                                 <Card.Body>
-                                    <Card.Title className="vibes fs-2">{destination.title}</Card.Title>
-                                    <Card.Text className="p-3 mb-2 fs-6 text-center montserrat">
-                                        {destination.houseNumber} {destination.street}<br></br>
-                                        {destination.city}, {destination.state} {destination.postalCode}<br></br>
-                                        {destination.country}<br></br>
+                                    <Card.Title className="vibesSmMd" style={{ height: '7vh' }}>{destination.title}</Card.Title>
+                                    <Card.Text className="p-3 mb-2
+                                     text-center montserratSm">
+                                        <p>{destination.houseNumber} {destination.street}</p>
+                                        <p>{destination.city}, {destination.state} {destination.postalCode}</p>
+                                        <p>{destination.country}</p>
                                     
-                                        Phone: {destination.phone}<br></br><br></br>
+                                        <p>Phone: {destination.phone}</p>
 
-                                        Category: {destination.category}<br></br><br></br>
-                                        Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}<br></br><br></br>
+                                        <p>Category: {destination.category}</p>
+                                        <p>Notes: {destination.notes || 'No notes: Select Update Notes Button to Add a Note'}</p>
                                         {/* Reviews: {destination.reviews}<br></br><br></br> */}
                                         {/* Rating: {destination.rating}<br></br><br></br> */}
                                     </Card.Text>

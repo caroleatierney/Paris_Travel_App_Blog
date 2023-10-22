@@ -1,13 +1,69 @@
+/* html {
+    font-size: calc(1em + 1vw);
+} */
+
 .vibes {
     font-family: 'Great Vibes' !important;
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
+    font-size: 4.0vh !important;
 }
 
+.vibesSm {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 1.0vh !important;
+}
+.vibesMd {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 4.0vh !important;
+}
+
+.vibesSmMd {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 3.0vh !important;
+}
+
+.vibesXl {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 7.0vh !important;
+}
 .montserrat {
     font-family: 'Montserrat Alternates';
     color: black;
+    font-size: 2.0vh !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
+
+.montserratSm {
+    font-family: 'Montserrat Alternates';
+    font-size: 1.5vh !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
+.montserratMd {
+    font-family: 'Montserrat Alternates';
+    font-size: 2.0vh !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
+
+.montserratLg{
+    font-family: 'Montserrat Alternates';
+    font-size: 8.0vh !important;
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
@@ -31,3 +87,251 @@
 .blur {
     backdrop-filter: blur(3px) saturate(90%);
 }
+
+        /* Small devices (Phones, 600px and down) -- this would display the text at 5.0rem on phones */
+        /* .h1Size {
+            font-size: 5.0rem !important;
+            color: rgb(255, 221, 0) !important;
+        } */
+        /* iPad Landscape */
+        /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            h1Size {
+                    color: rgb(60, 37, 41)pink;
+                }
+        } */
+
+        /* iPad Portrait */
+        /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            h1Size {
+                color: pink;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .h1Size {
+                font-size: 5.0rem !important; 
+                color: chartreuse !important;
+            }
+        }
+    
+        @media only screen and (max-width: 600px) {
+            .h1Size {
+                font-size: 2.0vh !important;
+                color: rgb(255, 0, 212) !important;
+            }
+        } */
+/*     
+        @media only screen and (max-width: 165px) {
+            .h1Size {
+                font-size: .7vh !important;
+                color: chartreuse !important;
+            }
+        } */
+
+        /* Large devices (laptops/desktops, 992px and up) -- This would display the text at 10.0rem on laptops and larger screens */
+/*     
+        @media only screen and (min-width: 992px) {
+            .h1Size {
+                font-size: 2.0vh !important;
+                color: blueviolet !important;
+            }
+        } */
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+     
+} */
+
+/* Portrait */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) 
+{} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+} */
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+
+} */
+
+/* Portrait */
+/* @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+} */
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+} */
+
+/* Portrait */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+} */
+
+/* ----------- Non-Retina Screens ----------- */
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
+} */
+
+/* ----------- Retina Screens ----------- */
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+} */
+
+/* ================================================================= */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+} */
+
+/* Portrait */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+
+} */
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+       p {
+            font-size: 1.0rem;
+            color: red;
+       }
+
+       .h1Size {
+            font-size: 3.0rem;
+            color: rgb(21, 0, 255);
+       }
+
+    .Card.Title {
+            font-size: 5.0rem;
+            color: rgb(255, 136, 0);
+        }
+} */
+
+/* .vibes {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+}
+
+.montserrat {
+    font-family: 'Montserrat Alternates';
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
+
+.gray {
+    color: #444;
+} */
+
+/* Portrait */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    p {
+            font-size: 1.0rem;
+            color: red;
+        }
+    
+        .h1Size {
+            font-size: 3.0rem;
+            color: rgb(21, 0, 255);
+        }
+    
+        .Card.Title {
+            font-size: 5.0rem;
+            color: rgb(255, 136, 0);
+        }
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    p {
+            font-size: 1.0rem;
+            color: red;
+        }
+    
+        .h1Size {
+            font-size: 3.0rem;
+            color: rgb(21, 0, 255);
+        }
+    
+        .Card.Title {
+            font-size: 5.0rem;
+            color: rgb(255, 136, 0);
+        }
+} */
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* @media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+/* @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+} */
+
+/* @media (max-device-width: 42mm) and (min-device-width: 38mm) {
+
+} */

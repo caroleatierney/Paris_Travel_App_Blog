@@ -20,25 +20,25 @@ export default function NavBar() {
 
         <Router basename={process.env.PUBLIC_URL}>
             <div>
-                <Nav className="navbar navbar-expand-lg d-flex flex-column">
-                    <ul className="navbar-nav d-flex justify-content-space-evenly">
+                <Nav className="navbar navbar-expand-sm d-flex container justify-content-center">
+                    <ul className="navbar-nav d-flex ">
                         <li className="nav-item active">
-                            <Button as={Link} to="/home" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Home</Button>
+                            <Button as={Link} to="/home" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Home</Button>
                         </li>
                         <li className="nav-item active">
-                            <Button as={Link} to="/about" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">About</Button>
+                            <Button as={Link} to="/about" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">About</Button>
                         </li>
                         <li className="nav-item active">
-                            <Button as={Link} to="/itinerary" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Itinerary</Button>
+                            <Button as={Link} to="/itinerary" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Itinerary</Button>
                         </li>
                         <li className="nav-item active">
-                            <Button as={Link} to="/tripBlog" variant="secondary" style={{ color: 'maroon' }}  className="nav-link montserrat fs-1 px-5">Trip Blog</Button>
+                            <Button as={Link} to="/tripBlog" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Trip Blog</Button>
                         </li>
                         <li>
-                            <Button as={Link} to="/search" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Search</Button>
+                            <Button as={Link} to="/search" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Search</Button>
                         </li>
                         <li>
-                            <Button as={Link} to="/monaLisa" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserrat fs-1 px-5">Mona Lisa</Button>
+                            <Button as={Link} to="/monaLisa" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Mona Lisa</Button>
                         </li>
                     </ul>
                 </Nav>
