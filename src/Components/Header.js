@@ -8,10 +8,30 @@ import './Header.css';
 export default function Header() {
     return (
         <div className="top">
-            <div className="topLeft"  >
-                <i className="topIcon fa-brands fa-square-facebook"/>
-                <i className="topIcon fa-brands fa-square-x-twitter"/>
-                <i className="topIcon fa-brands fa-square-instagram"/>
+            <div className="topLeft">          
+                <div>   
+                    <i 
+                        className="topIcon fa-brands fa-square-facebook"
+                        onClick={() => window.open("https://www.facebook.com/caroleatierney")}
+                    />
+                    <i
+                        className="topIcon fa-brands fa-square-x-twitter"
+                        onClick={() => window.open("https://www.twitter.com/CaroleATierney")}
+                    />
+                    <i 
+                        className="topIcon fa-brands fa-square-instagram"
+                        onClick={() => window.open("https://www.instagram.com/caroleatierney/")}
+                    />
+                    <i 
+                        className="topIcon fa-brands fa-whatsapp"
+                        onClick={() => window.open("https://wa.me/16177750725")}
+                    />
+                </div>
+                <img
+                    className="topImage"
+                    src="https://i.imgur.com/VXqnJPw.png"
+                    alt="Roseann"
+                />
             </div>
 
             <div className="topCenter">
@@ -23,9 +43,30 @@ export default function Header() {
                 <img
                     className="topImage"
                     src="https://i.imgur.com/gq5Qmc8.jpg?1"
-                    alt="Carole & Roseann" />
-                <i className="topSearchIcon fas fa-search"></i> 
+                    alt="Carole"
+                />
+                <div>
+                    <i
+                        className="topIcon fa-brands fa-square-facebook"
+                        onClick={() => window.open("https://www.facebook.com/caroleatierney")}
+                    />
+                    <i
+                        className="topIcon fa-brands fa-square-x-twitter"
+                        onClick={() => window.open("https://www.twitter.com/CaroleATierney")}
+                    />
+                    <i
+                        className="topIcon fa-brands fa-square-instagram"
+                        onClick={() => window.open("https://www.instagram.com/caroleatierney/")}
+                    />
+                    <i
+                        className="topIcon fa-brands fa-whatsapp"
+                        onClick={() => window.open("https://wa.me/16177750725")}
+                    />
+                </div>  
             </div>
+            {/* <div> */}
+                {/* <i className="topSearchIcon fas fa-search"></i> */}
+            {/* </div> */}
         </div>
     )
 }

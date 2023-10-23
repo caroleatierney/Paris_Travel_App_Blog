@@ -24,16 +24,18 @@
 }
 
 .topIcon {
-    font-size: 50px;
-    padding: 20px;
+    font-size: 2vw;
+    padding: 12px;
     color: #444;
     cursor: pointer;
 }
 .topImage {
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     object-fit: cover;
+    padding-right: 1vw;
+    padding-left: 1vw;
 }
 
 .topSearchIcon {
