@@ -79,7 +79,7 @@ export default function AddDestinations({getDestinations}) {
     return (
         <>
             <div className="text-center">
-                <Button variant="secondary" style={{
+                <Button className="MontserratMd" variant="secondary" style={{
                     color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
                 }} onClick={handleShow} >
                     Add a new destination

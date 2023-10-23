@@ -10,15 +10,19 @@ img {
 }
 
 .beige {
+    font-family: 'Great Vibes' !important;
     color: rgb(223, 218, 175);
-    /* font-weight: 600; */
-    font-size: 50px;
+    font-size: 3vw;
     text-shadow: 3px 3px 3px black;
 }
 
 .white {
     color: white;
     text-shadow: 3px 3px 3px rgb(13, 13, 13);
+    font-family: 'Montserrat Alternates';
+    font-size: 1.0vw !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
 }
 
 .carousel {

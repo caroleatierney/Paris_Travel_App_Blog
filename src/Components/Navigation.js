@@ -21,7 +21,7 @@ export default function NavBar() {
         <Router basename={process.env.PUBLIC_URL}>
             <div>
                 <Nav className="navbar navbar-expand-sm d-flex container justify-content-center">
-                    <ul className="navbar-nav d-flex ">
+                    <ul className="navbar-nav d-flex mt-5">
                         <li className="nav-item active">
                             <Button as={Link} to="/home" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Home</Button>
                         </li>

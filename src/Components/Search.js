@@ -118,14 +118,14 @@ export default function SearchDisplay() {
     // Search 'select dropdown' for categories and clear database
     return (
         <div className="blur search">
-            <h2 className="vibes display-3 my-5">Search for things to do</h2>
-            <h3 className="montserrat">Note Both search options have a 150 xx radius around Paris</h3>
-            <h3 className="montserrat">All results are written to database</h3>
+            <h2 className="vibesMd my-5">Search for things to do</h2>
+            <h3 className="montserratMd">Note Both search options have a 150 xx radius around Paris</h3>
+            <h3 className="montserratSm">All results are written to the database</h3>
 
             <div className="Container d-flex flex-row justify-content-center py-5">
                 <div className="row">
                     <div className="col">
-                        <select className="montserrat mx-5 p-3 bg-secondary" style={{
+                        <select className="montserratSm mx-5 p-3 bg-secondary" style={{
                             color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
                         }} value={selectedCategory} onChange={e => handleChange(e)}>
                             {options.map(option => (
@@ -135,7 +135,7 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
-                        <Button className="montserrat mx-5 p-3" style={{ color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px' }} variant="secondary" type ="button" onClick={clearSearch}>Clear Database</Button>
+                        <Button className="montserratSm mx-5 p-3" style={{ color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px' }} variant="secondary" type ="button" onClick={clearSearch}>Clear Database</Button>
 
                         {isCategorySelected && <DisplayDestinations />}
 

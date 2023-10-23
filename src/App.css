@@ -7,7 +7,7 @@
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 4.0vh !important;
+    font-size: 2.0vw !important;
 }
 
 .vibesSm {
@@ -15,14 +15,14 @@
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 1.0vh !important;
+    font-size: .5vw !important;
 }
 .vibesMd {
     font-family: 'Great Vibes' !important;
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 4.0vh !important;
+    font-size: 2.0vw !important;
 }
 
 .vibesSmMd {
@@ -30,40 +30,59 @@
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 3.0vh !important;
+    font-size: 1.5vw !important;
 }
 
+
+.vibesLg {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 1.5vw !important;
+}
 .vibesXl {
     font-family: 'Great Vibes' !important;
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 7.0vh !important;
+    font-size: 4.0vw !important;
 }
 .montserrat {
     font-family: 'Montserrat Alternates';
     color: black;
-    font-size: 2.0vh !important;
+    font-size: 1.0vh!important;
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
 
 .montserratSm {
     font-family: 'Montserrat Alternates';
-    font-size: 1.5vh !important;
+    color: black;
+    font-size: 0.8vw !important;
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
 .montserratMd {
     font-family: 'Montserrat Alternates';
-    font-size: 2.0vh !important;
+    color: black;
+    font-size: 1.0vw !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
+
+.montserratMdLg {
+    font-family: 'Montserrat Alternates';
+    color: black;
+    font-size: 3.0vw !important;
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
 
 .montserratLg{
     font-family: 'Montserrat Alternates';
-    font-size: 8.0vh !important;
+    color: black;
+    font-size: 4.0vw !important;
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
@@ -77,10 +96,9 @@
     height: 100%;
     text-align: center;
     justify-content: center;
-    color: whitesmoke;
-    border-color: whitesmoke;
+    border-color: rgb(56, 6, 97);
     border-style: solid;
-    border-width: 15px;
+    border-width: 5px;
     margin-bottom: 40px;
 }
 

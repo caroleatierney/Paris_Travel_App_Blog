@@ -42,8 +42,8 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
     return (
         <>
             <div className="text-center montserrat">
-                <Button className="bg-secondary" onClick={handleShow} >
-                    Update Destination Notes
+                <Button className="btn btn-secondary" onClick={handleShow} >
+                    Update Notes
                 </Button>
             </div>
 
@@ -60,7 +60,7 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
                         <textarea className="m-5 p-5" onChange={(e) => setUpdatedNotes(e.target.value)} value={updatedNotes}></textarea>
 
                         <div className="text-center">
-                            <button type="button" onClick={updateDestinationNotes} className="btn btn-secondary my-3 montserraSm">Update Destination</button>
+                            <button type="button" onClick={updateDestinationNotes} className="btn btn-secondary my-3 montserraSm">Update Notes</button>
                         </div>
                     </Form>
 
