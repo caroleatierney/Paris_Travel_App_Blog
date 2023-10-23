@@ -66,7 +66,7 @@ export default function DisplayDestinations() {
                 <Row>
                     {destinations.map((destination, index) => (
                         <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white">
-                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '25vh', height: '50vh'}}>
+                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '15vw', height: '30vw'}}>
                                 <Card.Body>
                                     <Card.Title className="vibesSmMd" style={{ height: '7vh' }}>{destination.title}</Card.Title>
                                     <Card.Text className="p-3 mb-2
