@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import './DisplayDestination.css';
-import ReviewList from './ReviewList';
-import ReviewForm from './ReviewForm';
-import Stars from './Stars';
 
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
