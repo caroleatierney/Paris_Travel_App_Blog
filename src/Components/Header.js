@@ -12,7 +12,7 @@ export default function Header() {
                 <div>   
                     <i 
                         className="topIcon fa-brands fa-square-facebook"
-                        onClick={() => window.open("https://www.facebook.com/caroleatierney")}
+                        onClick={() => window.open("https://www.facebook.com/roseanne.hayes")}
                     />
                     <i
                         className="topIcon fa-brands fa-square-x-twitter"
@@ -20,16 +20,16 @@ export default function Header() {
                     />
                     <i 
                         className="topIcon fa-brands fa-square-instagram"
-                        onClick={() => window.open("https://www.instagram.com/caroleatierney/")}
+                        onClick={() => window.open("https://www.instagram.com/roseannmirisola/")}
                     />
                     <i 
                         className="topIcon fa-brands fa-whatsapp"
-                        onClick={() => window.open("https://wa.me/16177750725")}
+                        onClick={() => window.open("https://wa.me/16175383672")}
                     />
                 </div>
                 <img
                     className="topImage"
-                    src="https://i.imgur.com/VXqnJPw.png"
+                    src="https://i.imgur.com/rbf3H3S.png"
                     alt="Roseann"
                 />
             </div>
