@@ -62,8 +62,8 @@ export default function TripBlog() {
             <Container className="d-flex justify-content-center">
                 <Row className="text-center">
                     {tripBlog.map((blog, index) => (
-                        <Col key={index} xs={3} className="d-inline-flex flex-row justify-content-around text-white p-4">
-                            <Card id="card" className="p-1 mb-3 text-center" style={{ width: '80vw' }}>
+                        <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white p-4">
+                            <Card id="card" className="p-1 m-4 text-center" style={{ width: '80vw' }}>
                                 <Card.Body>
                                     <Card.Title className="vibesSmMd" style={{ height: '8vh' }}>{blog.title}</Card.Title>
                                     <Card.Text className="p-1 mb-1
@@ -78,9 +78,11 @@ export default function TripBlog() {
                                         <p>{blog.date}</p>
 
                                         {/* <p>{blog.blog}</p> */}
-                                        <AddImage getTripBlog={getTripBlog} />
-                                        <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
-                                        <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
+                                        {/* <AddImage getTripBlog={getTripBlog} /> */}
+                                        <div className="d-flex flex-row justify-content-around text-white p-4">
+                                            <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
+                                            <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
+                                        </div>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

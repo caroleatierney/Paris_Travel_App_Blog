@@ -48,40 +48,52 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
     // react bootstrap modal used to only display update notes form field if user wants to update notes
     return (
         <>
-            <div className="text-center montserrat">
-                <Button className="btn btn-secondary" onClick={handleShow} >
+            <div className="text-center montserrat" style={{ background: "beige" }}>
+                <Button
+                    className="btn btn-secondary my-3 montserraSm" 
+                    onClick={handleShow}
+                >
                     Update
                 </Button>
             </div>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title>Update</Modal.Title>
-                    </div>
-
+                <Modal.Header className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                    <Modal.Title>Update</Modal.Title>
                 </Modal.Header>
 
-                <Modal.Body>
-                    <Form className='justify-contents-space-evenly'>
-                        <textarea className="m-5 p-5" onChange={(e) => setUpdatedTitle(e.target.value)} value={updatedTitle}></textarea>
+                <Modal.Body style={{ background: "#c4b7a6" }}>
+                    <Form className='d-flex flex-column justify-contents-space-evenly'>
+                        <label htmlFor="title">Enter New Title</label>
+                        <textarea
+                            className="form-control"
+                            id="title"
+                            style={{ background: "#e6e2d3" }}
+                            rows="5"
+                            onChange={(e) => setUpdatedTitle(e.target.value)}
+                            value={updatedTitle}
+                        />
 
-                        <textarea className="m-5 p-5" onChange={(e) => setUpdatedImage(e.target.value)} value={updatedImage}></textarea>
-
-                        <div className="text-center">
-                            <button type="button" onClick={updateImageTitle} className="btn btn-secondary my-3 montserraSm">Update</button>
-                        </div>
+                        <label htmlFor="photo">Replace Photo</label>
+                        <input
+                            className="form-control p-3"
+                            id="photo"
+                            style={{ background: "#e6e2d3"}}
+                            onChange={(e) => setUpdatedImage(e.target.value)}
+                            value={updatedImage}
+                        />
                     </Form>
 
                 </Modal.Body>
 
-                <Modal.Footer>
-                    <div className="text-center">
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                    </div>
+                <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                    <Button variant="secondary" onClick={updateImageTitle} className="btn btn-secondary mx-5 p-2 montserraSm">
+                        Update
+                    </Button>
 
+                    <Button variant="secondary" onClick={handleClose} className="btn btn-secondary mx-5 p-2 montserraSm">
+                        Close
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
