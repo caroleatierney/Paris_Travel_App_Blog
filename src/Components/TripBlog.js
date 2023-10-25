@@ -56,17 +56,17 @@ export default function TripBlog() {
     // display data from MockAPI
 
     return (
-        <div className="DisplayBlog p-5 m-5" style={{ minHeight: '100%' }} >
+        <div className="DisplayBlog" style={{ minHeight: '100%' }} >
             <AddImage getTripBlog={getTripBlog} />
 
-            <Container className="m-10 p-5">
-                <Row>
+            <Container className="d-flex justify-content-center">
+                <Row className="text-center">
                     {tripBlog.map((blog, index) => (
-                        <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white">
-                            <Card id="card" className="p-3 mb-2 text-center" style={{ width: '15vw', height: '30vw' }}>
+                        <Col key={index} xs={3} className="d-inline-flex flex-row justify-content-around text-white p-4">
+                            <Card id="card" className="p-1 mb-3 text-center" style={{ width: '80vw' }}>
                                 <Card.Body>
-                                    <Card.Title className="vibesSmMd" style={{ height: '7vh' }}>{blog.title}</Card.Title>
-                                    <Card.Text className="p-3 mb-2
+                                    <Card.Title className="vibesSmMd" style={{ height: '8vh' }}>{blog.title}</Card.Title>
+                                    <Card.Text className="p-1 mb-1
                                         text-center montserratSm">
                                         <Image
                                             className="d-block"
