@@ -10,12 +10,14 @@ import Image from 'react-bootstrap/Image';
 
 import AddPost from './AddPost.js'
 import AddImage from './AddImage.js'
+import UpdateImageTitle from './UpdateImageTitle.js'
+import DeleteBlog from './DeleteBlog.js'
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function TripBlog() {
-    const [TripBlog, setTripBlog] = useState([]);
+    const [tripBlog, setTripBlog] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -24,12 +26,31 @@ export default function TripBlog() {
         const response = await fetch(MOCK_API_URL);
         const data = await response.json();
         setTripBlog(data);
+        console.log(data)
     };
 
     // execute function to get the photos and blog
     useEffect(() => {
         getTripBlog();
     }, []);
+
+    // this passes the blog id to the updateImageTitle component so it can update the correct blog
+    // then reload new data
+    const onUpdate = async (blogId) => {
+        UpdateDestinationNotes(blogId);
+        const response = await fetch(MOCK_API_URL);
+        const data = await response.json();
+        setTripBlog(data);
+    };
+
+    // this passes the blog id to the delete component so it can delete the correct destination
+    // then reload new data
+    const onDelete = async (blogId) => {
+        DeleteBlog(blogId);
+        const response = await fetch(MOCK_API_URL);
+        const data = await response.json();
+        setTripBlog(data);
+    };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
@@ -40,24 +61,26 @@ export default function TripBlog() {
 
             <Container className="m-10 p-5">
                 <Row>
-                    {TripBlog.map((photo, index) => (
+                    {tripBlog.map((blog, index) => (
                         <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white">
                             <Card id="card" className="p-3 mb-2 text-center" style={{ width: '15vw', height: '30vw' }}>
                                 <Card.Body>
-                                    <Card.Title className="vibesSmMd" style={{ height: '7vh' }}>{photo.title}</Card.Title>
+                                    <Card.Title className="vibesSmMd" style={{ height: '7vh' }}>{blog.title}</Card.Title>
                                     <Card.Text className="p-3 mb-2
                                         text-center montserratSm">
                                         <Image
                                             className="d-block"
-                                            src="{photo.image}"
-                                            alt="{photo.title}"
+                                            src={blog.image}
+                                            alt="{blog.title}"
                                             thumbnail
                                             fluid
                                         />
-                                        <p>{photo.date}</p>
-                                        
-                                        <p>{photo.blog}</p>
+                                        <p>{blog.date}</p>
+
+                                        {/* <p>{blog.blog}</p> */}
                                         <AddImage getTripBlog={getTripBlog} />
+                                        <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
+                                        <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

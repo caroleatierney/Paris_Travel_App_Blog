@@ -4,22 +4,28 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import TripBlog from './TripBlog.js'
-
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function AddImage({ getTripBlog }) {
 
+    function getDate() {
+        const today = new Date();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+        const date = today.getDate();
+        return `${month}/${date}/${year}`;
+    }
+
     // API URL used to add to MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
     // state add state variables and state update function used in add form and set to null
-    const [newTitle, setNewTitle] = useState('')
-    const [newImage, setNewImage] = useState('')
-    const [newDate, setNewDate] = useState('new Date()')
-    const [newBlog, setNewBlog] = useState('[]')
+    const [newTitle, setNewTitle] = useState('');
+    const [newImage, setNewImage] = useState('');
+    const [newDate, setNewDate] = useState(getDate());
+    const [newBlog, setNewBlog] = useState('[]');
 
     // react bootstrap modal variables   
     const [show, setShow] = useState(false);
@@ -39,7 +45,7 @@ export default function AddImage({ getTripBlog }) {
                 title: newTitle,
                 image: newImage,
                 date: newDate,
-                blog: blog
+                blog: newBlog
             }),
         }).then(() => getTripBlog())
 
@@ -80,7 +86,7 @@ export default function AddImage({ getTripBlog }) {
                         <label className="montserrat">Add New Photo</label>
                         <input className="m-1" onChange={(e) => setNewImage(e.target.value)} value={newImage}></input>
                         <div className="text-center">
-                            <button className="montserrat" type="button" onClick={addImage} className="m-1">Add Photo</button>
+                            <button className="montserrat m-1" type="button" onClick={addImage}>Add Photo</button>
                         </div>
                     </form>
                 </Modal.Body>
