@@ -8,16 +8,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
-import AddPost from './AddPost.js'
+// import AddPost from './AddPost.js'
 import AddImage from './AddImage.js'
 import UpdateImageTitle from './UpdateImageTitle.js'
 import DeleteBlog from './DeleteBlog.js'
+import Posts from './Posts.js'
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function TripBlog() {
-    const [tripBlog, setTripBlog] = useState([]);
+    const [tripBlogs, setTripBlogs] = useState([]);
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -25,8 +26,9 @@ export default function TripBlog() {
     const getTripBlog = async () => {
         const response = await fetch(MOCK_API_URL);
         const data = await response.json();
-        setTripBlog(data);
-        console.log(data)
+        setTripBlogs(data);
+        // console.log("data" + data)
+        // console.log("tripBlogs" + {tripBlogs})
     };
 
     // execute function to get the photos and blog
@@ -37,10 +39,10 @@ export default function TripBlog() {
     // this passes the blog id to the updateImageTitle component so it can update the correct blog
     // then reload new data
     const onUpdate = async (blogId) => {
-        UpdateDestinationNotes(blogId);
+        UpdateTitle(blogId);
         const response = await fetch(MOCK_API_URL);
         const data = await response.json();
-        setTripBlog(data);
+        setTripBlogs(data);
     };
 
     // this passes the blog id to the delete component so it can delete the correct destination
@@ -49,7 +51,7 @@ export default function TripBlog() {
         DeleteBlog(blogId);
         const response = await fetch(MOCK_API_URL);
         const data = await response.json();
-        setTripBlog(data);
+        setTripBlogs(data);
     };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -61,7 +63,7 @@ export default function TripBlog() {
 
             <Container className="d-flex justify-content-center">
                 <Row className="text-center">
-                    {tripBlog.map((blog, index) => (
+                    {tripBlogs.map((blog, index) => (
                         <Col key={index} xs={4} className="d-inline-flex flex-row justify-content-around text-white p-4">
                             <Card id="card" className="p-1 m-4 text-center" style={{ width: '80vw' }}>
                                 <Card.Body>
@@ -75,17 +77,19 @@ export default function TripBlog() {
                                             thumbnail
                                             fluid
                                         />
-                                        <p>{blog.date}</p>
-
-                                        {/* <p>{blog.blog}</p> */}
-                                        {/* <AddImage getTripBlog={getTripBlog} /> */}
-                                        <div className="d-flex flex-row justify-content-around text-white p-4">
-                                            <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
-                                            <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
-                                        </div>
+                                        {blog.date}
                                     </Card.Text>
                                 </Card.Body>
-                            </Card>
+
+                                <div className="d-flex flex-row justify-content-around text-white p-4">
+                                    <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
+                                    <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
+                                </div>
+
+                                {/* is it here */}
+                                {/* <Posts tripBlogs={blog.blogArray} /> */}
+                                <Posts tripBlogs={blog} />
+                                </Card>
                         </Col>
                     ))}
                 </Row>
