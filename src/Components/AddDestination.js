@@ -130,7 +130,7 @@ export default function AddDestinations({getDestinations}) {
                         <input className="m-1" onChange={(e) => setNewRating(e.target.value)} value={newRating}></input>
 
                         <div className="text-center">
-                            <button className="montserrat" type="button" onClick={addDestination} className="m-1 tangerine">Add Destination</button>
+                            <button className="montserrat" type="button" onClick={addDestination} className="m-1">Add Destination</button>
                         </div>
                     </form>
                 </Modal.Body>

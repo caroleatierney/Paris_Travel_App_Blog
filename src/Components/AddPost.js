@@ -28,16 +28,47 @@ export default function AddPost() {
         const year = today.getFullYear();
         const date = today.getDate();
         return `${month}/${date}/${year}`;
-    }
+    };
 
     // when add button is clicked, the new object is posted as a string to MockAPI
-
-// push to array!
-
-    function addPost(e) {
+    async function addPost(e) {
         e.preventDefault()
+
+        // console.log(newBlogName, newBlogDate, newComments, newRating)
+        // Get the existing blogArray data from Mock API
+        const response = await fetch(MOCK_API_URL);
+        const data = await response.json();
+        const blogArray = data[0].blogArray;
+        
+        console.log(data)
+        console.log(blogArray)
+
+        // Add the new post to the blogArray
+        blogArray.push({
+            blogName: newBlogName,
+            blogDate: newBlogDate,
+            comments: newComments,
+            rating: newRating
+        });
+
+        // Update the blogArray data in Mock API
+        await fetch(MOCK_API_URL, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                blogArray: blogArray
+            })
+        });
+
+        // // Reload the page to display the updated blogArray data
+        // window.location.reload();
+    
+
+
         fetch(MOCK_API_URL, {
-            method: 'POST',
+            method: 'PUT',
             headers:
             {
                 'Content-Type': 'application/json',
@@ -48,11 +79,10 @@ export default function AddPost() {
                 comments: newComments,
                 rating: newRating
             }),
-        }).then(() => getTripBlog())
+        })
 
         // set form fields to blank after update
         setNewBlogName('')
-        // setNewBlogDate('')
         setNewComments('')
         setNewRating('')
 
@@ -105,6 +135,5 @@ export default function AddPost() {
 
                 </Modal.Footer>
             </Modal>
-        </>
-    )
+        </>    )
 }

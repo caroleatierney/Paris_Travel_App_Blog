@@ -16,8 +16,11 @@ export default class SinglePost extends Component {
     render() {
         return (
             <div>
-                <h3>{this.post.blogName}           {this.post.blogDate} {this.post.rating}</h3>
+                <hr></hr>
+                <h4>{this.post.blogName} {this.post.rating}</h4>
+                <h4>{this.post.blogDate}</h4>
                 <h6>{this.post.comments}</h6>
+                <hr></hr>
             </div>
         )
     }

@@ -13,6 +13,7 @@ import AddImage from './AddImage.js'
 import UpdateImageTitle from './UpdateImageTitle.js'
 import DeleteBlog from './DeleteBlog.js'
 import Posts from './Posts.js'
+import AddPost from './AddPost.js'
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -83,11 +84,12 @@ export default function TripBlog() {
 
                                 <div className="d-flex flex-row justify-content-around text-white p-4">
                                     <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
-                                    <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
+                                    {/* <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} /> */}
                                 </div>
 
                                 {/* is it here */}
                                 {/* <Posts tripBlogs={blog.blogArray} /> */}
+                                {/* <AddPost key={index} /> */}
                                 <Posts tripBlogs={blog} />
                                 </Card>
                         </Col>

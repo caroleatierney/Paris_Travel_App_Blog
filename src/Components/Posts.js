@@ -17,16 +17,19 @@ export default class Posts extends Component {
         this.tripBlogs = props.tripBlogs.blogArray
     }
 
+
+
+
     render() {
         return (
             <div>
+                {/* <AddPost /> */}
+
                 {this.tripBlogs.map((post, index) => {
                     // {console.log(post)}
                     // {console.log(post.blogArray)}
-                   return  <SinglePost key={index} post={post} />
-     
+                    return <SinglePost key={index} post={post} />
                 })}
-                <AddPost />
             </div>
         )
     }

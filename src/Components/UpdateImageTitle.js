@@ -48,7 +48,7 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
     // react bootstrap modal used to only display update notes form field if user wants to update notes
     return (
         <>
-            <div className="text-center montserrat" style={{ background: "beige" }}>
+            <div className="text-center montserrat">
                 <Button
                     className="btn btn-secondary my-3 montserraSm" 
                     onClick={handleShow}
