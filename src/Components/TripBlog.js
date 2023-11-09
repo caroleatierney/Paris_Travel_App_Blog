@@ -84,7 +84,7 @@ export default function TripBlog() {
 
                                 <div className="d-flex flex-row justify-content-around text-white p-4">
                                     <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
-                                    {/* <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} /> */}
+                                    <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
                                 </div>
 
                                 {/* is it here */}

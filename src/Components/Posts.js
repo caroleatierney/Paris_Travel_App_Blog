@@ -17,9 +17,6 @@ export default class Posts extends Component {
         this.tripBlogs = props.tripBlogs.blogArray
     }
 
-
-
-
     render() {
         return (
             <div>

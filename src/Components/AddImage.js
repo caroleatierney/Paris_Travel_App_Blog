@@ -62,43 +62,51 @@ export default function AddImage({ getTripBlog }) {
     // react bootstrap modal used to only display form fields if user wants to add a destination
     return (
         <>
-            <div className="text-center">
-                <Button className="MontserratMd" variant="secondary" style={{
-                    color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
-                }} onClick={handleShow} >
+            <div className="text-center montserrat">
+                <Button 
+                    className="btn btn-secondary my-3 montserraSm" 
+                    onClick={handleShow} >
                     Add a new photo
                 </Button>
             </div>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title className="montserrat bg-secondary">Add a photo</Modal.Title>
-                    </div>
-
-                </Modal.Header>
-
-                <Modal.Body>
-                    <form>
-                        <label className="montserrat">Add New Photo Title</label>
-                        <input className="m-1" onChange={(e) => setNewTitle(e.target.value)} value={newTitle}></input>
-
-                        <label className="montserrat">Add New Photo</label>
-                        <input className="m-1" onChange={(e) => setNewImage(e.target.value)} value={newImage}></input>
-                        <div className="text-center">
-                            <button className="montserrat m-1" type="button" onClick={addImage}>Add Photo</button>
+                <div style={{ color: 'white', border: 'solid', borderWidth: '5px', borderColor: 'white', borderRadius: '5px' }}>
+                    <Modal.Header className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                        <div className="flex flex-row text-center">
+                            <Modal.Title className="mx-5 p-2 montserratMd" style={{color: 'white'}}
+                                onClick={handleShow} >Add a photo</Modal.Title>
                         </div>
-                    </form>
-                </Modal.Body>
 
-                <Modal.Footer>
-                    <div className="text-center">
-                        <Button className="vibes" variant="secondary" onClick={handleClose}>
+                    </Modal.Header>
+
+                    <Modal.Body style={{ background: "#c4b7a6" }}>
+                        <form className="d-flex flex-column justify-content-space-evenly">
+                                <label htmlFor="photoTitle" className="montserratMd mb-1 white">Photo Title</label>
+                                <input 
+                                    className="form-control p-3 mb-3"
+                                    style={{ background: "#e6e2d3" }}
+                                    onChange={(e) => setNewTitle(e.target.value)} value={newTitle}>
+                                </input>
+
+                                <label htmlFor="photoLink" className="montserratMd mb-1 white">Photo Link</label>
+                                <input
+                                className="form-control p-3 mb-3"
+                                    style={{ background: "#e6e2d3" }}
+                                    onChange={(e) => setNewImage(e.target.value)} value={newImage}></input>
+                            </form>
+
+                    </Modal.Body>
+                    <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                        <Button variant="secondary" onClick={addImage} className="btn btn-secondary mx-5 p-2 montserraSm" >
+                            Add
+                        </Button>
+
+                        <Button variant="secondary" onClick={handleClose} className="btn btn-secondary mx-5 p-2 montserraSm">
                             Close
                         </Button>
-                    </div>
-
-                </Modal.Footer>
+                    </Modal.Footer>
+                </div>
             </Modal>
         </>
     )
