@@ -25,7 +25,7 @@ export default function AddImage({ getTripBlog }) {
     const [newTitle, setNewTitle] = useState('');
     const [newImage, setNewImage] = useState('');
     const [newDate, setNewDate] = useState(getDate());
-    const [newBlog, setNewBlog] = useState('[]');
+    const [newDescription, setNewDescription] = useState('[]');
 
     // react bootstrap modal variables   
     const [show, setShow] = useState(false);
@@ -45,15 +45,14 @@ export default function AddImage({ getTripBlog }) {
                 title: newTitle,
                 image: newImage,
                 date: newDate,
-                blog: newBlog
+                description: newDescription
             }),
         }).then(() => getTripBlog())
 
         // set form fields to blank after update
         setNewTitle('')
         setNewImage('')
-        setNewDate('')
-        setNewBlog('')
+        setNewDescription('')
 
         // close modal
         handleClose()
@@ -66,7 +65,7 @@ export default function AddImage({ getTripBlog }) {
                 <Button 
                     className="btn btn-secondary my-3 montserraSm" 
                     onClick={handleShow} >
-                    Add a new photo
+                        Add a new photo
                 </Button>
             </div>
 
@@ -94,11 +93,22 @@ export default function AddImage({ getTripBlog }) {
                                 className="form-control p-3 mb-3"
                                     style={{ background: "#e6e2d3" }}
                                     onChange={(e) => setNewImage(e.target.value)} value={newImage}></input>
+
+                                <label htmlFor="description" className="montserratMd mb-1 white">Description</label>
+                                <textarea
+                                    className="form-control p-3 mb-3"
+                                    style={{ background: "#e6e2d3" }}
+                                    rows="5"
+                                    onChange={(e) => setNewDescription(e.target.value)} value={newDescription}/>
                             </form>
 
                     </Modal.Body>
+                    
                     <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
-                        <Button variant="secondary" onClick={addImage} className="btn btn-secondary mx-5 p-2 montserraSm" >
+                        <Button 
+                        variant="secondary" 
+                        onClick={addImage} 
+                        className="btn btn-secondary mx-5 p-2 montserraSm" >
                             Add
                         </Button>
 

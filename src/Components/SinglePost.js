@@ -19,7 +19,7 @@ export default class SinglePost extends Component {
                 <hr></hr>
                 <h4>{this.post.blogName} {this.post.rating}</h4>
                 <h4>{this.post.blogDate}</h4>
-                <h6>{this.post.comments}</h6>
+                <p>{this.post.comments}</p>
                 <hr></hr>
             </div>
         )

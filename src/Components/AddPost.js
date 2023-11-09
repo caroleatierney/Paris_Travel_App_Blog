@@ -65,8 +65,6 @@ export default function AddPost() {
         // // Reload the page to display the updated blogArray data
         // window.location.reload();
     
-
-
         fetch(MOCK_API_URL, {
             method: 'PUT',
             headers:
@@ -93,47 +91,71 @@ export default function AddPost() {
     // react bootstrap modal used to only display form fields if user wants to add a destination
     return (
         <>
-            <div className="text-center">
-                <Button className="MontserratMd" variant="secondary" style={{
-                    color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
-                }} onClick={handleShow} >
+            <Modal show={show} onHide={handleClose}>
+                <div style={{ color: 'white', border: 'solid', borderWidth: '5px', borderColor: 'white', borderRadius: '5px' }}>
+                    <Modal.Header className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                        <div className="flex flex-row text-center">
+                            <Modal.Title className="mx-5 p-2 montserratMd" style={{ color: 'white' }}>Add a new Post</Modal.Title>
+                        </div>
+
+                    </Modal.Header>
+
+                    <Modal.Body style={{ background: "#c4b7a6" }}>
+                        <form className="d-flex flex-column justify-content-space-evenly">
+
+                            <label htmlFor="bloggersName" className="montserratMd mb-1 white">Your Name Here</label>
+                            <input 
+                                className="m-1" 
+                                onChange={(e) => setNewBlogName(e.target.value)} 
+                                style={{ background: "#e6e2d3" }}
+                                value={newBlogName}></input>
+
+                            <label htmlFor="comments" className="montserratMd mb-1 white">Add Your Comments</label>
+                            <textarea 
+                                className="m-1" 
+                                onChange={(e) => setNewComments(e.target.value)} 
+                                rows="5"
+                                style={{ background: "#e6e2d3" }}
+                                value={newComments}/>
+
+                            <label htmlFor="rating" className="montserratMd mb-1 white">Add Your Rating</label>
+                            <input 
+                                className="m-1" 
+                                onChange={(e) => setNewRating(e.target.value)} 
+                                style={{ background: "#e6e2d3" }}
+                                value={newRating}></input>
+                        </form>
+                    </Modal.Body>
+
+                    <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+                        <div className="text-center">
+                            <button
+                                variant="secondary"
+                                className="btn btn-secondary mx-5 p-2 montserraSm"
+                                type="button"
+                                onClick={addPost}>
+                                Add Post
+                            </button>
+
+                            <Button 
+                                variant="secondary" 
+                                onClick={handleClose} 
+                                className="btn btn-secondary mx-5 p-2 montserraSm">
+                                    Close
+                            </Button>
+                        </div>
+                    </Modal.Footer>
+
+                </div>
+            </Modal>
+
+            <div className="text-center montserrat">
+                <Button
+                    className="btn btn-secondary my-3 montserratSm"
+                    onClick={handleShow} >
                     Add a New Post
                 </Button>
             </div>
-
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title className="montserrat bg-secondary">Add a new Post</Modal.Title>
-                    </div>
-
-                </Modal.Header>
-
-                <Modal.Body>
-                    <form>
-                        <label className="montserrat">Your Name Here</label>
-                        <input className="m-1" onChange={(e) => setNewBlogName(e.target.value)} value={newBlogName}></input>
-
-                        <label className="montserrat">Add Your Comments</label>
-                        <input className="m-1" onChange={(e) => setNewComments(e.target.value)} value={newComments}></input>
-
-                        <label className="montserrat">Add Your Rating</label>
-                        <input className="m-1" onChange={(e) => setNewRating(e.target.value)} value={newRating}></input>
-
-                        <div className="text-center">
-                            <button className="montserrat m-1" type="button" onClick={addPost}>Add Post</button>
-                        </div>
-                    </form>
-                </Modal.Body>
-
-                <Modal.Footer>
-                    <div className="text-center">
-                        <Button className="vibes" variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                    </div>
-
-                </Modal.Footer>
-            </Modal>
-        </>    )
+        </>
+    )
 }

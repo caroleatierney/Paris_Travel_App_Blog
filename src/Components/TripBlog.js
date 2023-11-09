@@ -79,6 +79,9 @@ export default function TripBlog() {
                                             fluid
                                         />
                                         {blog.date}
+                                        <hr></hr>
+                                        <p style={{ height: '15vh'}}>{blog.description}</p>
+                                        <hr></hr>
                                     </Card.Text>
                                 </Card.Body>
 
@@ -87,9 +90,9 @@ export default function TripBlog() {
                                     <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
                                 </div>
 
-                                {/* is it here */}
+                                {/* is it here - don't know what it is */}
                                 {/* <Posts tripBlogs={blog.blogArray} /> */}
-                                {/* <AddPost key={index} /> */}
+                                <AddPost key={index} />
                                 <Posts tripBlogs={blog} />
                                 </Card>
                         </Col>

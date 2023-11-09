@@ -74,7 +74,6 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
                                 className="form-control p-3 mb-3"
                                 id="title"
                                 style={{ background: "#e6e2d3" }}
-                                rows="5"
                                 onChange={(e) => setUpdatedTitle(e.target.value)}
                                 value={updatedTitle}
                             />
