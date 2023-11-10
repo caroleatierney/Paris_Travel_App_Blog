@@ -49,11 +49,6 @@ export default function AddImage({ getTripBlog }) {
             }),
         }).then(() => getTripBlog())
 
-        // set form fields to blank after update
-        setNewTitle('')
-        setNewImage('')
-        setNewDescription('')
-
         // close modal
         handleClose()
     }

@@ -29,7 +29,7 @@ export default function DeleteBlog({ blogId, onDelete, getTripBlog }) {
     // this is the delete button rendered from the TripBlog's component's card
     return (
         <div className="text-center">
-            <button type="button" onClick={deleteBlog} className="btn btn-secondary my-3 montserraSm">Delete</button>
+            <button type="button" onClick={deleteBlog} className="btn btn-secondary my-3 montserratSmMd">Delete</button>
         </div>
     );
 }

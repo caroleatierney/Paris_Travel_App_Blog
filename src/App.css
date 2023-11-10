@@ -62,6 +62,14 @@
     font-weight: bold;
     text-shadow: 1px 1px 1px #d97fb9f5;
 }
+
+.montserratSmMd {
+    font-family: 'Montserrat Alternates';
+    color: black;
+    font-size: 1vw !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #d97fb9f5;
+}
 .montserratMd {
     font-family: 'Montserrat Alternates';
     color: black;

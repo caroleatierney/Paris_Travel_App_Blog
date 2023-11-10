@@ -8,15 +8,15 @@ import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
-export default function UpdateImageTitle({ getTripBlog, blogId }) {
+export default function UpdateImageTitle({ getTripBlog, blogId, title, image }) {
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
     // set update state variables and state update function used in update form and set to null
 
-{/* need to set to passed in values */ }
-    const [updatedTitle, setUpdatedTitle] = useState('')
-    const [updatedImage, setUpdatedImage] = useState('')
+    // set to passed in values
+    const [updatedTitle, setUpdatedTitle] = useState(title)
+    const [updatedImage, setUpdatedImage] = useState(image)
 
     // react bootstrap modal variables   
     const [show, setShow] = useState(false);
@@ -41,10 +41,6 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
             }),
         }).then(() => getTripBlog())
 
-        // set form field to blank after update
-        setUpdatedTitle('')
-        setUpdatedImage('')
-
         // close modal
         handleClose()
     }
@@ -54,7 +50,7 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
         <>
             <div className="text-center montserrat">
                 <Button
-                    className="btn btn-secondary my-3 montserraSm" 
+                    className="btn btn-secondary my-3 montserratSmMd" 
                     onClick={handleShow}
                 >
                     Update
@@ -91,11 +87,11 @@ export default function UpdateImageTitle({ getTripBlog, blogId }) {
                     </Modal.Body>
 
                     <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
-                        <Button variant="secondary" onClick={updateImageTitle} className="btn btn-secondary mx-5 p-2 montserraSm" >
+                        <Button variant="secondary" onClick={updateImageTitle} className="btn btn-secondary mx-5 p-2 montserratSmMd" >
                             Update
                         </Button>
 
-                        <Button variant="secondary" onClick={handleClose} className="btn btn-secondary mx-5 p-2 montserraSm">
+                        <Button variant="secondary" onClick={handleClose} className="btn btn-secondary mx-5 p-2 montserratSmMd">
                             Close
                         </Button>
                     </Modal.Footer>

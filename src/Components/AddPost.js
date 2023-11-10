@@ -79,11 +79,6 @@ export default function AddPost() {
             }),
         })
 
-        // set form fields to blank after update
-        setNewBlogName('')
-        setNewComments('')
-        setNewRating('')
-
         // close modal
         handleClose()
     }
@@ -131,7 +126,7 @@ export default function AddPost() {
                         <div className="text-center">
                             <button
                                 variant="secondary"
-                                className="btn btn-secondary mx-5 p-2 montserraSm"
+                                className="btn btn-secondary mx-5 p-2 montserratSmMd"
                                 type="button"
                                 onClick={addPost}>
                                 Add Post
@@ -140,7 +135,7 @@ export default function AddPost() {
                             <Button 
                                 variant="secondary" 
                                 onClick={handleClose} 
-                                className="btn btn-secondary mx-5 p-2 montserraSm">
+                                className="btn btn-secondary mx-5 p-2 montserratSmMd">
                                     Close
                             </Button>
                         </div>
@@ -151,7 +146,7 @@ export default function AddPost() {
 
             <div className="text-center montserrat">
                 <Button
-                    className="btn btn-secondary my-3 montserratSm"
+                    className="btn btn-secondary my-3 montserratSmMd"
                     onClick={handleShow} >
                     Add a New Post
                 </Button>

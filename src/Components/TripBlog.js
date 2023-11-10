@@ -86,7 +86,7 @@ export default function TripBlog() {
                                 </Card.Body>
 
                                 <div className="d-flex flex-row justify-content-around text-white p-4">
-                                    <UpdateImageTitle blogId={blog.id} getTripBlog={getTripBlog} onUpdate={onUpdate} />
+                                    <UpdateImageTitle blogId={blog.id} title={blog.title} image={blog.image} getTripBlog={getTripBlog} onUpdate={onUpdate} />
                                     <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
                                 </div>
 
