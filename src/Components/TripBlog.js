@@ -55,6 +55,14 @@ export default function TripBlog() {
         setTripBlogs(data);
     };
 
+    // this passes the blog id to the AddPost component so it can add the post to the correct image
+        const onAddPost = async (blogId) => {
+        AddPost(blogId);
+        const response = await fetch(MOCK_API_URL);
+        const data = await response.json();
+        setTripBlogs(data);
+    };
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
 
@@ -90,11 +98,10 @@ export default function TripBlog() {
                                     <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
                                 </div>
 
-                                {/* is it here - don't know what it is */}
                                 {/* <Posts tripBlogs={blog.blogArray} /> */}
-                                <AddPost key={index} />
                                 <Posts tripBlogs={blog} />
-                                </Card>
+                                <AddPost blogId={blog.id} getTripBlog={getTripBlog} onAddPost={onAddPost} />
+                            </Card>
                         </Col>
                     ))}
                 </Row>

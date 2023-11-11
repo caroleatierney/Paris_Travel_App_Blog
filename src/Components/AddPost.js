@@ -7,7 +7,7 @@ import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Component
-export default function AddPost() {
+export default function AddPost(blogId, OnAddPost, getTripBlog) {
     // API URL used to add to MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
@@ -35,13 +35,10 @@ export default function AddPost() {
         e.preventDefault()
 
         // console.log(newBlogName, newBlogDate, newComments, newRating)
-        // Get the existing blogArray data from Mock API
-        const response = await fetch(MOCK_API_URL);
+        // Get the existing blogArray data from MockAPI for specific blog
+        const response = await fetch(`${MOCK_API_URL}/${blogId.blogId}`);
         const data = await response.json();
-        const blogArray = data[0].blogArray;
-        
-        console.log(data)
-        console.log(blogArray)
+        const blogArray = data.blogArray;
 
         // Add the new post to the blogArray
         blogArray.push({
@@ -52,7 +49,7 @@ export default function AddPost() {
         });
 
         // Update the blogArray data in Mock API
-        await fetch(MOCK_API_URL, {
+        await fetch(`${MOCK_API_URL}/${blogId.blogId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -65,7 +62,7 @@ export default function AddPost() {
         // // Reload the page to display the updated blogArray data
         // window.location.reload();
     
-        fetch(MOCK_API_URL, {
+        fetch(`${MOCK_API_URL}/${blogId.blogId}`, {
             method: 'PUT',
             headers:
             {
@@ -124,6 +121,7 @@ export default function AddPost() {
 
                     <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
                         <div className="text-center">
+
                             <button
                                 variant="secondary"
                                 className="btn btn-secondary mx-5 p-2 montserratSmMd"
@@ -143,14 +141,12 @@ export default function AddPost() {
 
                 </div>
             </Modal>
-
-            <div className="text-center montserrat">
-                <Button
-                    className="btn btn-secondary my-3 montserratSmMd"
-                    onClick={handleShow} >
-                    Add a New Post
-                </Button>
-            </div>
+            <Button
+                variant="secondary"
+                onClick={addPost}
+                className="btn-secondary mb-2 montserratSmMd">
+                Add a New Post
+            </Button>
         </>
     )
 }

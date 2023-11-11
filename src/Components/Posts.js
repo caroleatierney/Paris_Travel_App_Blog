@@ -19,9 +19,8 @@ export default class Posts extends Component {
 
     render() {
         return (
-            <div>
-                {/* <AddPost /> */}
-
+            <div style={{ border: 'solid', borderWidth: '5px', borderColor: 'white', borderRadius: '5px' }}>
+                <h1>Posts</h1>
                 {this.tripBlogs.map((post, index) => {
                     // {console.log(post)}
                     // {console.log(post.blogArray)}

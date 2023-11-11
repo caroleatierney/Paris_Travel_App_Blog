@@ -25,7 +25,7 @@ export default function AddImage({ getTripBlog }) {
     const [newTitle, setNewTitle] = useState('');
     const [newImage, setNewImage] = useState('');
     const [newDate, setNewDate] = useState(getDate());
-    const [newDescription, setNewDescription] = useState('[]');
+    const [newDescription, setNewDescription] = useState('');
 
     // react bootstrap modal variables   
     const [show, setShow] = useState(false);
@@ -49,6 +49,11 @@ export default function AddImage({ getTripBlog }) {
             }),
         }).then(() => getTripBlog())
 
+        // set form fields to blank after update
+        setNewTitle('')
+        setNewImage('')
+        setNewDescription('')
+        
         // close modal
         handleClose()
     }

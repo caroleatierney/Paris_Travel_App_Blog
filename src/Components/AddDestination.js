@@ -78,23 +78,23 @@ export default function AddDestinations({getDestinations}) {
     // react bootstrap modal used to only display form fields if user wants to add a destination
     return (
         <>
-            <div className="text-center">
-                <Button className="MontserratMd" variant="secondary" style={{
-                    color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px'
-                }} onClick={handleShow} >
+            <div className="flex flex-row text-center">
+                <Button
+                    className="montserratSmMd"
+                    type="button"
+                    variant="secondary"
+                    onClick={handleShow}>
                     Add a new destination
                 </Button>
             </div>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title className="montserrat bg-secondary">Add a destination</Modal.Title>
-                    </div>
+                <Modal.Header style={{ background: "#c4b7a6" }}>
+                    <Modal.Title className="montserratSmMd text-center">Add a destination</Modal.Title>
 
                 </Modal.Header>
 
-                <Modal.Body>
+                <Modal.Body style={{ background: "#c4b7a6" }}>
                     <form>
                         <label className="montserrat">Add New Destination Title</label>
                         <input className="m-1" onChange={(e) => setNewTitle(e.target.value)} value={newTitle}></input>
@@ -129,15 +129,24 @@ export default function AddDestinations({getDestinations}) {
                         <label className="montserrat">Add New Destination Rating</label>
                         <input className="m-1" onChange={(e) => setNewRating(e.target.value)} value={newRating}></input>
 
-                        <div className="text-center">
-                            <button className="montserrat" type="button" onClick={addDestination} className="m-1">Add Destination</button>
-                        </div>
                     </form>
                 </Modal.Body>
 
-                <Modal.Footer>
+                <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
                     <div className="text-center">
-                        <Button className="tangerine" variant="secondary" onClick={handleClose}>
+                        <Button 
+                            className="montserratSmMd"
+                            type="button"
+                            variant="secondary"
+                            onClick={addDestination}>
+                            Add Destination
+                        </Button>
+                        
+                        <Button 
+                            className="montserratSmMd"
+                            type="button"
+                            variant="secondary"
+                            onClick={handleClose}>
                             Close
                         </Button>
                     </div>

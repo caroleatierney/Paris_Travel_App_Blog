@@ -58,18 +58,23 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
                 <Modal.Body>
                     <Form className='justify-contents-space-evenly'>
                         <textarea className="m-5 p-5" onChange={(e) => setUpdatedNotes(e.target.value)} value={updatedNotes}></textarea>
-
-                        <div className="text-center">
-                            <button type="button" onClick={updateDestinationNotes} className="btn btn-secondary my-3 montserraSm">Update Notes</button>
-                        </div>
                     </Form>
 
                 </Modal.Body>
 
                 <Modal.Footer>
                     <div className="text-center">
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
+                        <Button
+                            variant="secondary"
+                            onClick={updateDestinationNotes}
+                            className="btn btn-secondary my-3 montserraSm">
+                            Update Notes
+                        </Button>
+                        
+                        <Button
+                            variant="secondary"
+                            onClick={handleClose}>
+                                Close
                         </Button>
                     </div>
 
