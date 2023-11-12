@@ -56,12 +56,12 @@ export default function TripBlog() {
     };
 
     // this passes the blog id to the AddPost component so it can add the post to the correct image
-        const onAddPost = async (blogId) => {
-        AddPost(blogId);
-        const response = await fetch(MOCK_API_URL);
-        const data = await response.json();
-        setTripBlogs(data);
-    };
+    //     const onAddPost = async (blogId) => {
+    //     AddPost(blogId);
+    //     const response = await fetch(MOCK_API_URL);
+    //     const data = await response.json();
+    //     setTripBlogs(data);
+    // };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
@@ -100,7 +100,8 @@ export default function TripBlog() {
 
                                 {/* <Posts tripBlogs={blog.blogArray} /> */}
                                 <Posts tripBlogs={blog} />
-                                <AddPost blogId={blog.id} getTripBlog={getTripBlog} onAddPost={onAddPost} />
+                                {/* <AddPost blogId={blog.id} getTripBlog={getTripBlog} onAddPost={onAddPost} /> */}
+                                <AddPost blogId={blog.id} getTripBlog={getTripBlog} />
                             </Card>
                         </Col>
                     ))}

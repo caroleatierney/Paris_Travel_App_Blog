@@ -47,33 +47,44 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
                 </Button>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title>Update Notes</Modal.Title>
-                    </div>
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    style={{ marginTop: '200px' }}
+                >
 
+                <Modal.Header style={{ background: "#c4b7a6" }}>
+                    <div className="flex flex-row text-center">
+                        <Modal.Title className="mx-5 p-2 montserratMd" style={{ color: 'white' }}>Update Notes</Modal.Title>
+                    </div>
                 </Modal.Header>
 
-                <Modal.Body>
-                    <Form className='justify-contents-space-evenly'>
-                        <textarea className="m-5 p-5" onChange={(e) => setUpdatedNotes(e.target.value)} value={updatedNotes}></textarea>
+                <Modal.Body className='justify-contents-center' style={{ background: "#c4b7a6" }}>
+                    <Form className='justify-contents-center'>
+                        <textarea 
+                            className="m-2"
+                            onChange={(e) => setUpdatedNotes(e.target.value)}
+                            rows="10"
+                            value={updatedNotes}
+                            style={{ background: "#e6e2d3", width: '450px' }}
+                        />
                     </Form>
-
                 </Modal.Body>
 
-                <Modal.Footer>
+                <Modal.Footer className="d-flex justify-content-center" style={{ background: "#c4b7a6" }}>
+
                     <div className="text-center">
                         <Button
                             variant="secondary"
                             onClick={updateDestinationNotes}
-                            className="btn btn-secondary my-3 montserraSm">
+                            className="btn btn-secondary mx-5 p-2 montserratSmMd">
                             Update Notes
                         </Button>
                         
                         <Button
                             variant="secondary"
-                            onClick={handleClose}>
+                            onClick={handleClose}
+                            className="btn btn-secondary mx-5 p-2 montserratSmMd">
                                 Close
                         </Button>
                     </div>

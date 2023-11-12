@@ -14,12 +14,21 @@ export default class SinglePost extends Component {
     }
 
     render() {
+        // Conditinally display the posts ony if they are populated
         return (
             <div className="mb-2" style={{ border: 'solid', borderWidth: '5px', borderColor: 'pink', borderRadius: '1px' }}>
-                <h4 className="mt-2">{this.post.blogName} {this.post.rating}</h4>
-                <h4>{this.post.blogDate}</h4>
-                <p>{this.post.comments}</p>
-                <hr style={{ color: "white" }}></hr>
+                {this.post.blogName && 
+                    <div>
+                        <div className="mt-3 d-flex  justify-content-evenly">
+                            <h4>{this.post.blogName}</h4>
+                            <h4>{this.post.blogDate}</h4>           
+                            <h4>Rating: {this.post.rating}</h4>
+                        </div>
+                        <hr style={{ color: "grey" }}></hr>                
+                        <h5>{this.post.comments}</h5>
+                        <hr style={{ color: "grey" }}></hr>
+                    </div>
+                }
             </div>
         )
     }
