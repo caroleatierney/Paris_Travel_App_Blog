@@ -13,6 +13,18 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
     // when the delete button is clicked, this function is executed, 
     // passing in the current destination id
     const deleteDestination = () => {
+
+        // only admin can delete
+        alert('Enter admin password to delete')
+        let password = prompt("Please enter the admin password");
+        let response;
+        if (password == "MoreBriePlease") {
+            response = "Blog will be deleted";
+        } else {
+            response = "You do not have authority, contact the admin";
+            return
+        }
+        
         onDelete(destinationId)
         fetch(MOCK_API_URL + `/${destinationId}`, {
             method: 'DELETE',
