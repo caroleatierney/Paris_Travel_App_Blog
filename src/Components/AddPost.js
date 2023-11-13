@@ -7,7 +7,8 @@ import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Component
-export default function AddPost(blogId, getTripBlog) {
+export default function AddPost({ blogId, getTripBlog }) {
+
     // API URL used to add to MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
@@ -30,7 +31,7 @@ export default function AddPost(blogId, getTripBlog) {
         return `${month}/${date}/${year}`;
     };
 
-    function validateForm(isFormValid, setIsFormValid) {
+    function validateForm() {
         if (!newBlogName || !newComments || !newRating) {
             alert("All fields are required");
             return false;
@@ -50,9 +51,11 @@ export default function AddPost(blogId, getTripBlog) {
 
         // console.log(newBlogName, newBlogDate, newComments, newRating)
         // Get the existing blogArray data from MockAPI for specific blog
-        const response = await fetch(`${MOCK_API_URL}/${blogId.blogId}`);
+        // const response = await fetch(`${MOCK_API_URL}/${blogId.blogId}`);
+        const response = await fetch(`${MOCK_API_URL}/${blogId}`);
         const data = await response.json();
         const blogArray = data.blogArray;
+        // console.log(blogArray)
 
         // Add the new post to the blogArray
         blogArray.push({
@@ -63,7 +66,7 @@ export default function AddPost(blogId, getTripBlog) {
         });
 
         // Update the blogArray data in Mock API
-        await fetch(`${MOCK_API_URL}/${blogId.blogId}`, {
+        await fetch(`${MOCK_API_URL}/${blogId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -71,21 +74,7 @@ export default function AddPost(blogId, getTripBlog) {
             body: JSON.stringify({
                 blogArray: blogArray
             })
-        });
-    
-        fetch(`${MOCK_API_URL}/${blogId.blogId}`, {
-            method: 'PUT',
-            headers:
-            {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                blogName: newBlogName,
-                blogDate: newBlogDate,
-                comments: newComments,
-                rating: newRating
-            }),
-        })
+        }).then(() => getTripBlog())
 
         // close modal
         handleClose()

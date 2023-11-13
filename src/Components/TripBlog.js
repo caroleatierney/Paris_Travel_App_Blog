@@ -36,33 +36,7 @@ export default function TripBlog() {
     useEffect(() => {
         getTripBlog();
     }, []);
-
-    // this passes the blog id to the updateImageTitle component so it can update the correct blog
-    // then reload new data
-    const onUpdate = async (blogId) => {
-        UpdateTitle(blogId);
-        const response = await fetch(MOCK_API_URL);
-        const data = await response.json();
-        setTripBlogs(data);
-    };
-
-    // this passes the blog id to the delete component so it can delete the correct destination
-    // then reload new data
-    const onDelete = async (blogId) => {
-        DeleteBlog(blogId);
-        const response = await fetch(MOCK_API_URL);
-        const data = await response.json();
-        setTripBlogs(data);
-    };
-
-    // this passes the blog id to the AddPost component so it can add the post to the correct image
-    //     const onAddPost = async (blogId) => {
-    //     AddPost(blogId);
-    //     const response = await fetch(MOCK_API_URL);
-    //     const data = await response.json();
-    //     setTripBlogs(data);
-    // };
-
+   
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
 
@@ -94,14 +68,27 @@ export default function TripBlog() {
                                 </Card.Body>
 
                                 <div className="d-flex flex-row justify-content-around text-white p-4">
-                                    <UpdateImageTitle blogId={blog.id} title={blog.title} image={blog.image} getTripBlog={getTripBlog} onUpdate={onUpdate} />
-                                    <DeleteBlog blogId={blog.id} getTripBlog={getTripBlog} onDelete={onDelete} />
+                                    <UpdateImageTitle
+                                        blogId={blog.id}
+                                        title={blog.title}
+                                        image={blog.image}
+                                        getTripBlog={getTripBlog}
+                                    />
+                                    <DeleteBlog
+                                        blogId={blog.id}
+                                        getTripBlog={getTripBlog}
+                                    />
                                 </div>
 
-                                {/* <Posts tripBlogs={blog.blogArray} /> */}
-                                <Posts tripBlogs={blog} />
-                                {/* <AddPost blogId={blog.id} getTripBlog={getTripBlog} onAddPost={onAddPost} /> */}
-                                <AddPost blogId={blog.id} getTripBlog={getTripBlog} />
+                                <Posts
+                                    tripBlogs={blog}
+                                />
+                                
+                                <AddPost
+                                    blogId={blog.id}
+                                    getTripBlog={getTripBlog}
+                                />
+
                             </Card>
                         </Col>
                     ))}
