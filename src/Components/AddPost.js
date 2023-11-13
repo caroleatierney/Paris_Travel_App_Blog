@@ -7,7 +7,7 @@ import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Component
-export default function AddPost({ blogId, getTripBlog }) {
+export default function AddPost({ blogId, updateTripPosts }) {
 
     // API URL used to add to MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
@@ -74,10 +74,17 @@ export default function AddPost({ blogId, getTripBlog }) {
             body: JSON.stringify({
                 blogArray: blogArray
             })
-        }).then(() => getTripBlog())
+        })
+
+        // set form fields to blank after update
+        setNewBlogName('')
+        setNewComments('')
+        setNewRating('')
 
         // close modal
         handleClose()
+
+        updateTripPosts();
     }
 
     // display form as long as all the fields are not updated

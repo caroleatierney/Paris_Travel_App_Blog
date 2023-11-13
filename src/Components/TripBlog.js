@@ -13,7 +13,6 @@ import AddImage from './AddImage.js'
 import UpdateImageTitle from './UpdateImageTitle.js'
 import DeleteBlog from './DeleteBlog.js'
 import Posts from './Posts.js'
-import AddPost from './AddPost.js'
 import '../App.css';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -81,14 +80,9 @@ export default function TripBlog() {
                                 </div>
 
                                 <Posts
-                                    tripBlogs={blog}
-                                />
-                                
-                                <AddPost
                                     blogId={blog.id}
-                                    getTripBlog={getTripBlog}
                                 />
-
+                            
                             </Card>
                         </Col>
                     ))}
