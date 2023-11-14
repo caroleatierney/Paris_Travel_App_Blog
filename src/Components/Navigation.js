@@ -22,9 +22,9 @@ export default function NavBar() {
             <div>
                 <Nav className="navbar navbar-expand-sm d-flex container justify-content-center">
                     <ul className="navbar-nav d-flex mt-5">
-                        <li className="nav-item active">
+                        {/* <li className="nav-item active">
                             <Button as={Link} to="/home" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Home</Button>
-                        </li>
+                        </li> */}
                         <li className="nav-item active">
                             <Button as={Link} to="/about" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">About</Button>
                         </li>
@@ -44,9 +44,9 @@ export default function NavBar() {
                 </Nav>
 
                 <Switch>
-                    <Route path="/home">
+                    {/* <Route path="/home">
                         <Home />
-                    </Route>
+                    </Route> */}
 
                     <Route path="/about">
                         <About />

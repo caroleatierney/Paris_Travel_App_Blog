@@ -25,12 +25,22 @@ const options = [
     { text: 'Areas and Buildings', value: 'areas%20and%20buildings' },
 ];
 
+let isFirstTime = true;
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
 export default function SearchDisplay() {
     // declare state for the category variables
     const [selectedCategory, setSelectedCategory] = useState('');
-    const [isCategorySelected, setIsCategorySelected] = useState(false);
+    const [isCategorySelected, setIsCategorySelected] = useState(true);
+
+    // Default to true first time to get destinations in the database
+    // if ("firstTime = true") {
+    //     setIsCategorySelected(true);
+    //     isFirstTime = false;
+    // } else {
+    //     setIsCategorySelected(false);
+    // }
 
     // this just sets the category to a 'non-category' so any category the 
     // user selects will become active
@@ -39,9 +49,9 @@ export default function SearchDisplay() {
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // fetch data from the Here API
-    async function searchHereApi(selectedCategory, limit = 5) {
+    async function searchHereApi(selectedCategory, limit = 15) {
 
-        const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=150&limit=${limit}&lang=en&q=${selectedCategory}`
+        const BASE_URL = `https://discover.search.hereapi.com/v1/discover?in=circle:48.864716,2.349014;r=200&limit=${limit}&lang=en&q=${selectedCategory}`
         const URL = BASE_URL + "&apiKey=" + process.env.REACT_APP_HERE_API_KEY;
         const res = await fetch(URL)
         const data = await res.json()
@@ -85,6 +95,7 @@ export default function SearchDisplay() {
         setSelectedCategory(event.target.value);
         searchHereApi(event.target.value);
         setIsCategorySelected(true);
+        console.log(isCategorySelected)
     };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -118,9 +129,9 @@ export default function SearchDisplay() {
     // Search 'select dropdown' for categories and clear database
     return (
         <div className="blur search">
-            <h2 className="vibesMd my-5">Search for things to do</h2>
-            <h3 className="montserratMd">Note Both search options have a 150 xx radius around Paris</h3>
-            <h3 className="montserratSm">All results are written to the database</h3>
+            <h1 className="vibesLg my-5">Search for things to do</h1>
+            <h3 className="montserratMd">Note:  the category search option searches a 200 meter radius around Paris</h3>
+            <h3 className="montserratSmMd">All results are written to the database</h3>
 
             <div className="Container d-flex flex-row justify-content-center py-5">
                 <div className="row">
@@ -135,9 +146,17 @@ export default function SearchDisplay() {
                             ))}
                         </select>
 
-                        <Button className="montserratSm mx-5 p-3" style={{ color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px' }} variant="secondary" type ="button" onClick={clearSearch}>Clear Database</Button>
+                        <Button
+                            className="montserratSm mx-5 p-3"
+                            style={{ color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px' }}
+                            variant="secondary"
+                            type ="button"
+                            onClick={clearSearch}>
+                                Clear Database
+                        </Button>
 
                         {isCategorySelected && <DisplayDestinations />}
+                        {/* <DisplayDestinations /> */}
 
                     </div>
                 </div>

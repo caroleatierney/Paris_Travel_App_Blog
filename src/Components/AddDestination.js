@@ -81,7 +81,8 @@ export default function AddDestinations({getDestinations}) {
         <>
             <div className="flex flex-row text-center">
                 <Button
-                    className="montserratSm"
+                    className="montserratSm mx-5 p-3"
+                    style={{ color: 'black', textShadow: '1px 1px 1px #d97fb9f5', border: 'solid', borderWidth: '1px' }}
                     type="button"
                     variant="secondary"
                     onClick={handleShow}>

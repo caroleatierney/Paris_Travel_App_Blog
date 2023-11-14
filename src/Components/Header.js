@@ -36,13 +36,13 @@ export default function Header() {
 
             <div className="topCenter">
                 <p className="vibesXl mt-5">Roseann & Carole's Excellent Adventure!</p>
-                <p className="vibesMd mb-5">Paris 2023</p>
+                <p className="vibesMdLg mb-5">Paris 2023</p>
             </div>
 
             <div className="topRight">
                 <img
                     className="topImage"
-                    src="https://i.imgur.com/gq5Qmc8.jpg?1"
+                    src="https://i.imgur.com/RowNPSQ.png"
                     alt="Carole"
                 />
                 <div>

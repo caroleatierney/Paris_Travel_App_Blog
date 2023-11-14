@@ -47,3 +47,4 @@ npm start
 gh-pages
 Push changes then 
 Use 'npm run deploy'
+

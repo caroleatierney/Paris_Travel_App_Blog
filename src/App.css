@@ -33,12 +33,20 @@
     font-size: 1.5vw !important;
 }
 
+.vibesMdLg {
+    font-family: 'Great Vibes' !important;
+    color: black;
+    text-shadow: 1px 1px 1px #d64cd4c8;
+    font-weight: bold;
+    font-size: 2.5vw !important;
+}
+
 .vibesLg {
     font-family: 'Great Vibes' !important;
     color: black;
     text-shadow: 1px 1px 1px #d64cd4c8;
     font-weight: bold;
-    font-size: 1.5vw !important;
+    font-size: 3.0vw !important;
 }
 .vibesXl {
     font-family: 'Great Vibes' !important;
