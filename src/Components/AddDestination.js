@@ -98,8 +98,8 @@ export default function AddDestinations({getDestinations}) {
 
                 <div style={{ color: 'white', border: 'solid', borderWidth: '5px', borderColor: 'white', borderRadius: '10px' }}>
 
-                    <Modal.Header className="justify-content-center" style={{ background: "#c4b7a6" }}>
-                        <Modal.Title className="montserratMd mb-1 red">Add a destination</Modal.Title>
+                    <Modal.Header className="justify-content-center red" style={{ background: "#c4b7a6" }}>
+                        <Modal.Title className="montserratMd mb-1" style={{ color: 'white' }}>Add a destination</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body style={{ background: "#c4b7a6" }}>

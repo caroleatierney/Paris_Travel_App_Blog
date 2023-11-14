@@ -35,21 +35,21 @@ export default function DisplayDestinations() {
 
     // this passes the destination id to the updateNotes component so it can update the correct destination's notes
     // then reload new data
-    const onUpdate = async (destinationId) => {
-        UpdateDestinationNotes(destinationId);
-        const response = await fetch(MOCK_API_URL);
-        const data = await response.json();
-        setDestinations(data);
-    };
+    // const onUpdate = async (destinationId) => {
+    //     UpdateDestinationNotes(destinationId);
+    //     const response = await fetch(MOCK_API_URL);
+    //     const data = await response.json();
+    //     setDestinations(data);
+    // };
 
     // this passes the destination id to the delete component so it can delete the correct destination
     // then reload new data
-    const onDelete = async (destinationId) => {
-        DeleteDestination(destinationId);
-        const response = await fetch(MOCK_API_URL);
-        const data = await response.json();
-        setDestinations(data);
-    };
+    // const onDelete = async (destinationId) => {
+    //     DeleteDestination(destinationId);
+    //     const response = await fetch(MOCK_API_URL);
+    //     const data = await response.json();
+    //     setDestinations(data);
+    // };
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
     // display data from MockAPI
@@ -86,12 +86,12 @@ export default function DisplayDestinations() {
                                         destinationId={destination.id}
                                         getDestinations={getDestinations}
                                         notes={destination.notes}
-                                        onUpdate={onUpdate}
+                                        // onUpdate={onUpdate}
                                     />
                                     <DeleteDestination
                                         destinationId={destination.id}
                                         getDestinations={getDestinations}
-                                        onDelete={onDelete}
+                                        // onDelete={onDelete}
                                     />
                                 </Card.Body>
                         </Card>

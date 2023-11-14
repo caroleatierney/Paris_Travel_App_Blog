@@ -19,21 +19,24 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId,
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const handleChange = (event) => {
+        setUpdatedNotes(event.target.value);
+    };
+
     // when update button is clicked, the updated object is put as a string to MockAPI
     const updateDestinationNotes = (e,) => {
         e.preventDefault()
-        setUpdatedNotes(e.target.value)
         fetch(MOCK_API_URL + `/${destinationId}`, {
             method: 'PUT',
             headers:
             {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({notes: updatedNotes}),
+            body: JSON.stringify({ notes: updatedNotes }),
         }).then(() => getDestinations())
 
         // set form field to blank after update
-        setUpdatedNotes('')
+        // setUpdatedNotes('')
 
         // close modal
         handleClose()
@@ -48,11 +51,11 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId,
                 </Button>
             </div>
 
-                <Modal
-                    show={show}
-                    onHide={handleClose}
-                    style={{ marginTop: '200px' }}
-                >
+            <Modal
+                show={show}
+                onHide={handleClose}
+                style={{ marginTop: '200px' }}
+            >
 
                 <Modal.Header className="justify-content-center" style={{ background: "#c4b7a6" }}>
                     <div>
@@ -61,8 +64,8 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId,
                 </Modal.Header>
 
                 <Modal.Body className='justify-contents-center' style={{ background: "#c4b7a6" }}>
-                    <Form className='justify-contents-center'>
-                        <textarea 
+                    <Form className='justify-contents-center' onSubmit={updateDestinationNotes}>
+                        <textarea
                             className="m-2"
                             onChange={(e) => setUpdatedNotes(e.target.value)}
                             rows="10"
@@ -76,17 +79,18 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId,
 
                     <div className="text-center">
                         <Button
+                            type="submit"
                             variant="secondary"
                             onClick={updateDestinationNotes}
                             className="btn btn-secondary mx-5 p-2 montserratSmMd">
                             Submit
                         </Button>
-                        
+
                         <Button
                             variant="secondary"
                             onClick={handleClose}
                             className="btn btn-secondary mx-5 p-2 montserratSmMd">
-                                Close
+                            Close
                         </Button>
                     </div>
 
