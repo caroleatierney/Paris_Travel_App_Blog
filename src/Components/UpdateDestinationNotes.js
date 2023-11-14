@@ -53,9 +53,9 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
                     style={{ marginTop: '200px' }}
                 >
 
-                <Modal.Header style={{ background: "#c4b7a6" }}>
-                    <div className="flex flex-row text-center">
-                        <Modal.Title className="mx-5 p-2 montserratMd" style={{ color: 'white' }}>Update Notes</Modal.Title>
+                <Modal.Header className="justify-content-center" style={{ background: "#c4b7a6" }}>
+                    <div>
+                        <Modal.Title className="montserratMd" style={{ color: 'white' }}>Update Notes</Modal.Title>
                     </div>
                 </Modal.Header>
 

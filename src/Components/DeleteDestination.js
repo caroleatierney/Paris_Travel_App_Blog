@@ -9,6 +9,7 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
 
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
+    const DELETE_PW = process.env.REACT_APP_DELETE_PASSWORD
 
     // when the delete button is clicked, this function is executed, 
     // passing in the current destination id
@@ -18,7 +19,7 @@ export default function DeleteDestination({ destinationId, onDelete, getDestinat
         alert('Enter admin password to delete')
         let password = prompt("Please enter the admin password");
         let response;
-        if (password == "MoreBriePlease") {
+        if (password == DELETE_PW) {
             response = "Blog will be deleted";
         } else {
             response = "You do not have authority, contact the admin";
