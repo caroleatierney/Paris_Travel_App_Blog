@@ -85,6 +85,7 @@ export default function DisplayDestinations() {
                                     <UpdateDestinationNotes
                                         destinationId={destination.id}
                                         getDestinations={getDestinations}
+                                        notes={destination.notes}
                                         onUpdate={onUpdate}
                                     />
                                     <DeleteDestination

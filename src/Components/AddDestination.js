@@ -81,7 +81,7 @@ export default function AddDestinations({getDestinations}) {
         <>
             <div className="flex flex-row text-center">
                 <Button
-                    className="montserratSmMd"
+                    className="montserratSm"
                     type="button"
                     variant="secondary"
                     onClick={handleShow}>
@@ -99,7 +99,7 @@ export default function AddDestinations({getDestinations}) {
                 <div style={{ color: 'white', border: 'solid', borderWidth: '5px', borderColor: 'white', borderRadius: '10px' }}>
 
                     <Modal.Header className="justify-content-center" style={{ background: "#c4b7a6" }}>
-                        <Modal.Title className="montserratSm mb-1 red">Add a destination</Modal.Title>
+                        <Modal.Title className="montserratMd mb-1 red">Add a destination</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body style={{ background: "#c4b7a6" }}>
@@ -109,22 +109,22 @@ export default function AddDestinations({getDestinations}) {
                                 <label className="montserratSm mb-1 white">Destination Title</label>
                                 <input className="m-1" onChange={(e) => setNewTitle(e.target.value)} value={newTitle} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">House Number</label>
+                                <label className="montserratSm mb-1 white">House Number</label>
                                 <input className="m-1" onChange={(e) => setNewHouseNumber(e.target.value)} value={newHouseNumber} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">Street</label>
+                                <label className="montserratSm mb-1 white">Street</label>
                                 <input className="m-1" onChange={(e) => setNewStreet(e.target.value)} value={newStreet} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">City</label>
+                                <label className="montserratSm mb-1 white">City</label>
                                 <input className="m-1" onChange={(e) => setNewCity(e.target.value)} value={newCity} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">State</label>
+                                <label className="montserratSm mb-1 white">State</label>
                                 <input className="m-1" onChange={(e) => setNewState(e.target.value)} value={newState} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">Postal Code</label>
+                                <label className="montserratSm mb-1 white">Postal Code</label>
                                 <input className="m-1" onChange={(e) => setNewPostalCode(e.target.value)} value={newPostalCode} style={{ background: "#e6e2d3" }} />
 
-                                    <label className="montserratSm mb-1 white">Country</label>
+                                <label className="montserratSm mb-1 white">Country</label>
                                 <input className="m-1" onChange={(e) => setNewCountry(e.target.value)} value={newCountry} style={{ background: "#e6e2d3" }} />
                             </div>
 

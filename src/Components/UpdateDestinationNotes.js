@@ -6,12 +6,13 @@ import Form from 'react-bootstrap/Form';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // Main Functional Component
-export default function UpdateDestinationNotes({ getDestinations, destinationId }) {
+export default function UpdateDestinationNotes({ getDestinations, destinationId, notes }) {
+
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/destinations'
 
     // set update state variables and state update function used in update form and set to null
-    const [updatedNotes, setUpdatedNotes] = useState('')
+    const [updatedNotes, setUpdatedNotes] = useState(notes)
 
     // react bootstrap modal variables   
     const [show, setShow] = useState(false);
@@ -78,7 +79,7 @@ export default function UpdateDestinationNotes({ getDestinations, destinationId 
                             variant="secondary"
                             onClick={updateDestinationNotes}
                             className="btn btn-secondary mx-5 p-2 montserratSmMd">
-                            Update Notes
+                            Submit
                         </Button>
                         
                         <Button

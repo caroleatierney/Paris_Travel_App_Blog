@@ -12,9 +12,7 @@ export default function UpdateImageTitle({ getTripBlog, blogId, title, image }) 
     // API URL used to update MockAPI
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
 
-    // set update state variables and state update function used in update form and set to null
-
-    // set to passed in values
+    // set update state variables and state update function used in update form and set to passed in values
     const [updatedTitle, setUpdatedTitle] = useState(title)
     const [updatedImage, setUpdatedImage] = useState(image)
 
