@@ -23,7 +23,7 @@
     "text": "^0.1.0",
     "webpack-cli": "^5.1.4"
   },
-  "homepage": "https://caroleatierney.github.io/week_16_final_project",
+  "homepage": "https://caroleatierney.github.io/Paris_Travel_App_Blog",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
