@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Paris_Travel_App_Blog/static/css/main.b9eec8eb.css",
+    "main.js": "/Paris_Travel_App_Blog/static/js/main.51480759.js",
+    "index.html": "/Paris_Travel_App_Blog/index.html",
+    "main.b9eec8eb.css.map": "/Paris_Travel_App_Blog/static/css/main.b9eec8eb.css.map",
+    "main.51480759.js.map": "/Paris_Travel_App_Blog/static/js/main.51480759.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9eec8eb.css",
+    "static/js/main.51480759.js"
+  ]
+}
