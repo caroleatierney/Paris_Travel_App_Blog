@@ -33,6 +33,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.0",
     "react-scripts": "latest"
   },
   "browserslist": {

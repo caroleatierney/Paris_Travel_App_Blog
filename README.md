@@ -1,4 +1,3 @@
-Test new gh push
 
 # This is the Final Project for Promineo's Fron End Developer Bootcamp
 ### These are the requirements
