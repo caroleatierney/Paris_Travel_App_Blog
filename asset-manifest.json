@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/caroleatierney/week_16_final_project/static/css/main.39b02e38.css",
-    "main.js": "/caroleatierney/week_16_final_project/static/js/main.b3a4c77a.js",
-    "index.html": "/caroleatierney/week_16_final_project/index.html",
-    "main.39b02e38.css.map": "/caroleatierney/week_16_final_project/static/css/main.39b02e38.css.map",
-    "main.b3a4c77a.js.map": "/caroleatierney/week_16_final_project/static/js/main.b3a4c77a.js.map"
+    "main.css": "/caroleatierney/Paris_Travel_App_Blog/static/css/main.39b02e38.css",
+    "main.js": "/caroleatierney/Paris_Travel_App_Blog/static/js/main.b3a4c77a.js",
+    "index.html": "/caroleatierney/Paris_Travel_App_Blog/index.html",
+    "main.39b02e38.css.map": "/caroleatierney/Paris_Travel_App_Blog/static/css/main.39b02e38.css.map",
+    "main.b3a4c77a.js.map": "/caroleatierney/Paris_Travel_App_Blog/static/js/main.b3a4c77a.js.map"
   },
   "entrypoints": [
     "static/css/main.39b02e38.css",
