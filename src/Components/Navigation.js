@@ -40,6 +40,9 @@ export default function NavBar() {
                         <li>
                             <Button as={Link} to="/monaLisa" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5">Mona Lisa</Button>
                         </li>
+                        <li>
+                            <Button roll="link" variant="secondary" style={{ color: 'maroon' }} className="nav-link montserratMd me-5" href="https://www.youtube.com/embed/ZM6NvOGpumI?start=68&fs=1" target="_blank">Bob's Video</Button>
+                        </li>
                     </ul>
                 </Nav>
 
@@ -67,6 +70,7 @@ export default function NavBar() {
                     <Route path="/monaLisa">
                         <MonaLisa />
                     </Route>
+                    
                 </Switch>
             </div>
         </Router>

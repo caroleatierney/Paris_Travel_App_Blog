@@ -1,5 +1,5 @@
 
-# This is the Final Project for Promineo's Fron End Developer Bootcamp
+# This is the Final Project for Promineo's Front End Developer Bootcamp
 ### These are the requirements
 - Using an online API of your choice, create a React project. You will be working on this for the next three weeks.
 - Project must meet the following criteria:
@@ -39,13 +39,9 @@ https://places.ls.hereapi.com/places/v1/discover/search
 &at=52.531,13.3843
 &q=Brandenburg+Gate
 
+To run locally:
+type "npm start"
 
-
-Local app
-Push changes then
-npm start
-
-gh-pages
-Push changes then 
-Use 'npm run deploy'
-
+To push to GH-Pages:
+Add, Push and Commit changes then 
+type 'npm run deploy'
