@@ -11,19 +11,18 @@ export default function DeleteBlog({ blogId, onDelete, getTripBlog }) {
     const MOCK_API_URL = 'https://65189219818c4e98ac5fdbd0.mockapi.io/TripBlog'
     const DELETE_PW = process.env.REACT_APP_DELETE_PASSWORD
 
-    // when the delete button is clicked, this function is executed, 
+    // when the delete button is clicked, this function is executed,  
     // passing in the current blog id
     const deleteBlog = () => {
 
         // only admin can delete
         alert('Enter admin password to delete')
         let password = prompt("Please enter the admin password");
-        let response;
 
         if (password == DELETE_PW) {
-            response = "Blog will be deleted";
+            alert("Blog will be deleted");
         } else {
-            response = "You do not have authority, contact the admin";
+            alert("You do not have authority, contact the admin");
             return
         }
 

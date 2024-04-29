@@ -1,4 +1,4 @@
-// the search component currently has a search destinations by category isng the Here api
+// the search component currently has a search destinations by category using the Here api
 // after the search is made, the destinations are saved into MockAPI where full crud can be performed on them
 import React, { useState } from 'react';
 import DisplayDestinations from './DisplayDestinations.js'
