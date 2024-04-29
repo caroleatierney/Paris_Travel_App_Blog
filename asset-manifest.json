@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Paris_Travel_App_Blog/static/css/main.99b74a41.css",
-    "main.js": "/Paris_Travel_App_Blog/static/js/main.f986f81d.js",
+    "main.js": "/Paris_Travel_App_Blog/static/js/main.0c871a3a.js",
     "index.html": "/Paris_Travel_App_Blog/index.html",
     "main.99b74a41.css.map": "/Paris_Travel_App_Blog/static/css/main.99b74a41.css.map",
-    "main.f986f81d.js.map": "/Paris_Travel_App_Blog/static/js/main.f986f81d.js.map"
+    "main.0c871a3a.js.map": "/Paris_Travel_App_Blog/static/js/main.0c871a3a.js.map"
   },
   "entrypoints": [
     "static/css/main.99b74a41.css",
-    "static/js/main.f986f81d.js"
+    "static/js/main.0c871a3a.js"
   ]
 }
